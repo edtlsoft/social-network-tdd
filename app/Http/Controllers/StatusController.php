@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 class StatusController extends Controller
 {
     /**
+     * StatusController constructor.
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -35,10 +43,12 @@ class StatusController extends Controller
      */
     public function store(Request $request)
     {
-        Status::create([
+        $status = Status::create([
             'user_id' => $request->user()->id,
             'body' => $request->body
         ]);
+
+        return response()->json(['body' => $status->body]);
     }
 
     /**

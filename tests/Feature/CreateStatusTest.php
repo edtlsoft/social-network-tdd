@@ -18,17 +18,35 @@ class CreateStatusTest extends TestCase
     {
         $this->withoutExceptionHandling();
 
+        $body = 'My first status';
+
         // 1. Given => Given a authenticated user
         $user = factory(User::class)->create(['email' => 'edward@edtlsoft.com']);
         $this->actingAs($user);
 
         // 2. When  => When you make a post request to status
-        $this->post(route('statuses.store'), ['body' => 'My first status']);
+        $response = $this->post(route('statuses.store'), ['body' => $body]);
+
+        $response->assertJson([
+            'body' => $body
+        ]);
 
         // 3. Then  => Then I see a new status in the database
         $this->assertDatabaseHas('statuses', [
             'user_id' => $user->id,
-            'body'    => 'My first status'
+            'body'    => $body
         ]);
+    }
+
+    /**
+     * @test
+     */
+    public function guests_users_can_not_create_statuses()
+    {
+        $response = $this->post(route('statuses.store'), ['body' => 'My first status']);
+
+        //dd($response->content());
+
+        $response->assertRedirect('login');
     }
 }

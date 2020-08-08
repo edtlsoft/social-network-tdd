@@ -25,8 +25,7 @@
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Status.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Status.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_031913_create_statuses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_031913_create_statuses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,6 +174,10 @@
       <TestRunner class="Tests\Feature\CreateStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" scope="Class" />
       <method v="2" />
     </configuration>
+    <configuration name="CreateStatusTest.guests_users_can_not_create_statuses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CreateStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" method="guests_users_can_not_create_statuses" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="ExampleTest.testBasicTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\ExampleTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ExampleTest.php" method="testBasicTest" scope="Method" />
       <method v="2" />
@@ -189,6 +192,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.CreateStatusTest" />
+        <item itemvalue="PHPUnit.CreateStatusTest.guests_users_can_not_create_statuses" />
         <item itemvalue="PHPUnit.ExampleTest.testBasicTest" />
         <item itemvalue="PHP Script.web.php" />
       </list>
@@ -205,7 +209,7 @@
       <workItem from="1596640784124" duration="1360000" />
       <workItem from="1596725167749" duration="861000" />
       <workItem from="1596726104324" duration="3086000" />
-      <workItem from="1596850699052" duration="5991000" />
+      <workItem from="1596850699052" duration="7883000" />
     </task>
     <servers />
   </component>
@@ -236,22 +240,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596855445741" />
-    <state width="893" height="282" key="GridCell.Tab.0.bottom" timestamp="1596857923043">
+    <state width="1367" height="356" key="GridCell.Tab.0.bottom" timestamp="1596859717578">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="893" height="282" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596857923043" />
-    <state width="893" height="282" key="GridCell.Tab.0.center" timestamp="1596857923042">
+    <state width="1367" height="356" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596859717578" />
+    <state width="1367" height="356" key="GridCell.Tab.0.center" timestamp="1596859717577">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="893" height="282" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596857923042" />
-    <state width="893" height="282" key="GridCell.Tab.0.left" timestamp="1596857923041">
+    <state width="1367" height="356" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596859717577" />
+    <state width="1367" height="356" key="GridCell.Tab.0.left" timestamp="1596859717577">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="893" height="282" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596857923041" />
-    <state width="893" height="282" key="GridCell.Tab.0.right" timestamp="1596857923042">
+    <state width="1367" height="356" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596859717577" />
+    <state width="1367" height="356" key="GridCell.Tab.0.right" timestamp="1596859717578">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="893" height="282" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596857923042" />
+    <state width="1367" height="356" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596859717578" />
     <state width="1367" height="249" key="GridCell.Tab.1.bottom" timestamp="1596729201707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
