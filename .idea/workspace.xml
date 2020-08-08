@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,9 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +164,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../php/php.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../apache/conf/extra" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -200,7 +203,7 @@
       <workItem from="1596640784124" duration="1360000" />
       <workItem from="1596725167749" duration="861000" />
       <workItem from="1596726104324" duration="3086000" />
-      <workItem from="1596850699052" duration="2905000" />
+      <workItem from="1596850699052" duration="5091000" />
     </task>
     <servers />
   </component>
@@ -223,26 +226,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="324" y="19" key="#CLI_Interpreters/0.0.1366.728@0.0.1366.728" timestamp="1596726791412" />
-    <state x="524" y="119" key="FileChooserDialogImpl" timestamp="1596726743387">
+    <state x="488" y="44" key="#com.intellij.ide.util.MemberChooser" timestamp="1596855394025">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596726743387" />
-    <state width="1367" height="233" key="GridCell.Tab.0.bottom" timestamp="1596854891016">
+    <state x="488" y="44" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596855394025" />
+    <state x="524" y="119" key="FileChooserDialogImpl" timestamp="1596855445741">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="233" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596854891016" />
-    <state width="1367" height="233" key="GridCell.Tab.0.center" timestamp="1596854891016">
+    <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596855445741" />
+    <state width="1367" height="310" key="GridCell.Tab.0.bottom" timestamp="1596857069275">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="233" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596854891016" />
-    <state width="1367" height="233" key="GridCell.Tab.0.left" timestamp="1596854891016">
+    <state width="1367" height="310" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596857069275" />
+    <state width="1367" height="310" key="GridCell.Tab.0.center" timestamp="1596857069274">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="233" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596854891016" />
-    <state width="1367" height="233" key="GridCell.Tab.0.right" timestamp="1596854891016">
+    <state width="1367" height="310" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596857069274" />
+    <state width="1367" height="310" key="GridCell.Tab.0.left" timestamp="1596857069274">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="233" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596854891016" />
+    <state width="1367" height="310" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596857069274" />
+    <state width="1367" height="310" key="GridCell.Tab.0.right" timestamp="1596857069274">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1367" height="310" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596857069274" />
     <state width="1367" height="249" key="GridCell.Tab.1.bottom" timestamp="1596729201707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -271,9 +278,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="295" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1596727160385" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596850748279">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596856525669">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596850748279" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596856525669" />
   </component>
 </project>
