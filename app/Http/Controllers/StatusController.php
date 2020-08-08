@@ -35,7 +35,10 @@ class StatusController extends Controller
      */
     public function store(Request $request)
     {
-        Status::create(['body' => $request->body]);
+        Status::create([
+            'user_id' => $request->user()->id,
+            'body' => $request->body
+        ]);
     }
 
     /**

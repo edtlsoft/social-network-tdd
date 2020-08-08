@@ -26,6 +26,9 @@ class CreateStatusTest extends TestCase
         $this->post(route('statuses.store'), ['body' => 'My first status']);
 
         // 3. Then  => Then I see a new status in the database
-        $this->assertDatabaseHas('statuses', ['body' => 'My first status']);
+        $this->assertDatabaseHas('statuses', [
+            'user_id' => $user->id,
+            'body'    => 'My first status'
+        ]);
     }
 }
