@@ -6,3 +6,7 @@ Route::get('/login', function(){ return 'Login...'; })->name('login');
 
 Route::post('/statuses', 'StatusController@store')->name('statuses.store');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
