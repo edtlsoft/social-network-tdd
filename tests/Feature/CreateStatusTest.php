@@ -25,7 +25,7 @@ class CreateStatusTest extends TestCase
         $this->actingAs($user);
 
         // 2. When  => When you make a post request to status
-        $response = $this->post(route('statuses.store'), ['body' => $body]);
+        $response = $this->postJson(route('statuses.store'), ['body' => $body]);
 
         $response->assertJson([
             'body' => $body
@@ -43,10 +43,47 @@ class CreateStatusTest extends TestCase
      */
     public function guests_users_can_not_create_statuses()
     {
-        $response = $this->post(route('statuses.store'), ['body' => 'My first status']);
+        $response = $this->postJson(route('statuses.store'), ['body' => 'My first status']);
 
         //dd($response->content());
 
         $response->assertRedirect('login');
+    }
+
+    /**
+     * @test
+     */
+    public function a_status_requires_a_body()
+    {
+        $user = factory(User::class)->create(['email' => 'edward@edtlsoft.com']);
+        $this->actingAs($user);
+
+        $response = $this->postJson(route('statuses.store'), ['body' => '']);
+
+        //dd($response->getContent());
+        $response->assertStatus(422);
+
+        $response->assertJsonStructure([
+            'message',
+            'errors' => ['body']
+        ]);
+    }
+
+    /**
+     * @test
+     */
+    public function a_status_body_requires_a_minimum_length()
+    {
+        $user = factory(User::class)->create(['email' => 'edward@edtlsoft.com']);
+        $this->actingAs($user);
+
+        $response = $this->postJson(route('statuses.store'), ['body' => 'Hey there!']);
+
+        $response->assertStatus(422);
+
+        $response->assertJsonStructure([
+            'message',
+            'errors' => ['body']
+        ]);
     }
 }

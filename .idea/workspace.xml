@@ -23,11 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/social-network-tdd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/social-network-tdd.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,9 +170,17 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="PHPUnit.CreateStatusTest">
+  <component name="RunManager" selected="PHPUnit.CreateStatusTest.a_status_body_requires_a_minimum_length">
     <configuration name="CreateStatusTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CreateStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CreateStatusTest.a_status_body_requires_a_minimum_length" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CreateStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" method="a_status_body_requires_a_minimum_length" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CreateStatusTest.a_status_requires_a_body" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CreateStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" method="a_status_requires_a_body" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="CreateStatusTest.guests_users_can_not_create_statuses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -188,15 +195,13 @@
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
-    <configuration name="web.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/routes/web.php">
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CreateStatusTest.a_status_body_requires_a_minimum_length" />
+        <item itemvalue="PHPUnit.CreateStatusTest.a_status_requires_a_body" />
         <item itemvalue="PHPUnit.CreateStatusTest" />
         <item itemvalue="PHPUnit.CreateStatusTest.guests_users_can_not_create_statuses" />
         <item itemvalue="PHPUnit.ExampleTest.testBasicTest" />
-        <item itemvalue="PHP Script.web.php" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +216,7 @@
       <workItem from="1596640784124" duration="1360000" />
       <workItem from="1596725167749" duration="861000" />
       <workItem from="1596726104324" duration="3086000" />
-      <workItem from="1596850699052" duration="8941000" />
+      <workItem from="1596850699052" duration="11113000" />
     </task>
     <servers />
   </component>
@@ -242,22 +247,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596855445741" />
-    <state width="1367" height="356" key="GridCell.Tab.0.bottom" timestamp="1596906938020">
+    <state width="893" height="262" key="GridCell.Tab.0.bottom" timestamp="1596940046898">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="356" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596906938020" />
-    <state width="1367" height="356" key="GridCell.Tab.0.center" timestamp="1596906938020">
+    <state width="893" height="262" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596940046898" />
+    <state width="893" height="262" key="GridCell.Tab.0.center" timestamp="1596940046896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="356" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596906938020" />
-    <state width="1367" height="356" key="GridCell.Tab.0.left" timestamp="1596906938020">
+    <state width="893" height="262" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596940046896" />
+    <state width="893" height="262" key="GridCell.Tab.0.left" timestamp="1596940046895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="356" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596906938020" />
-    <state width="1367" height="356" key="GridCell.Tab.0.right" timestamp="1596906938020">
+    <state width="893" height="262" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596940046895" />
+    <state width="893" height="262" key="GridCell.Tab.0.right" timestamp="1596940046897">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1367" height="356" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596906938020" />
+    <state width="893" height="262" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596940046897" />
     <state width="1367" height="249" key="GridCell.Tab.1.bottom" timestamp="1596729201707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -286,9 +291,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="295" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1596727160385" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596857123874">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596940117288">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596857123874" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596940117288" />
   </component>
 </project>
