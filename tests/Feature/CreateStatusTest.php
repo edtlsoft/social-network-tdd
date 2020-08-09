@@ -43,7 +43,7 @@ class CreateStatusTest extends TestCase
      */
     public function guests_users_can_not_create_statuses()
     {
-        $response = $this->postJson(route('statuses.store'), ['body' => 'My first status']);
+        $response = $this->post(route('statuses.store'), ['body' => 'My first status']);
 
         //dd($response->content());
 
@@ -77,7 +77,7 @@ class CreateStatusTest extends TestCase
         $user = factory(User::class)->create(['email' => 'edward@edtlsoft.com']);
         $this->actingAs($user);
 
-        $response = $this->postJson(route('statuses.store'), ['body' => 'Hey there!']);
+        $response = $this->postJson(route('statuses.store'), ['body' => 'Hey there']);
 
         $response->assertStatus(422);
 

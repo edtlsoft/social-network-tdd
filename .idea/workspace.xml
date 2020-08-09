@@ -23,8 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/social-network-tdd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/social-network-tdd.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" afterDir="false" />
     </list>
@@ -153,6 +157,8 @@
       <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/php-webdriver/webdriver" />
+      <path value="$PROJECT_DIR$/vendor/laravel/dusk" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fgXbCONDGO5b1obLgVXM3Tmya9" />
@@ -166,9 +172,14 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../apache/conf/extra" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\developer\social-network-tdd" />
+    </key>
   </component>
   <component name="RunManager" selected="PHPUnit.CreateStatusTest.a_status_body_requires_a_minimum_length">
     <configuration name="CreateStatusTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -198,9 +209,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.CreateStatusTest.a_status_body_requires_a_minimum_length" />
+        <item itemvalue="PHPUnit.CreateStatusTest.guests_users_can_not_create_statuses" />
         <item itemvalue="PHPUnit.CreateStatusTest.a_status_requires_a_body" />
         <item itemvalue="PHPUnit.CreateStatusTest" />
-        <item itemvalue="PHPUnit.CreateStatusTest.guests_users_can_not_create_statuses" />
         <item itemvalue="PHPUnit.ExampleTest.testBasicTest" />
       </list>
     </recent_temporary>
@@ -216,7 +227,7 @@
       <workItem from="1596640784124" duration="1360000" />
       <workItem from="1596725167749" duration="861000" />
       <workItem from="1596726104324" duration="3086000" />
-      <workItem from="1596850699052" duration="11113000" />
+      <workItem from="1596850699052" duration="15459000" />
     </task>
     <servers />
   </component>
@@ -247,22 +258,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596855445741" />
-    <state width="893" height="262" key="GridCell.Tab.0.bottom" timestamp="1596940046898">
+    <state width="1367" height="309" key="GridCell.Tab.0.bottom" timestamp="1596944836308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="893" height="262" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596940046898" />
-    <state width="893" height="262" key="GridCell.Tab.0.center" timestamp="1596940046896">
+    <state width="1367" height="309" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596944836308" />
+    <state width="1367" height="309" key="GridCell.Tab.0.center" timestamp="1596944836308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="893" height="262" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596940046896" />
-    <state width="893" height="262" key="GridCell.Tab.0.left" timestamp="1596940046895">
+    <state width="1367" height="309" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596944836308" />
+    <state width="1367" height="309" key="GridCell.Tab.0.left" timestamp="1596944836307">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="893" height="262" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596940046895" />
-    <state width="893" height="262" key="GridCell.Tab.0.right" timestamp="1596940046897">
+    <state width="1367" height="309" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596944836307" />
+    <state width="1367" height="309" key="GridCell.Tab.0.right" timestamp="1596944836308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="893" height="262" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596940046897" />
+    <state width="1367" height="309" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596944836308" />
     <state width="1367" height="249" key="GridCell.Tab.1.bottom" timestamp="1596729201707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -291,9 +302,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="295" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1596727160385" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596940117288">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596944135156">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596940117288" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596944135156" />
   </component>
 </project>
