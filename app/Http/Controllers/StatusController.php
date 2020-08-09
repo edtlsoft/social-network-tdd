@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StatusStoreRequest;
 use App\Models\Status;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class StatusController extends Controller
 {
@@ -19,7 +20,7 @@ class StatusController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -29,8 +30,8 @@ class StatusController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  App\Http\Requests\StatusStoreRequest $request
-     * @return \Illuminate\Http\Response
+     * @param  StatusStoreRequest $request
+     * @return Response
      */
     public function store(StatusStoreRequest $request)
     {
@@ -46,7 +47,7 @@ class StatusController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Status  $status
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show(Status $status)
     {
@@ -57,7 +58,7 @@ class StatusController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Status  $status
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit(Status $status)
     {
@@ -69,7 +70,7 @@ class StatusController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Status  $status
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, Status $status)
     {
@@ -80,7 +81,7 @@ class StatusController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Status  $status
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy(Status $status)
     {

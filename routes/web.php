@@ -2,9 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function(){
-    return view('welcome');
-});
+
+Route::get('/', 'HomeController@index')->name('home');
 
 
 Route::post('/statuses', 'StatusController@store')->name('statuses.store');
@@ -13,7 +12,6 @@ Route::post('/statuses', 'StatusController@store')->name('statuses.store');
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 
 

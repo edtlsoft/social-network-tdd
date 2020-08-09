@@ -24,8 +24,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanCreateStatusTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanCreateStatusTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +228,7 @@
       <workItem from="1596640784124" duration="1360000" />
       <workItem from="1596725167749" duration="861000" />
       <workItem from="1596726104324" duration="3086000" />
-      <workItem from="1596850699052" duration="21770000" />
+      <workItem from="1596850699052" duration="25168000" />
     </task>
     <servers />
   </component>
@@ -253,22 +259,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596855445741" />
-    <state width="683" height="174" key="GridCell.Tab.0.bottom" timestamp="1596946018723">
+    <state width="893" height="62" key="GridCell.Tab.0.bottom" timestamp="1596952365115">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="683" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596946018723" />
-    <state width="683" height="174" key="GridCell.Tab.0.center" timestamp="1596946018723">
+    <state width="893" height="62" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596952365115" />
+    <state width="893" height="62" key="GridCell.Tab.0.center" timestamp="1596952365114">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="683" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596946018723" />
-    <state width="683" height="174" key="GridCell.Tab.0.left" timestamp="1596946018722">
+    <state width="893" height="62" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596952365114" />
+    <state width="893" height="62" key="GridCell.Tab.0.left" timestamp="1596952365113">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="683" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596946018722" />
-    <state width="683" height="174" key="GridCell.Tab.0.right" timestamp="1596946018723">
+    <state width="893" height="62" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596952365113" />
+    <state width="893" height="62" key="GridCell.Tab.0.right" timestamp="1596952365114">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="683" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596946018723" />
+    <state width="893" height="62" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596952365114" />
     <state width="1367" height="249" key="GridCell.Tab.1.bottom" timestamp="1596729201707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -297,9 +303,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="295" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1596727160385" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596951004904">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596953209996">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596951004904" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596953209996" />
   </component>
 </project>

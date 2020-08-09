@@ -25,7 +25,6 @@ class UsersCanCreateStatusTest extends DuskTestCase
                 ->visit('/')
                 ->type('#body', 'My first status')
                 ->press('#create-status')
-                ->screenshot('create-status')
                 ->assertSee('My first status');
         });
     }
