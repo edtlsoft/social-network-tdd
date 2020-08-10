@@ -24,13 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_031913_create_statuses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_08_031913_create_statuses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanCreateStatusTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanCreateStatusTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -173,12 +173,13 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files/Git/etc/profile.d" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Program Files\Git\etc\profile.d" />
       <recent name="C:\xampp\htdocs\developer\social-network-tdd" />
     </key>
   </component>
@@ -228,7 +229,7 @@
       <workItem from="1596640784124" duration="1360000" />
       <workItem from="1596725167749" duration="861000" />
       <workItem from="1596726104324" duration="3086000" />
-      <workItem from="1596850699052" duration="25168000" />
+      <workItem from="1596850699052" duration="30551000" />
     </task>
     <servers />
   </component>
@@ -251,14 +252,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="324" y="19" key="#CLI_Interpreters/0.0.1366.728@0.0.1366.728" timestamp="1596726791412" />
-    <state x="488" y="44" key="#com.intellij.ide.util.MemberChooser" timestamp="1596855394025">
+    <state x="488" y="44" key="#com.intellij.ide.util.MemberChooser" timestamp="1597009129006">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="44" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1596855394025" />
-    <state x="524" y="119" key="FileChooserDialogImpl" timestamp="1596855445741">
+    <state x="488" y="44" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1597009129006" />
+    <state x="524" y="119" key="FileChooserDialogImpl" timestamp="1597009297666">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596855445741" />
+    <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597009297666" />
     <state width="893" height="62" key="GridCell.Tab.0.bottom" timestamp="1596952365115">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -303,9 +304,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="295" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1596727160385" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596953209996">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597020964501">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1596953209996" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597020964501" />
   </component>
 </project>
