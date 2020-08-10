@@ -24,7 +24,7 @@ class StatusController extends Controller
      */
     public function index()
     {
-        //
+        return Status::latest()->paginate(10);
     }
 
     /**
