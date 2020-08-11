@@ -8,6 +8,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+
+window.EventBus = require('./EventBus').default;
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -16,10 +19,11 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+const files = require.context('./', true, /\.vue$/i)
+files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('status-form', require('./components/StatusForm.vue').default);
+// Vue.component('status-form', require('./components/StatusForm.vue').default);
+// Vue.component('statuses-list', require('./components/StatusesList.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

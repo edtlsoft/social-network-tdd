@@ -8,13 +8,6 @@
                 <button class="btn btn-primary" id="create-status">Publish</button>
             </div>
         </form>
-        <div>
-            <ul class="list-group">
-                <li v-for="status in statuses" :key="status.id" class="list-group-item">
-                    {{ status.body }}
-                </li>
-            </ul>
-        </div>
     </div>
 </template>
 
@@ -25,14 +18,13 @@
                 status: {
                     body: '',
                 },
-                statuses: [],
             })
         },
         methods: {
             storeStatus() {
                 axios.post('/statuses', this.status)
                     .then(response => {
-                        this.statuses.push(response.data)
+                        EventBus.$emit('status-created', response.data)
                         this.status.body = ''
                     })
                     .catch(errors => console.log(errors))
