@@ -24,9 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/StatusesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/StatusesList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/StatusResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/StatusResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Status.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Status.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,25 +178,25 @@
       <recent name="C:\xampp\htdocs\developer\social-network-tdd" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.CreateStatusTest.a_status_body_requires_a_minimum_length">
-    <configuration name="CreateStatusTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CreateStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHPUnit.StatusResourceTest.a_status_resource_must_have_the_necessary_fields">
     <configuration name="CreateStatusTest.a_status_body_requires_a_minimum_length" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CreateStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" method="a_status_body_requires_a_minimum_length" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="CreateStatusTest.a_status_requires_a_body" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CreateStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" method="a_status_requires_a_body" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="CreateStatusTest.guests_users_can_not_create_statuses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CreateStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" method="guests_users_can_not_create_statuses" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ExampleTest.testBasicTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ExampleTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ExampleTest.php" method="testBasicTest" scope="Method" />
+    <configuration name="ListStatusesTest.can_get_all_statuses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ListStatusesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ListStatusesTest.php" method="can_get_all_statuses" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="StatusResourceTest.a_status_resource_must_have_the_necessary_fields" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Http\Resources\StatusResourceTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Http/Resources/StatusResourceTest.php" method="a_status_resource_must_have_the_necessary_fields" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="StatusTest.a_status_belongs_to_a_user" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Models\StatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" method="a_status_belongs_to_a_user" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -206,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.StatusResourceTest.a_status_resource_must_have_the_necessary_fields" />
+        <item itemvalue="PHPUnit.StatusTest.a_status_belongs_to_a_user" />
+        <item itemvalue="PHPUnit.ListStatusesTest.can_get_all_statuses" />
         <item itemvalue="PHPUnit.CreateStatusTest.a_status_body_requires_a_minimum_length" />
         <item itemvalue="PHPUnit.CreateStatusTest.guests_users_can_not_create_statuses" />
-        <item itemvalue="PHPUnit.CreateStatusTest.a_status_requires_a_body" />
-        <item itemvalue="PHPUnit.CreateStatusTest" />
-        <item itemvalue="PHPUnit.ExampleTest.testBasicTest" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +224,7 @@
       <workItem from="1596640784124" duration="1360000" />
       <workItem from="1596725167749" duration="861000" />
       <workItem from="1596726104324" duration="3086000" />
-      <workItem from="1596850699052" duration="51213000" />
+      <workItem from="1596850699052" duration="54248000" />
     </task>
     <servers />
   </component>
@@ -252,26 +251,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="44" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1597009129006" />
+    <state x="1779" y="-207" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597208260977">
+      <screen x="1366" y="-326" width="1366" height="728" />
+    </state>
+    <state x="1779" y="-207" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208260977" />
     <state x="524" y="119" key="FileChooserDialogImpl" timestamp="1597009297666">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597009297666" />
-    <state width="893" height="62" key="GridCell.Tab.0.bottom" timestamp="1596952365115">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1367" height="287" key="GridCell.Tab.0.bottom" timestamp="1597208787989">
+      <screen x="1366" y="-326" width="1366" height="728" />
     </state>
     <state width="893" height="62" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596952365115" />
-    <state width="893" height="62" key="GridCell.Tab.0.center" timestamp="1596952365114">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1367" height="287" key="GridCell.Tab.0.bottom/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208787989" />
+    <state width="1367" height="287" key="GridCell.Tab.0.center" timestamp="1597208787988">
+      <screen x="1366" y="-326" width="1366" height="728" />
     </state>
     <state width="893" height="62" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596952365114" />
-    <state width="893" height="62" key="GridCell.Tab.0.left" timestamp="1596952365113">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1367" height="287" key="GridCell.Tab.0.center/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208787988" />
+    <state width="1367" height="287" key="GridCell.Tab.0.left" timestamp="1597208787987">
+      <screen x="1366" y="-326" width="1366" height="728" />
     </state>
     <state width="893" height="62" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596952365113" />
-    <state width="893" height="62" key="GridCell.Tab.0.right" timestamp="1596952365114">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1367" height="287" key="GridCell.Tab.0.left/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208787987" />
+    <state width="1367" height="287" key="GridCell.Tab.0.right" timestamp="1597208787988">
+      <screen x="1366" y="-326" width="1366" height="728" />
     </state>
     <state width="893" height="62" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596952365114" />
+    <state width="1367" height="287" key="GridCell.Tab.0.right/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208787988" />
     <state width="1367" height="249" key="GridCell.Tab.1.bottom" timestamp="1596729201707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -300,9 +307,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="295" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1596727160385" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597203208812">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup" timestamp="1597208481687">
+      <screen x="1366" y="-326" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597203208812" />
+    <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208481687" />
   </component>
 </project>
