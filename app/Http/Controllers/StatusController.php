@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StatusStoreRequest;
+use App\Http\Resources\StatusResource;
 use App\Models\Status;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -24,7 +25,9 @@ class StatusController extends Controller
      */
     public function index()
     {
-        return Status::latest()->paginate(10);
+        return StatusResource::collection(
+            Status::latest()->paginate(10)
+        );
     }
 
     /**
@@ -40,7 +43,7 @@ class StatusController extends Controller
             'body' => $request->body
         ]);
 
-        return response()->json(['body' => $status->body]);
+        return StatusResource::make($status);
     }
 
     /**

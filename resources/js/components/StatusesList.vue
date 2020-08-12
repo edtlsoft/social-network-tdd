@@ -4,11 +4,11 @@
             <div class="card-body d-flex flex-column">
                 <div class="d-flex align-items-center mb-3">
                     <div>
-                        <img class="rounded mr-3 shadow-sm" src="/images/default-avatar.jpg" alt="user-profile" width="40px">
+                        <img class="rounded mr-3 shadow-sm" :src="status.user_avatar" alt="user-profile" width="40px">
                     </div>
                     <div>
-                        <h5 class="mb-1">Edward Lopez</h5>
-                        <div class="small text-muted">Hace una hora</div>
+                        <h5 class="mb-1" v-text="status.user_name"></h5>
+                        <div class="small text-muted" v-text="status.ago"></div>
                     </div>
                 </div>
                 <div>

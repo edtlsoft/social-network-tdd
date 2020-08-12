@@ -24,7 +24,7 @@
             storeStatus() {
                 axios.post('/statuses', this.status)
                     .then(response => {
-                        EventBus.$emit('status-created', response.data)
+                        EventBus.$emit('status-created', response.data.data)
                         this.status.body = ''
                     })
                     .catch(errors => console.log(errors))
