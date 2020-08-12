@@ -1964,6 +1964,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37655,20 +37666,56 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "ul",
-      { staticClass: "list-group" },
-      _vm._l(_vm.statuses, function(status) {
-        return _c("li", { key: status.id, staticClass: "list-group-item" }, [
-          _vm._v("\n            " + _vm._s(status.body) + "\n        ")
-        ])
-      }),
-      0
-    )
-  ])
+  return _c(
+    "div",
+    _vm._l(_vm.statuses, function(status) {
+      return _c(
+        "div",
+        { key: status.id, staticClass: "card mb-3 border-0 shadow-sm" },
+        [
+          _c("div", { staticClass: "card-body d-flex flex-column" }, [
+            _vm._m(0, true),
+            _vm._v(" "),
+            _c("div", [
+              _c("p", {
+                staticClass: "card-text text-secondary",
+                domProps: { textContent: _vm._s(status.body) }
+              })
+            ])
+          ])
+        ]
+      )
+    }),
+    0
+  )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex align-items-center mb-3" }, [
+      _c("div", [
+        _c("img", {
+          staticClass: "rounded mr-3 shadow-sm",
+          attrs: {
+            src: "/images/default-avatar.jpg",
+            alt: "user-profile",
+            width: "40px"
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("h5", { staticClass: "mb-1" }, [_vm._v("Edward Lopez")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "small text-muted" }, [
+          _vm._v("Hace una hora")
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
