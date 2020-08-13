@@ -1921,6 +1921,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37587,48 +37592,53 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "form",
-      {
-        on: {
-          submit: function($event) {
-            $event.preventDefault()
-            return _vm.storeStatus($event)
-          }
-        }
-      },
-      [
-        _c("div", { staticClass: "card-body" }, [
-          _c("textarea", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.status.body,
-                expression: "status.body"
-              }
-            ],
-            staticClass: "form-control border-0 bg-light",
-            attrs: {
-              name: "body",
-              id: "body",
-              placeholder: "What's on your mind, Edward?"
-            },
-            domProps: { value: _vm.status.body },
+    _vm.isAuthenticated
+      ? _c(
+          "form",
+          {
             on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.status, "body", $event.target.value)
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.storeStatus($event)
               }
             }
-          })
-        ]),
-        _vm._v(" "),
-        _vm._m(0)
-      ]
-    )
+          },
+          [
+            _c("div", { staticClass: "card-body" }, [
+              _c("textarea", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.status.body,
+                    expression: "status.body"
+                  }
+                ],
+                staticClass: "form-control border-0 bg-light",
+                attrs: {
+                  name: "body",
+                  id: "body",
+                  placeholder:
+                    "What's on your mind, " + _vm.currentUser.name + "?"
+                },
+                domProps: { value: _vm.status.body },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.status, "body", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _vm._m(0)
+          ]
+        )
+      : _c("div", { staticClass: "card-body" }, [
+          _c("a", { attrs: { href: "/login" } }, [_vm._v("Debes hacer login")])
+        ])
   ])
 }
 var staticRenderFns = [
@@ -49934,9 +49944,12 @@ var EventBus = new Vue();
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _mixins_auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mixins/auth.js */ "./resources/js/mixins/auth.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -49966,7 +49979,10 @@ files.keys().map(function (key) {
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+// Mixins
 
+
+Vue.mixin(_mixins_auth_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
 var app = new Vue({
   el: '#app'
 });
@@ -50153,6 +50169,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StatusesList_vue_vue_type_template_id_544adc6e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/mixins/auth.js":
+/*!*************************************!*\
+  !*** ./resources/js/mixins/auth.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var user = document.head.querySelector('meta[name="user"]').content;
+/* harmony default export */ __webpack_exports__["default"] = ({
+  computed: {
+    currentUser: function currentUser() {
+      return this.isAuthenticated ? JSON.parse(user) : {
+        name: 'Usuario invitado'
+      };
+    },
+    isAuthenticated: function isAuthenticated() {
+      return !!this.user;
+    },
+    guest: function guest() {
+      return !this.isAuthenticated;
+    }
+  }
+});
 
 /***/ }),
 

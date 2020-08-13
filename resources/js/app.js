@@ -31,6 +31,11 @@ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
+// Mixins
+import AuthMixin from './mixins/auth.js'
+Vue.mixin(AuthMixin)
+
 const app = new Vue({
     el: '#app',
 });
