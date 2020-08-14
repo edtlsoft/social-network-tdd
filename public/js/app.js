@@ -50190,7 +50190,7 @@ var user = document.head.querySelector('meta[name="user"]').content;
       };
     },
     isAuthenticated: function isAuthenticated() {
-      return !!this.user;
+      return !!user;
     },
     guest: function guest() {
       return !this.isAuthenticated;

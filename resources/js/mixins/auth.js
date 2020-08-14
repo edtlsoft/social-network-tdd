@@ -9,7 +9,7 @@ export default {
                     : { name: 'Usuario invitado' }
         },
         isAuthenticated() {
-            return !! this.user
+            return !! user
         },
         guest() {
             return ! this.isAuthenticated
