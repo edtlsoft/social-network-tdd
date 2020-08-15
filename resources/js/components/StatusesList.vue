@@ -14,6 +14,10 @@
                 <div>
                     <p class="card-text text-secondary" v-text="status.body"></p>
                 </div>
+                <div>
+                    <button v-if="status.is_liked" dusk="unlike-btn" @clic="unlike(status)">TE GUSTA</button>
+                    <button v-else dusk="like-btn" @click="like(status)">Like</button>
+                </div>
             </div>
         </div>
     </div>
@@ -30,6 +34,20 @@ export default {
         loadListOfStatuses() {
             axios.get('/statuses')
                 .then(response => this.statuses = response.data.data)
+                .catch(errors => console.log(errors))
+        },
+        like(status) {
+            axios.post(`/statuses/${status.id}/like`)
+                .then(response => {
+                    status.is_liked = true
+                })
+                .catch(errors => console.log(errors))
+        },
+        unlike(status) {
+            axios.post(`/statuses/${status.id}/like`)
+                .then(response => {
+                    status.is_liked = true
+                })
                 .catch(errors => console.log(errors))
         },
     },

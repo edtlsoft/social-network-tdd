@@ -1980,6 +1980,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1992,6 +1996,20 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/statuses').then(function (response) {
         return _this.statuses = response.data.data;
+      })["catch"](function (errors) {
+        return console.log(errors);
+      });
+    },
+    like: function like(status) {
+      axios.post("/statuses/".concat(status.id, "/like")).then(function (response) {
+        status.is_liked = true;
+      })["catch"](function (errors) {
+        return console.log(errors);
+      });
+    },
+    unlike: function unlike(status) {
+      axios.post("/statuses/".concat(status.id, "/like")).then(function (response) {
+        status.is_liked = true;
       })["catch"](function (errors) {
         return console.log(errors);
       });
@@ -37714,6 +37732,34 @@ var render = function() {
                 staticClass: "card-text text-secondary",
                 domProps: { textContent: _vm._s(status.body) }
               })
+            ]),
+            _vm._v(" "),
+            _c("div", [
+              status.is_liked
+                ? _c(
+                    "button",
+                    {
+                      attrs: { dusk: "unlike-btn" },
+                      on: {
+                        clic: function($event) {
+                          return _vm.unlike(status)
+                        }
+                      }
+                    },
+                    [_vm._v("TE GUSTA")]
+                  )
+                : _c(
+                    "button",
+                    {
+                      attrs: { dusk: "like-btn" },
+                      on: {
+                        click: function($event) {
+                          return _vm.like(status)
+                        }
+                      }
+                    },
+                    [_vm._v("Like")]
+                  )
             ])
           ])
         ]

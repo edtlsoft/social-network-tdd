@@ -70,4 +70,19 @@ class StatusTest extends TestCase
         // Then
         $this->assertEquals(1, $status->likes()->count());
     }
+
+    /** @test */
+    public function a_status_knows_if_has_been_liked()
+    {
+        $user   = factory(User::class)->create();
+        $status = factory(Status::class)->create();
+
+        $this->assertFalse($status->isLiked());
+
+        $this->actingAs($user);
+
+        $status->like();
+
+        $this->assertTrue($status->isLiked());
+    }
 }
