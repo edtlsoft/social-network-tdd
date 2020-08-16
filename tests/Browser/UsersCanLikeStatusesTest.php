@@ -25,9 +25,32 @@ class UsersCanLikeStatusesTest extends DuskTestCase
                     ->visit('/')
                     ->waitForText($status->body)
                     ->press('@like-btn')
-                    ->waitForText('TE GUSTA')
-                    ->assertSee('TE GUSTA')
+                    ->waitForText('Unlike')
+                    ->assertSee('Unlike')
                     ;
+        });
+    }
+
+    /** @test
+     * @throws \Throwable
+     */
+    public function user_can_like_and_unlike_statuses()
+    {
+        $user   = factory(User::class)->create();
+        $status = factory(Status::class)->create();
+
+        $this->browse(function (Browser $browser) use ($user, $status) {
+            $browser->loginAs($user)
+                ->visit('/')
+                ->waitForText($status->body)
+                ->press('@like-btn')
+                ->waitForText('Unlike')
+                ->assertSee('Unlike')
+
+                ->press('@unlike-btn')
+                ->waitForText('Like')
+                ->assertSee('Like')
+            ;
         });
     }
 }

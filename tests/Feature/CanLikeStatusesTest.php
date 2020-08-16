@@ -43,4 +43,24 @@ class CanLikeStatusesTest extends TestCase
             'message' => 'Unauthenticated.'
         ]);
     }
+
+    /** @test */
+    public function an_authenticated_user_can_unlike_statuses()
+    {
+        $this->withoutExceptionHandling();
+        // Given
+        $status = factory(Status::class)->create();
+        $user   = factory(User::class)->create();
+        $this->actingAs($user);
+
+        // When
+        $response = $this->postJson(route('statuses.like.store', $status));
+        $response = $this->deleteJson(route('statuses.like.destroy', $status));
+
+        // Then
+        $this->assertDatabaseMissing('likes', [
+            'user_id'   => $user->id,
+            'status_id' => $status->id,
+        ]);
+    }
 }

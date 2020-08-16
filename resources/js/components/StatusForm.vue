@@ -7,11 +7,13 @@
                 </textarea>
             </div>
             <div class="card-footer">
-                <button class="btn btn-primary" id="create-status">Publish</button>
+                <button class="btn btn-primary" id="create-status">
+                    <i class="fa fa-paper-plane mr-1"></i> Post
+                </button>
             </div>
         </form>
         <div v-else class="card-body">
-            <a href="/login">Debes hacer login</a>
+            <a href="/login">Must log in</a>
         </div>
     </div>
 </template>

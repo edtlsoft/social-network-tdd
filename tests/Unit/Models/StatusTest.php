@@ -85,4 +85,20 @@ class StatusTest extends TestCase
 
         $this->assertTrue($status->isLiked());
     }
+
+    /** @test */
+    public function a_status_can_be_unliked()
+    {
+        // Given
+        $status = factory(Status::class)->create();
+        $user = factory(User::class)->create();
+        $this->actingAs($user);
+
+        // When
+        $status->like();
+        $status->unlike();
+
+        // Then
+        $this->assertEquals(0, $status->likes()->count());
+    }
 }

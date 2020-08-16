@@ -1926,6 +1926,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1984,6 +1986,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2008,8 +2020,8 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     unlike: function unlike(status) {
-      axios.post("/statuses/".concat(status.id, "/like")).then(function (response) {
-        status.is_liked = true;
+      axios["delete"]("/statuses/".concat(status.id, "/like")).then(function (response) {
+        status.is_liked = false;
       })["catch"](function (errors) {
         return console.log(errors);
       });
@@ -37655,7 +37667,7 @@ var render = function() {
           ]
         )
       : _c("div", { staticClass: "card-body" }, [
-          _c("a", { attrs: { href: "/login" } }, [_vm._v("Debes hacer login")])
+          _c("a", { attrs: { href: "/login" } }, [_vm._v("Must log in")])
         ])
   ])
 }
@@ -37668,7 +37680,10 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-primary", attrs: { id: "create-status" } },
-        [_vm._v("Publish")]
+        [
+          _c("i", { staticClass: "fa fa-paper-plane mr-1" }),
+          _vm._v(" Post\n            ")
+        ]
       )
     ])
   }
@@ -37732,35 +37747,45 @@ var render = function() {
                 staticClass: "card-text text-secondary",
                 domProps: { textContent: _vm._s(status.body) }
               })
-            ]),
-            _vm._v(" "),
-            _c("div", [
-              status.is_liked
-                ? _c(
-                    "button",
-                    {
-                      attrs: { dusk: "unlike-btn" },
-                      on: {
-                        clic: function($event) {
-                          return _vm.unlike(status)
-                        }
-                      }
-                    },
-                    [_vm._v("TE GUSTA")]
-                  )
-                : _c(
-                    "button",
-                    {
-                      attrs: { dusk: "like-btn" },
-                      on: {
-                        click: function($event) {
-                          return _vm.like(status)
-                        }
-                      }
-                    },
-                    [_vm._v("Like")]
-                  )
             ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-footer" }, [
+            status.is_liked
+              ? _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-link btn-sm",
+                    attrs: { dusk: "unlike-btn" },
+                    on: {
+                      click: function($event) {
+                        return _vm.unlike(status)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "fas fa-thumbs-up text-primary mr-1"
+                    }),
+                    _vm._v(" Unlike\n            ")
+                  ]
+                )
+              : _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-link btn-sm",
+                    attrs: { dusk: "like-btn" },
+                    on: {
+                      click: function($event) {
+                        return _vm.like(status)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", { staticClass: "far fa-thumbs-up mr-1" }),
+                    _vm._v(" Like\n            ")
+                  ]
+                )
           ])
         ]
       )

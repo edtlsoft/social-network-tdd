@@ -14,10 +14,20 @@
                 <div>
                     <p class="card-text text-secondary" v-text="status.body"></p>
                 </div>
-                <div>
-                    <button v-if="status.is_liked" dusk="unlike-btn" @clic="unlike(status)">TE GUSTA</button>
-                    <button v-else dusk="like-btn" @click="like(status)">Like</button>
-                </div>
+            </div>
+            <div class="card-footer">
+                <button v-if="status.is_liked"
+                        @click="unlike(status)"
+                        class="btn btn-link btn-sm"
+                        dusk="unlike-btn">
+                    <i class="fas fa-thumbs-up text-primary mr-1"></i> Unlike
+                </button>
+                <button v-else
+                        @click="like(status)"
+                        class="btn btn-link btn-sm"
+                        dusk="like-btn">
+                    <i class="far fa-thumbs-up mr-1"></i> Like
+                </button>
             </div>
         </div>
     </div>
@@ -44,9 +54,9 @@ export default {
                 .catch(errors => console.log(errors))
         },
         unlike(status) {
-            axios.post(`/statuses/${status.id}/like`)
+            axios.delete(`/statuses/${status.id}/like`)
                 .then(response => {
-                    status.is_liked = true
+                    status.is_liked = false
                 })
                 .catch(errors => console.log(errors))
         },
