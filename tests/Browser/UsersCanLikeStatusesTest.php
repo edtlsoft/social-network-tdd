@@ -53,4 +53,20 @@ class UsersCanLikeStatusesTest extends DuskTestCase
             ;
         });
     }
+
+    /** @test
+     * @throws \Throwable
+     */
+    public function guest_can_not_like_statuses()
+    {
+        $status = factory(Status::class)->create();
+
+        $this->browse(function (Browser $browser) use ($status) {
+            $browser->visit('/')
+                ->waitForText($status->body)
+                ->press('@like-btn')
+                ->assertPathIs('/login')
+                ;
+        });
+    }
 }

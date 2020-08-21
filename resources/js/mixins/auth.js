@@ -15,4 +15,11 @@ export default {
             return ! this.isAuthenticated
         },
     },
+    methods: {
+        redirectIfGuest() {
+            if( this.guest ){
+                window.location.href = '/login'
+            }
+        },
+    },
 }

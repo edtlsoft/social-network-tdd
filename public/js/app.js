@@ -37711,6 +37711,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { on: { click: _vm.redirectIfGuest } },
     _vm._l(_vm.statuses, function(status) {
       return _c(
         "div",
@@ -50265,6 +50266,13 @@ var user = document.head.querySelector('meta[name="user"]').content;
     },
     guest: function guest() {
       return !this.isAuthenticated;
+    }
+  },
+  methods: {
+    redirectIfGuest: function redirectIfGuest() {
+      if (this.guest) {
+        window.location.href = '/login';
+      }
     }
   }
 });

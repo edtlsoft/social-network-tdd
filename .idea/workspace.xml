@@ -24,21 +24,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StatusLikeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StatusLikeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Status.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Status.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/StatusForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/StatusForm.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/StatusesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/StatusesList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/mixins/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/mixins/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanLikeStatusesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanLikeStatusesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CanLikeStatusesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CanLikeStatusesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,6 +230,8 @@
       <workItem from="1596850699052" duration="74457000" />
       <workItem from="1597462191402" duration="4104000" />
       <workItem from="1597542473565" duration="4099000" />
+      <workItem from="1597670519477" duration="2136000" />
+      <workItem from="1597973470369" duration="2314000" />
     </task>
     <servers />
   </component>
@@ -331,14 +323,15 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596727465570" />
-    <state x="295" y="0" width="583" height="728" key="find.popup" timestamp="1596727160385">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="295" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1596727160385" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1597547824467">
+    <state x="1816" y="-105" width="583" height="728" key="find.popup" timestamp="1597707431957">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597283565427" />
+    <state x="295" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1596727160385" />
+    <state x="1816" y="-105" width="583" height="728" key="find.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597707431957" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597976061810">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1597976061810" />
     <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597547824467" />
     <state x="1712" y="-183" width="672" height="678" key="search.everywhere.popup/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597380076229" />
     <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208481687" />
