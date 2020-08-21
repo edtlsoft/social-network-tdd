@@ -21,7 +21,7 @@ class UsersCanSeeAllStatusesTest extends DuskTestCase
     {
         // Given
         $user = factory(User::class)->create();
-        $statuses = factory(Status::class, 5)->create();
+        $statuses = factory(Status::class, 5)->create(['created_at' => now()->subMinute()]);
 
         $this->browse(function (Browser $browser) use ($user, $statuses) {
             $browser->loginAs($user)
