@@ -1996,6 +1996,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2015,6 +2016,7 @@ __webpack_require__.r(__webpack_exports__);
     like: function like(status) {
       axios.post("/statuses/".concat(status.id, "/like")).then(function (response) {
         status.is_liked = true;
+        status.likes_count++;
       })["catch"](function (errors) {
         return console.log(errors);
       });
@@ -2022,6 +2024,7 @@ __webpack_require__.r(__webpack_exports__);
     unlike: function unlike(status) {
       axios["delete"]("/statuses/".concat(status.id, "/like")).then(function (response) {
         status.is_liked = false;
+        status.likes_count--;
       })["catch"](function (errors) {
         return console.log(errors);
       });
@@ -37786,7 +37789,11 @@ var render = function() {
                     _c("i", { staticClass: "far fa-thumbs-up mr-1" }),
                     _vm._v(" Like\n            ")
                   ]
-                )
+                ),
+            _vm._v(" "),
+            _c("span", { attrs: { dusk: "likes-count" } }, [
+              _vm._v(_vm._s(status.likes_count))
+            ])
           ])
         ]
       )

@@ -20,7 +20,8 @@ class StatusResource extends JsonResource
             'user_name' => $this->resource->user->name,
             'user_avatar' => '/images/default-avatar.jpg',
             'ago' => $this->resource->created_at->diffForHumans(),
-            'is_liked' => $this->resource->isLiked()
+            'is_liked' => $this->resource->isLiked(),
+            'likes_count' => $this->resource->likesCount()
         ];
     }
 }

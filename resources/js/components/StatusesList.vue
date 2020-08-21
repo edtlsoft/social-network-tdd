@@ -28,6 +28,7 @@
                         dusk="like-btn">
                     <i class="far fa-thumbs-up mr-1"></i> Like
                 </button>
+                <span dusk="likes-count">{{ status.likes_count }}</span>
             </div>
         </div>
     </div>
@@ -50,6 +51,7 @@ export default {
             axios.post(`/statuses/${status.id}/like`)
                 .then(response => {
                     status.is_liked = true
+                    status.likes_count++
                 })
                 .catch(errors => console.log(errors))
         },
@@ -57,6 +59,7 @@ export default {
             axios.delete(`/statuses/${status.id}/like`)
                 .then(response => {
                     status.is_liked = false
+                    status.likes_count--
                 })
                 .catch(errors => console.log(errors))
         },
