@@ -13,6 +13,8 @@ Route::post('/statuses', 'StatusController@store')->name('statuses.store');
 Route::post('/statuses/{status}/like', 'StatusLikeController@store')->name('statuses.like.store');
 Route::delete('/statuses/{status}/like', 'StatusLikeController@destroy')->name('statuses.like.destroy');
 
+// Statuses comments
+Route::post('/statuses/{status}/comments', 'StatusCommentController@store')->name('statuses.comments.store');
 
 
 Auth::routes();
