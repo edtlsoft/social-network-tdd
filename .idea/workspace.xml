@@ -24,13 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/StatusResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/StatusResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Status.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Status.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/StatusesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/StatusesList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanLikeStatusesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanLikeStatusesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Http/Resources/StatusResourceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Http/Resources/StatusResourceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,6 +229,7 @@
       <workItem from="1597542473565" duration="4099000" />
       <workItem from="1597670519477" duration="2136000" />
       <workItem from="1597973470369" duration="5553000" />
+      <workItem from="1598064554338" duration="1444000" />
     </task>
     <servers />
   </component>

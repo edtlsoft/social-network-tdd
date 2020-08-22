@@ -15,7 +15,7 @@
                     <p class="card-text text-secondary" v-text="status.body"></p>
                 </div>
             </div>
-            <div class="card-footer">
+            <div class="card-footer d-flex justify-content-between align-items-center">
                 <button v-if="status.is_liked"
                         @click="unlike(status)"
                         class="btn btn-link btn-sm"
@@ -28,7 +28,10 @@
                         dusk="like-btn">
                     <i class="far fa-thumbs-up mr-1"></i> Like
                 </button>
-                <span dusk="likes-count">{{ status.likes_count }}</span>
+                <div class="text-secondary mr-2">
+                    <i class="far fa-thumbs-up"></i>
+                    <span dusk="likes-count">{{ status.likes_count }}</span>
+                </div>
             </div>
         </div>
     </div>
