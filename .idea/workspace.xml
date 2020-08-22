@@ -23,6 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/StatusCommentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_22_034931_create_comments_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/CreateCommentsTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Status.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Status.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -178,7 +182,7 @@
       <recent name="C:\xampp\htdocs\developer\social-network-tdd" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.CreateCommentsTest.authenticated_users_can_comment_statuses">
+  <component name="RunManager" selected="PHPUnit.CreateCommentsTest.guest_users_can_not_comment_statuses">
     <configuration name="CanLikeStatusesTest.an_authenticated_user_can_unlike_statuses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CanLikeStatusesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CanLikeStatusesTest.php" method="an_authenticated_user_can_unlike_statuses" scope="Method" />
       <method v="2" />
@@ -187,8 +191,8 @@
       <TestRunner class="Tests\Feature\CreateCommentsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateCommentsTest.php" method="authenticated_users_can_comment_statuses" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="StatusResourceTest.a_status_resource_must_have_the_necessary_fields" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\Http\Resources\StatusResourceTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Http/Resources/StatusResourceTest.php" method="a_status_resource_must_have_the_necessary_fields" scope="Method" />
+    <configuration name="CreateCommentsTest.guest_users_can_not_comment_statuses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CreateCommentsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateCommentsTest.php" method="guest_users_can_not_comment_statuses" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="StatusTest.a_status_can_be_unliked" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -205,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CreateCommentsTest.guest_users_can_not_comment_statuses" />
         <item itemvalue="PHPUnit.CreateCommentsTest.authenticated_users_can_comment_statuses" />
         <item itemvalue="PHPUnit.StatusTest.a_status_knows_how_many_likes_it_has" />
         <item itemvalue="PHPUnit.StatusTest.a_status_can_be_unliked" />
         <item itemvalue="PHPUnit.CanLikeStatusesTest.an_authenticated_user_can_unlike_statuses" />
-        <item itemvalue="PHPUnit.StatusResourceTest.a_status_resource_must_have_the_necessary_fields" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +233,7 @@
       <workItem from="1597542473565" duration="4099000" />
       <workItem from="1597670519477" duration="2136000" />
       <workItem from="1597973470369" duration="5553000" />
-      <workItem from="1598064554338" duration="3368000" />
+      <workItem from="1598064554338" duration="3947000" />
     </task>
     <servers />
   </component>
@@ -265,31 +269,31 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597009297666" />
-    <state width="1262" height="259" key="GridCell.Tab.0.bottom" timestamp="1598068377260">
+    <state width="963" height="259" key="GridCell.Tab.0.bottom" timestamp="1598068950172">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1262" height="259" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598068377260" />
+    <state width="963" height="259" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598068950172" />
     <state width="1367" height="223" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597545776645" />
     <state width="1367" height="179" key="GridCell.Tab.0.bottom/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.bottom/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
-    <state width="1262" height="259" key="GridCell.Tab.0.center" timestamp="1598068377259">
+    <state width="963" height="259" key="GridCell.Tab.0.center" timestamp="1598068950171">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1262" height="259" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598068377259" />
+    <state width="963" height="259" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598068950171" />
     <state width="1367" height="223" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597545776643" />
     <state width="1367" height="179" key="GridCell.Tab.0.center/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628126" />
     <state width="1367" height="287" key="GridCell.Tab.0.center/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929868" />
-    <state width="1262" height="259" key="GridCell.Tab.0.left" timestamp="1598068377259">
+    <state width="963" height="259" key="GridCell.Tab.0.left" timestamp="1598068950170">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1262" height="259" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598068377259" />
+    <state width="963" height="259" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598068950170" />
     <state width="1367" height="223" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597545776642" />
     <state width="1367" height="179" key="GridCell.Tab.0.left/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628125" />
     <state width="1367" height="287" key="GridCell.Tab.0.left/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929867" />
-    <state width="1262" height="259" key="GridCell.Tab.0.right" timestamp="1598068377260">
+    <state width="963" height="259" key="GridCell.Tab.0.right" timestamp="1598068950171">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1262" height="259" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598068377260" />
+    <state width="963" height="259" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598068950171" />
     <state width="1367" height="223" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597545776644" />
     <state width="1367" height="179" key="GridCell.Tab.0.right/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.right/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
@@ -326,10 +330,10 @@
     </state>
     <state x="295" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1596727160385" />
     <state x="1816" y="-105" width="583" height="728" key="find.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597707431957" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1598068422540">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1598069006282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598068422540" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598069006282" />
     <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597547824467" />
     <state x="1712" y="-183" width="672" height="678" key="search.everywhere.popup/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597380076229" />
     <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208481687" />

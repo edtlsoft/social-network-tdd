@@ -39,9 +39,7 @@ class CanLikeStatusesTest extends TestCase
         $response = $this->postJson(route('statuses.like.store', $status));
 
         // Then
-        $response->assertJson([
-            'message' => 'Unauthenticated.'
-        ]);
+        $response->assertStatus(401);
     }
 
     /** @test */

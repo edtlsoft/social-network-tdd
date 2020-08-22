@@ -16,8 +16,6 @@ class CreateCommentsTest extends TestCase
     /** @test */
     public function authenticated_users_can_comment_statuses()
     {
-        $this->withoutExceptionHandling();
-
         // Given
         $status  = factory(Status::class)->create();
         $comment = 'My first comment';
@@ -36,5 +34,21 @@ class CreateCommentsTest extends TestCase
             'status_id' => $status->id,
             'body' => $comment,
         ]);
+    }
+
+    /** @test */
+    public function guest_users_can_not_comment_statuses()
+    {
+        // Given
+        $status  = factory(Status::class)->create();
+        $comment = 'My first comment';
+
+        // When
+        $response = $this->postJson(route('statuses.comments.store', $status), [
+            'body' => $comment,
+        ]);
+
+        // Then
+        $response->assertStatus(401);
     }
 }
