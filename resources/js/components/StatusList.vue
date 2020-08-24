@@ -1,44 +1,21 @@
 <template>
     <div @click="redirectIfGuest">
-        <div class="card mb-3 border-0 shadow-sm" v-for="status in statuses" :key="status.id">
-            <div class="card-body d-flex flex-column">
-                <div class="d-flex align-items-center mb-3">
-                    <div>
-                        <img class="rounded mr-3 shadow-sm" :src="status.user_avatar" alt="user-profile" width="40px">
-                    </div>
-                    <div>
-                        <h5 class="mb-1" v-text="status.user_name"></h5>
-                        <div class="small text-muted" v-text="status.ago"></div>
-                    </div>
-                </div>
-                <div>
-                    <p class="card-text text-secondary" v-text="status.body"></p>
-                </div>
-            </div>
-            <div class="card-footer d-flex justify-content-between align-items-center">
-                <button v-if="status.is_liked"
-                        @click="unlike(status)"
-                        class="btn btn-link btn-sm"
-                        dusk="unlike-btn">
-                    <i class="fas fa-thumbs-up text-primary mr-1"></i> Unlike
-                </button>
-                <button v-else
-                        @click="like(status)"
-                        class="btn btn-link btn-sm"
-                        dusk="like-btn">
-                    <i class="far fa-thumbs-up mr-1"></i> Like
-                </button>
-                <div class="text-secondary mr-2">
-                    <i class="far fa-thumbs-up"></i>
-                    <span dusk="likes-count">{{ status.likes_count }}</span>
-                </div>
-            </div>
-        </div>
+        <status-list-item
+            v-for="status in statuses"
+            :key="status.id"
+            :status="status"
+        ></status-list-item>
     </div>
 </template>
 
 <script>
+
+import StatusListItem from "./StatusListItem";
+
 export default {
+    components: {
+        StatusListItem,
+    },
     data() {
         return ({
             statuses: [],
@@ -50,22 +27,7 @@ export default {
                 .then(response => this.statuses = response.data.data)
                 .catch(errors => console.log(errors))
         },
-        like(status) {
-            axios.post(`/statuses/${status.id}/like`)
-                .then(response => {
-                    status.is_liked = true
-                    status.likes_count++
-                })
-                .catch(errors => console.log(errors))
-        },
-        unlike(status) {
-            axios.delete(`/statuses/${status.id}/like`)
-                .then(response => {
-                    status.is_liked = false
-                    status.likes_count--
-                })
-                .catch(errors => console.log(errors))
-        },
+
     },
     mounted() {
         this.loadListOfStatuses();
