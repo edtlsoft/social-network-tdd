@@ -17,8 +17,8 @@ class CreateCommentsTest extends TestCase
     public function authenticated_users_can_comment_statuses()
     {
         // Given
-        $status  = factory(Status::class)->create();
         $comment = 'My first comment';
+        $status  = factory(Status::class)->create();
         $user    = factory(User::class)->create();
 
         $this->actingAs($user);
@@ -26,6 +26,10 @@ class CreateCommentsTest extends TestCase
         // When
         $response = $this->postJson(route('statuses.comments.store', $status), [
             'body' => $comment,
+        ]);
+
+        $response->assertJson([
+            'data' => ['body' => $comment]
         ]);
 
         // Then
