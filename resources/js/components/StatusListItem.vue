@@ -20,6 +20,16 @@
                 <i class="far fa-thumbs-up"></i>
                 <span dusk="likes-count">{{ status.likes_count }}</span>
             </div>
+            <form @submit.prevent="storeComment">
+                <textarea class="form-control" dusk="comment" v-model="comment"
+                ></textarea>
+                <button type="submit" dusk="comment-btn">Send </button>
+            </form>
+            <ul class="list-group">
+                <li class="list-group-item" v-for="comment in comments" :key="comment.id">
+                    {{ comment.body }}
+                </li>
+            </ul>
         </div>
     </div>
 </template>
@@ -40,9 +50,22 @@ export default {
     },
     data() {
         return ({
-            //
+            comment: '',
+            comments: [],
         })
-    }
+    },
+    methods: {
+        storeComment() {
+            axios.post(`/statuses/${this.status.id}/comments`, {
+                body: this.comment
+            })
+            .then(response => {
+                this.comments.push(response.data.data)
+                this.comment = ''
+            })
+            .catch(errors => console.log(errors))
+        }
+    },
 }
 </script>
 

@@ -2094,6 +2094,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -2106,8 +2116,25 @@ __webpack_require__.r(__webpack_exports__);
     LikeBtn: _LikeBtn__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
-    return {//
+    return {
+      comment: '',
+      comments: []
     };
+  },
+  methods: {
+    storeComment: function storeComment() {
+      var _this = this;
+
+      axios.post("/statuses/".concat(this.status.id, "/comments"), {
+        body: this.comment
+      }).then(function (response) {
+        _this.comments.push(response.data.data);
+
+        _this.comment = '';
+      })["catch"](function (errors) {
+        return console.log(errors);
+      });
+    }
   }
 });
 
@@ -37920,7 +37947,63 @@ var render = function() {
           _c("span", { attrs: { dusk: "likes-count" } }, [
             _vm._v(_vm._s(_vm.status.likes_count))
           ])
-        ])
+        ]),
+        _vm._v(" "),
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.storeComment($event)
+              }
+            }
+          },
+          [
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.comment,
+                  expression: "comment"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { dusk: "comment" },
+              domProps: { value: _vm.comment },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.comment = $event.target.value
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("button", { attrs: { type: "submit", dusk: "comment-btn" } }, [
+              _vm._v("Send ")
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "ul",
+          { staticClass: "list-group" },
+          _vm._l(_vm.comments, function(comment) {
+            return _c(
+              "li",
+              { key: comment.id, staticClass: "list-group-item" },
+              [
+                _vm._v(
+                  "\n                " + _vm._s(comment.body) + "\n            "
+                )
+              ]
+            )
+          }),
+          0
+        )
       ],
       1
     )
