@@ -26,5 +26,15 @@ class CommentResourceTest extends TestCase
             $comment->body,
             $commentResource['body']
         );
+
+        $this->assertEquals(
+            $comment->user->name,
+            $commentResource['user_name']
+        );
+
+        $this->assertEquals(
+            '/images/default-avatar.jpg',
+            $commentResource['user_avatar']
+        );
     }
 }

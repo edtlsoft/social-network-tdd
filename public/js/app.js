@@ -2104,6 +2104,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -37997,7 +37998,11 @@ var render = function() {
               { key: comment.id, staticClass: "list-group-item" },
               [
                 _vm._v(
-                  "\n                " + _vm._s(comment.body) + "\n            "
+                  "\n                " +
+                    _vm._s(comment.body) +
+                    "\n                " +
+                    _vm._s(comment.user_name) +
+                    "\n            "
                 )
               ]
             )

@@ -174,25 +174,25 @@
       <recent name="C:\xampp\htdocs\developer\social-network-tdd" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.StatusResourceTest.a_status_resource_must_have_the_necessary_fields">
+  <component name="RunManager" selected="PHPUnit.CommentResourceTest.a_comment_resource_must_have_the_necessary_fields">
+    <configuration name="Comment" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Models\Comment" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/CommentTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <configuration name="CommentResourceTest.a_comment_resource_must_have_the_necessary_fields" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\Http\Resources\CommentResourceTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Http/Resources/CommentResourceTest.php" method="a_comment_resource_must_have_the_necessary_fields" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CommentTest.a_comment_belogns_to_user" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Models\CommentTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/CommentTest.php" method="a_comment_belogns_to_user" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="StatusResourceTest.a_status_resource_must_have_the_necessary_fields" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\Http\Resources\StatusResourceTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Http/Resources/StatusResourceTest.php" method="a_status_resource_must_have_the_necessary_fields" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UsersCanCommentStatusTest.a_authenticated_user_can_comment_a_status" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Browser\UsersCanCommentStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Browser/UsersCanCommentStatusTest.php" method="a_authenticated_user_can_comment_a_status" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="UsersCanCommentStatusTest.authenticated_users_can_comment_a_status" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Browser\UsersCanCommentStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Browser/UsersCanCommentStatusTest.php" method="authenticated_users_can_comment_a_status" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="UsersCanCommentStatusTest.authenticated_users_can_see_all_comments" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Browser\UsersCanCommentStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Browser/UsersCanCommentStatusTest.php" method="authenticated_users_can_see_all_comments" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -201,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CommentResourceTest.a_comment_resource_must_have_the_necessary_fields" />
+        <item itemvalue="PHPUnit.CommentTest.a_comment_belogns_to_user" />
+        <item itemvalue="PHPUnit.Comment" />
         <item itemvalue="PHPUnit.StatusResourceTest.a_status_resource_must_have_the_necessary_fields" />
         <item itemvalue="PHPUnit.UsersCanCommentStatusTest.authenticated_users_can_comment_a_status" />
-        <item itemvalue="PHPUnit.UsersCanCommentStatusTest.authenticated_users_can_see_all_comments" />
-        <item itemvalue="PHPUnit.UsersCanCommentStatusTest.a_authenticated_user_can_comment_a_status" />
-        <item itemvalue="PHPUnit.CommentResourceTest.a_comment_resource_must_have_the_necessary_fields" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +227,7 @@
       <workItem from="1597973470369" duration="5553000" />
       <workItem from="1598064554338" duration="4355000" />
       <workItem from="1598231887983" duration="9767000" />
-      <workItem from="1598407662612" duration="3633000" />
+      <workItem from="1598407662612" duration="6028000" />
     </task>
     <servers />
   </component>
@@ -268,31 +268,31 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597009297666" />
-    <state width="963" height="300" key="GridCell.Tab.0.bottom" timestamp="1598411401828">
+    <state width="963" height="300" key="GridCell.Tab.0.bottom" timestamp="1598413925680">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="963" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598411401828" />
+    <state width="963" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598413925680" />
     <state width="1367" height="223" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597545776645" />
     <state width="1367" height="179" key="GridCell.Tab.0.bottom/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.bottom/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
-    <state width="963" height="300" key="GridCell.Tab.0.center" timestamp="1598411401827">
+    <state width="963" height="300" key="GridCell.Tab.0.center" timestamp="1598413925678">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="963" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598411401827" />
+    <state width="963" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598413925678" />
     <state width="1367" height="223" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597545776643" />
     <state width="1367" height="179" key="GridCell.Tab.0.center/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628126" />
     <state width="1367" height="287" key="GridCell.Tab.0.center/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929868" />
-    <state width="963" height="300" key="GridCell.Tab.0.left" timestamp="1598411401827">
+    <state width="963" height="300" key="GridCell.Tab.0.left" timestamp="1598413925678">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="963" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598411401827" />
+    <state width="963" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598413925678" />
     <state width="1367" height="223" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597545776642" />
     <state width="1367" height="179" key="GridCell.Tab.0.left/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628125" />
     <state width="1367" height="287" key="GridCell.Tab.0.left/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929867" />
-    <state width="963" height="300" key="GridCell.Tab.0.right" timestamp="1598411401828">
+    <state width="963" height="300" key="GridCell.Tab.0.right" timestamp="1598413925679">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="963" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598411401828" />
+    <state width="963" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598413925679" />
     <state width="1367" height="223" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597545776644" />
     <state width="1367" height="179" key="GridCell.Tab.0.right/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.right/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
@@ -329,10 +329,10 @@
     </state>
     <state x="295" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1596727160385" />
     <state x="1816" y="-105" width="583" height="728" key="find.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597707431957" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1598410537960">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1598413751823">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598410537960" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598413751823" />
     <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597547824467" />
     <state x="1712" y="-183" width="672" height="678" key="search.everywhere.popup/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597380076229" />
     <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208481687" />

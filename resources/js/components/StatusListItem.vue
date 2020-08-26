@@ -28,6 +28,7 @@
             <ul class="list-group">
                 <li class="list-group-item" v-for="comment in comments" :key="comment.id">
                     {{ comment.body }}
+                    {{ comment.user_name }}
                 </li>
             </ul>
         </div>
