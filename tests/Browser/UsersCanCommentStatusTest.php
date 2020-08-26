@@ -29,4 +29,20 @@ class UsersCanCommentStatusTest extends DuskTestCase
                     ;
         });
     }
+
+    /** @test */
+    public function authenticated_users_can_see_all_comments()
+    {
+        $status   = factory(\App\Models\Status::class)->create();
+        $comments = factory(\App\Models\Comment::class, 3)->create();
+
+        $this->browse(function (Browser $browser) use ($status, $comments) {
+            $browser->visit('/')
+                ->waitForText($status->body)
+                ->assertSee($comments->shift()->body)
+                ->assertSee($comments->shift()->body)
+                ->assertSee($comments->shift()->body)
+            ;
+        });
+    }
 }

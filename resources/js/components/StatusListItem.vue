@@ -51,7 +51,7 @@ export default {
     data() {
         return ({
             comment: '',
-            comments: [],
+            comments: this.status.comments,
         })
     },
     methods: {
