@@ -20,17 +20,44 @@
                 <i class="far fa-thumbs-up"></i>
                 <span dusk="likes-count">{{ status.likes_count }}</span>
             </div>
-            <form @submit.prevent="storeComment">
-                <textarea class="form-control" dusk="comment" v-model="comment"
-                ></textarea>
-                <button type="submit" dusk="comment-btn">Send </button>
+        </div>
+        <div class="card-footer">
+
+            <div v-for="comment in comments" :key="comment.id" class="mb-3">
+                <img class="rounded shadow-sm float-left mr-2" width="35" :src="comment.user_avatar" :alt="comment.user_name">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-2 text-secondary">
+                        <a href="#">
+                            <strong>{{ comment.user_name }}</strong>
+                        </a>
+                        {{ comment.body }}
+                    </div>
+                </div>
+            </div>
+
+            <form @submit.prevent="storeComment" v-if="isAuthenticated">
+                <div class="d-flex aling-items-center">
+                    <img class="rounded shadow-sm mr-2"
+                         width="35" src="/images/default-avatar.jpg"
+                         :alt="currentUser.name"
+                    >
+                    <div class="input-group">
+                        <textarea v-model="comment"
+                                  dusk="comment"
+                                  class="form-control border-0"
+                                  rows="1"
+                                  placeholder="Write a comment..."
+                        ></textarea>
+                        <div class="input-group-append">
+                            <button dusk="comment-btn"
+                                    type="submit"
+                                    class="btn btn-primary">
+                                Send
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </form>
-            <ul class="list-group">
-                <li class="list-group-item" v-for="comment in comments" :key="comment.id">
-                    {{ comment.body }}
-                    {{ comment.user_name }}
-                </li>
-            </ul>
         </div>
     </div>
 </template>
