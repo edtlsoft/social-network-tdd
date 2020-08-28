@@ -2,8 +2,13 @@
     <div>
         <form v-if="isAuthenticated" @submit.prevent="storeStatus">
             <div class="card-body">
-                <textarea v-model="status.body" class="form-control border-0 bg-light" name="body" id="body"
-                          :placeholder="`What's on your mind, ${currentUser.name}?`">
+                <textarea v-model="status.body"
+                          :placeholder="`What's on your mind, ${currentUser.name}?`"
+                          class="form-control border-0 bg-light"
+                          name="body"
+                          id="body"
+                          required
+                >
                 </textarea>
             </div>
             <div class="card-footer">

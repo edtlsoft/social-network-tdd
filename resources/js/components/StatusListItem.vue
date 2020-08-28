@@ -47,6 +47,7 @@
                                   class="form-control border-0"
                                   rows="1"
                                   placeholder="Write a comment..."
+                                  required
                         ></textarea>
                         <div class="input-group-append">
                             <button dusk="comment-btn"

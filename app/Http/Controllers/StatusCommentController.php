@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StatusCommentStoreRequest;
 use App\Http\Resources\CommentResource;
 use App\Models\Status;
 use Illuminate\Http\Request;
@@ -13,7 +14,7 @@ class StatusCommentController extends Controller
         $this->middleware('auth');
     }
 
-    public function store(Request $request, Status $status)
+    public function store(StatusCommentStoreRequest $request, Status $status)
     {
         $comment = $status->comments()->create([
             'user_id' => $request->user()->id,

@@ -1981,6 +1981,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2068,6 +2073,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _LikeBtn__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LikeBtn */ "./resources/js/components/LikeBtn.vue");
+//
 //
 //
 //
@@ -37828,10 +37834,11 @@ var render = function() {
                 ],
                 staticClass: "form-control border-0 bg-light",
                 attrs: {
+                  placeholder:
+                    "What's on your mind, " + _vm.currentUser.name + "?",
                   name: "body",
                   id: "body",
-                  placeholder:
-                    "What's on your mind, " + _vm.currentUser.name + "?"
+                  required: ""
                 },
                 domProps: { value: _vm.status.body },
                 on: {
@@ -38046,7 +38053,8 @@ var render = function() {
                       attrs: {
                         dusk: "comment",
                         rows: "1",
-                        placeholder: "Write a comment..."
+                        placeholder: "Write a comment...",
+                        required: ""
                       },
                       domProps: { value: _vm.comment },
                       on: {
