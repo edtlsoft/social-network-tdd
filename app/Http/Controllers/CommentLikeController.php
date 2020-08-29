@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Like;
+use App\Models\Comment;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class CommentLikeController extends Controller
 {
@@ -17,19 +20,22 @@ class CommentLikeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Comment $comment
+     * @return Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Comment $comment)
     {
-        //
+        return $comment->likes()->create([
+            'user_id' => $request->user()->id,
+        ]);
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
@@ -37,22 +43,11 @@ class CommentLikeController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, $id)
     {
@@ -62,11 +57,14 @@ class CommentLikeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Comment $comment
+     * @return Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, Comment $comment)
     {
-        //
+        return $comment->likes()->where([
+            'user_id' => $request->user()->id,
+        ])->delete();
     }
 }

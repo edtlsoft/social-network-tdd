@@ -12,21 +12,27 @@ class CanLikeCommentsTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function an_authenticated_user_can_like_comments()
+    public function an_authenticated_user_can_like_and_unlike_comments()
     {
+        $this->withoutExceptionHandling();
         // Given
         $comment = factory(Comment::class)->create();
-        $user   = factory(User::class)->create();
+        $user    = factory(User::class)->create();
         $this->actingAs($user);
 
         // When
         $response = $this->postJson(route('comments.like.store', $comment));
 
         // Then
-        $this->assertDatabaseHas('likes', [
-            'user_id'   => $user->id,
-            'status_id' => $comment->id,
-        ]);
+        $this->assertCount(1, $comment->fresh()->likes);
+        $this->assertDatabaseHas('likes', ['user_id' => $user->id]);
+
+        // When
+        $response = $this->deleteJson(route('comments.like.destroy', $comment));
+
+        // Then
+        $this->assertCount(0, $comment->fresh()->likes);
+        $this->assertDatabaseMissing('likes', ['user_id' => $user->id]);
     }
 
     /** @test */
@@ -40,25 +46,5 @@ class CanLikeCommentsTest extends TestCase
 
         // Then
         $response->assertStatus(401);
-    }
-
-    /** @test */
-    public function an_authenticated_user_can_unlike_comments()
-    {
-        $this->withoutExceptionHandling();
-        // Given
-        $status = factory(Comment::class)->create();
-        $user   = factory(User::class)->create();
-        $this->actingAs($user);
-
-        // When
-        $response = $this->postJson(route('comments.like.store', $status));
-        $response = $this->deleteJson(route('comments.like.destroy', $status));
-
-        // Then
-        $this->assertDatabaseMissing('likes', [
-            'user_id'   => $user->id,
-            'status_id' => $status->id,
-        ]);
     }
 }
