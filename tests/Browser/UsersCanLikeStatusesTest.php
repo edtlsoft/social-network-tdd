@@ -6,14 +6,16 @@ use App\Models\Status;
 use App\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
+use Laravel\Dusk\Concerns\InteractsWithAuthentication;
 use Tests\DuskTestCase;
+use Throwable;
 
 class UsersCanLikeStatusesTest extends DuskTestCase
 {
-    use DatabaseMigrations;
+    use DatabaseMigrations, InteractsWithAuthentication;
 
     /** @test
-     * @throws \Throwable
+     * @throws Throwable
      */
     public function user_can_like_statuses()
     {
@@ -32,7 +34,7 @@ class UsersCanLikeStatusesTest extends DuskTestCase
     }
 
     /** @test
-     * @throws \Throwable
+     * @throws Throwable
      */
     public function user_can_like_and_unlike_statuses()
     {
@@ -58,17 +60,20 @@ class UsersCanLikeStatusesTest extends DuskTestCase
     }
 
     /** @test
-     * @throws \Throwable
+     * @throws Throwable
      */
     public function guest_can_not_like_statuses()
     {
         $status = factory(Status::class)->create();
 
         $this->browse(function (Browser $browser) use ($status) {
+            // Logout Dusk
+            $browser->visit('_dusk/logout');
+
             $browser->visit('/')
                 ->waitForText($status->body)
+                ->screenshot('redirect-if-not-auth')
                 ->press('@like-btn')
-                ->pause(200)
                 ->assertPathIs('/login')
                 ;
         });
