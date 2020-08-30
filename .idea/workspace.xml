@@ -25,7 +25,10 @@
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Status.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Status.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanLikeStatusesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanLikeStatusesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/CommentTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/CommentTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,25 +181,25 @@
       <recent name="C:\xampp\htdocs\developer\social-network-tdd" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.StatusTest">
-    <configuration name="CommentTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\Models\CommentTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/CommentTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.StatusTest.a_status_model_must_use_the_triat_has_likes_trait">
+    <configuration name="CommentTest.a_comment_model_must_use_the_triat_has_likes_trait" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Models\CommentTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/CommentTest.php" method="a_comment_model_must_use_the_triat_has_likes_trait" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="CommentTest.a_status_can_be_unliked" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\Models\CommentTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/CommentTest.php" method="a_status_can_be_unliked" scope="Method" />
+    <configuration name="StatusTest.a_comment_model_must_use_the_triat_has_likes_trait" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Models\StatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" method="a_comment_model_must_use_the_triat_has_likes_trait" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="CommentTest.a_status_knows_how_many_likes_it_has" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\Models\CommentTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/CommentTest.php" method="a_status_knows_how_many_likes_it_has" scope="Method" />
+    <configuration name="StatusTest.a_model_model_must_use_the_triat_has_likes_trait" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Models\StatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" method="a_model_model_must_use_the_triat_has_likes_trait" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="CommentTest.a_status_knows_if_has_been_liked" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\Models\CommentTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/CommentTest.php" method="a_status_knows_if_has_been_liked" scope="Method" />
+    <configuration name="StatusTest.a_status_has_many_comments" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Models\StatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" method="a_status_has_many_comments" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="StatusTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\Models\StatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" scope="Class" />
+    <configuration name="StatusTest.a_status_model_must_use_the_triat_has_likes_trait" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Models\StatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" method="a_status_model_must_use_the_triat_has_likes_trait" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -205,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.StatusTest" />
-        <item itemvalue="PHPUnit.CommentTest" />
-        <item itemvalue="PHPUnit.CommentTest.a_status_knows_how_many_likes_it_has" />
-        <item itemvalue="PHPUnit.CommentTest.a_status_can_be_unliked" />
-        <item itemvalue="PHPUnit.CommentTest.a_status_knows_if_has_been_liked" />
+        <item itemvalue="PHPUnit.StatusTest.a_status_model_must_use_the_triat_has_likes_trait" />
+        <item itemvalue="PHPUnit.StatusTest.a_model_model_must_use_the_triat_has_likes_trait" />
+        <item itemvalue="PHPUnit.StatusTest.a_comment_model_must_use_the_triat_has_likes_trait" />
+        <item itemvalue="PHPUnit.CommentTest.a_comment_model_must_use_the_triat_has_likes_trait" />
+        <item itemvalue="PHPUnit.StatusTest.a_status_has_many_comments" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +235,7 @@
       <workItem from="1598064554338" duration="4355000" />
       <workItem from="1598231887983" duration="9767000" />
       <workItem from="1598407662612" duration="6620000" />
-      <workItem from="1598580928550" duration="13233000" />
+      <workItem from="1598580928550" duration="17422000" />
     </task>
     <servers />
   </component>
@@ -260,11 +263,15 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="44" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1597009129006" />
-    <state x="1779" y="14" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598750699010">
+    <state x="1866" y="-55" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598752172003">
+      <screen x="1366" y="-105" width="1366" height="728" />
+    </state>
+    <state x="1866" y="-55" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598752172003" />
+    <state x="1779" y="14" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598755155385">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598233258585" />
-    <state x="1779" y="14" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598750699010" />
+    <state x="1779" y="14" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598755155385" />
     <state x="1779" y="-207" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208260977" />
     <state x="695" y="115" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1598321497925">
       <screen x="0" y="0" width="1366" height="728" />
@@ -274,32 +281,32 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597009297666" />
-    <state width="1367" height="209" key="GridCell.Tab.0.bottom" timestamp="1598750666146">
+    <state width="1367" height="200" key="GridCell.Tab.0.bottom" timestamp="1598755128700">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
-    <state width="1367" height="209" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598750666146" />
+    <state width="1367" height="200" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598755128700" />
     <state width="1367" height="179" key="GridCell.Tab.0.bottom/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.bottom/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
-    <state width="1367" height="209" key="GridCell.Tab.0.center" timestamp="1598750666145">
+    <state width="1367" height="200" key="GridCell.Tab.0.center" timestamp="1598755128700">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
-    <state width="1367" height="209" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598750666145" />
+    <state width="1367" height="200" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598755128700" />
     <state width="1367" height="179" key="GridCell.Tab.0.center/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628126" />
     <state width="1367" height="287" key="GridCell.Tab.0.center/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929868" />
-    <state width="1367" height="209" key="GridCell.Tab.0.left" timestamp="1598750666145">
+    <state width="1367" height="200" key="GridCell.Tab.0.left" timestamp="1598755128699">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
-    <state width="1367" height="209" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598750666145" />
+    <state width="1367" height="200" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598755128699" />
     <state width="1367" height="179" key="GridCell.Tab.0.left/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628125" />
     <state width="1367" height="287" key="GridCell.Tab.0.left/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929867" />
-    <state width="1367" height="209" key="GridCell.Tab.0.right" timestamp="1598750666146">
+    <state width="1367" height="200" key="GridCell.Tab.0.right" timestamp="1598755128700">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
-    <state width="1367" height="209" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598750666146" />
+    <state width="1367" height="200" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598755128700" />
     <state width="1367" height="179" key="GridCell.Tab.0.right/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.right/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
     <state width="1367" height="259" key="GridCell.Tab.1.bottom" timestamp="1597376421875">
@@ -344,12 +351,27 @@
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="2027" y="26" key="refactoring.ChangeSignatureDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598584438139" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1598675971675">
+    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1598751826769">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598413751823" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598675971675" />
+    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598751826769" />
     <state x="1712" y="-183" width="672" height="678" key="search.everywhere.popup/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597380076229" />
     <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208481687" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/tests/Unit/Traits/HasLikesTraitTest.php</url>
+          <line>98</line>
+          <properties>
+            <option name="className" value="\Tests\Unit\Traits\HasLikesTraitTest" />
+            <option name="methodName" value="a_status_knows_how_many_likes_it_has" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

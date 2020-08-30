@@ -68,6 +68,7 @@ class UsersCanLikeStatusesTest extends DuskTestCase
             $browser->visit('/')
                 ->waitForText($status->body)
                 ->press('@like-btn')
+                ->pause(200)
                 ->assertPathIs('/login')
                 ;
         });
