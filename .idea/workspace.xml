@@ -24,7 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanLikeStatusesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanLikeStatusesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CommentResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/CommentResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/StatusListItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/StatusListItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Http/Resources/CommentResourceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Http/Resources/CommentResourceTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,9 +180,9 @@
       <recent name="C:\xampp\htdocs\developer\social-network-tdd" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.UsersCanLikeStatusesTest.guest_can_not_like_statuses">
-    <configuration name="CommentTest.a_comment_model_must_use_the_triat_has_likes_trait" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\Models\CommentTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/CommentTest.php" method="a_comment_model_must_use_the_triat_has_likes_trait" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.CommentResourceTest.a_comment_resource_must_have_the_necessary_fields">
+    <configuration name="CommentResourceTest.a_comment_resource_must_have_the_necessary_fields" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Http\Resources\CommentResourceTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Http/Resources/CommentResourceTest.php" method="a_comment_resource_must_have_the_necessary_fields" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="StatusTest.a_comment_model_must_use_the_triat_has_likes_trait" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -204,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CommentResourceTest.a_comment_resource_must_have_the_necessary_fields" />
         <item itemvalue="PHPUnit.UsersCanLikeStatusesTest.guest_can_not_like_statuses" />
         <item itemvalue="PHPUnit.StatusTest.a_status_model_must_use_the_triat_has_likes_trait" />
         <item itemvalue="PHPUnit.StatusTest.a_model_model_must_use_the_triat_has_likes_trait" />
         <item itemvalue="PHPUnit.StatusTest.a_comment_model_must_use_the_triat_has_likes_trait" />
-        <item itemvalue="PHPUnit.CommentTest.a_comment_model_must_use_the_triat_has_likes_trait" />
       </list>
     </recent_temporary>
   </component>
@@ -231,7 +234,7 @@
       <workItem from="1598064554338" duration="4355000" />
       <workItem from="1598231887983" duration="9767000" />
       <workItem from="1598407662612" duration="6620000" />
-      <workItem from="1598580928550" duration="19868000" />
+      <workItem from="1598580928550" duration="25258000" />
     </task>
     <servers />
   </component>
@@ -277,32 +280,32 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597009297666" />
-    <state width="1367" height="172" key="GridCell.Tab.0.bottom" timestamp="1598758153854">
+    <state width="1367" height="227" key="GridCell.Tab.0.bottom" timestamp="1598928465132">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
-    <state width="1367" height="172" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598758153854" />
+    <state width="1367" height="227" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598928465132" />
     <state width="1367" height="179" key="GridCell.Tab.0.bottom/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.bottom/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
-    <state width="1367" height="172" key="GridCell.Tab.0.center" timestamp="1598758153853">
+    <state width="1367" height="227" key="GridCell.Tab.0.center" timestamp="1598928465131">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
-    <state width="1367" height="172" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598758153853" />
+    <state width="1367" height="227" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598928465131" />
     <state width="1367" height="179" key="GridCell.Tab.0.center/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628126" />
     <state width="1367" height="287" key="GridCell.Tab.0.center/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929868" />
-    <state width="1367" height="172" key="GridCell.Tab.0.left" timestamp="1598758153853">
+    <state width="1367" height="227" key="GridCell.Tab.0.left" timestamp="1598928465128">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
-    <state width="1367" height="172" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598758153853" />
+    <state width="1367" height="227" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598928465128" />
     <state width="1367" height="179" key="GridCell.Tab.0.left/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628125" />
     <state width="1367" height="287" key="GridCell.Tab.0.left/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929867" />
-    <state width="1367" height="172" key="GridCell.Tab.0.right" timestamp="1598758153854">
+    <state width="1367" height="227" key="GridCell.Tab.0.right" timestamp="1598928465131">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
-    <state width="1367" height="172" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598758153854" />
+    <state width="1367" height="227" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598928465131" />
     <state width="1367" height="179" key="GridCell.Tab.0.right/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.right/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
     <state width="1367" height="259" key="GridCell.Tab.1.bottom" timestamp="1597376421875">
@@ -347,11 +350,11 @@
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="2027" y="26" key="refactoring.ChangeSignatureDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598584438139" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1598751826769">
+    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1598812313817">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598413751823" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598751826769" />
+    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598812313817" />
     <state x="1712" y="-183" width="672" height="678" key="search.everywhere.popup/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597380076229" />
     <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208481687" />
   </component>

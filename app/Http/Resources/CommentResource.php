@@ -16,9 +16,12 @@ class CommentResource extends JsonResource
     public function toArray($request)
     {
         return [
+            'id' => $this->resource->id,
             'body' => $this->resource->body,
             'user_name' => $this->resource->user->name,
-            'user_avatar' => '/images/default-avatar.jpg'
+            'user_avatar' => '/images/default-avatar.jpg',
+            'likes_count' => $this->resource->likesCount(),
+            'is_liked' => $this->resource->isLiked()
         ];
     }
 }

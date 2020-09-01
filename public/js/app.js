@@ -2138,6 +2138,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -2165,6 +2168,22 @@ __webpack_require__.r(__webpack_exports__);
         _this.comments.push(response.data.data);
 
         _this.comment = '';
+      })["catch"](function (errors) {
+        return console.log(errors);
+      });
+    },
+    storeLikeComment: function storeLikeComment(comment) {
+      axios.post("/comments/".concat(comment.id, "/like")).then(function (response) {
+        comment.is_liked = true;
+        comment.likes_count++;
+      })["catch"](function (errors) {
+        return console.log(errors);
+      });
+    },
+    deleteLikeComment: function deleteLikeComment(comment) {
+      axios["delete"]("/comments/".concat(comment.id, "/like")).then(function (response) {
+        comment.is_liked = false;
+        comment.likes_count--;
       })["catch"](function (errors) {
         return console.log(errors);
       });
@@ -38013,7 +38032,38 @@ var render = function() {
                     "\n                "
                 )
               ])
-            ])
+            ]),
+            _vm._v(" "),
+            _c("span", {
+              attrs: { dusk: "comment-likes-count" },
+              domProps: { textContent: _vm._s(comment.likes_count) }
+            }),
+            _vm._v(" "),
+            !comment.is_liked
+              ? _c(
+                  "button",
+                  {
+                    attrs: { dusk: "comment-like-btn" },
+                    on: {
+                      click: function($event) {
+                        return _vm.storeLikeComment(comment)
+                      }
+                    }
+                  },
+                  [_vm._v("Like")]
+                )
+              : _c(
+                  "button",
+                  {
+                    attrs: { dusk: "comment-unlike-btn" },
+                    on: {
+                      click: function($event) {
+                        return _vm.deleteLikeComment(comment)
+                      }
+                    }
+                  },
+                  [_vm._v("Unlike")]
+                )
           ])
         }),
         _vm._v(" "),

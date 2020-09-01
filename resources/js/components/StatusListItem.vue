@@ -33,6 +33,9 @@
                         {{ comment.body }}
                     </div>
                 </div>
+                <span dusk="comment-likes-count" v-text="comment.likes_count"></span>
+                <button v-if="!comment.is_liked" dusk="comment-like-btn" @click="storeLikeComment(comment)">Like</button>
+                <button v-else dusk="comment-unlike-btn" @click="deleteLikeComment(comment)">Unlike</button>
             </div>
 
             <form @submit.prevent="storeComment" v-if="isAuthenticated">
@@ -93,7 +96,25 @@ export default {
                 this.comment = ''
             })
             .catch(errors => console.log(errors))
-        }
+        },
+
+        storeLikeComment(comment) {
+            axios.post(`/comments/${comment.id}/like`)
+                .then(response => {
+                    comment.is_liked = true
+                    comment.likes_count++
+                })
+                .catch(errors => console.log(errors))
+        },
+        deleteLikeComment(comment) {
+            axios.delete(`/comments/${comment.id}/like`)
+                .then(response => {
+                    comment.is_liked = false
+                    comment.likes_count--
+                })
+                .catch(errors => console.log(errors))
+        },
+
     },
 }
 </script>
