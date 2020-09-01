@@ -48,6 +48,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+.comment-like-btn {
+    font-size: 0.9em;
+    padding-left: 0px;
+
+    i { display: none; }
+}
 
 </style>
