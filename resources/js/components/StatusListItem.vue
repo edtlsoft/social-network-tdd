@@ -15,7 +15,13 @@
             </div>
         </div>
         <div class="card-footer d-flex justify-content-between align-items-center">
-            <like-btn :status="status"></like-btn>
+            <like-btn
+                dusk="status-like-btn"
+                :model="status"
+                :url="`/statuses/${status.id}/likes`"
+            >
+            </like-btn>
+
             <div class="text-secondary mr-2">
                 <i class="far fa-thumbs-up"></i>
                 <span dusk="likes-count">{{ status.likes_count }}</span>
@@ -34,8 +40,12 @@
                     </div>
                 </div>
                 <span dusk="comment-likes-count" v-text="comment.likes_count"></span>
-                <button v-if="!comment.is_liked" dusk="comment-like-btn" @click="storeLikeComment(comment)">Like</button>
-                <button v-else dusk="comment-unlike-btn" @click="deleteLikeComment(comment)">Unlike</button>
+                <like-btn
+                    dusk="comment-like-btn"
+                    :model="comment"
+                    :url="`/comments/${comment.id}/likes`"
+                >
+                </like-btn>
             </div>
 
             <form @submit.prevent="storeComment" v-if="isAuthenticated">
@@ -97,24 +107,6 @@ export default {
             })
             .catch(errors => console.log(errors))
         },
-
-        storeLikeComment(comment) {
-            axios.post(`/comments/${comment.id}/like`)
-                .then(response => {
-                    comment.is_liked = true
-                    comment.likes_count++
-                })
-                .catch(errors => console.log(errors))
-        },
-        deleteLikeComment(comment) {
-            axios.delete(`/comments/${comment.id}/like`)
-                .then(response => {
-                    comment.is_liked = false
-                    comment.likes_count--
-                })
-                .catch(errors => console.log(errors))
-        },
-
     },
 }
 </script>

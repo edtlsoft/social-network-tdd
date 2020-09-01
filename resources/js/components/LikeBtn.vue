@@ -1,40 +1,46 @@
 <template>
-    <button v-if="status.is_liked"
-            @click="unlike(status)"
-            class="btn btn-link btn-sm"
-            dusk="unlike-btn">
-        <i class="fas fa-thumbs-up text-primary mr-1"></i> Unlike
-    </button>
-    <button v-else
-            @click="like(status)"
-            class="btn btn-link btn-sm"
-            dusk="like-btn">
-        <i class="far fa-thumbs-up mr-1"></i> Like
+    <button :class="getBtnClass" @click="toggle()">
+        <i :class="getIconClass"></i> {{ getText }}
     </button>
 </template>
 
 <script>
 export default {
     props: {
-        status: {
+        model: {
             type: Object,
+            required: true,
+        },
+        url: {
+            type: String,
             required: true,
         }
     },
-    methods: {
-        like(status) {
-            axios.post(`/statuses/${status.id}/like`)
-                .then(response => {
-                    status.is_liked = true
-                    status.likes_count++
-                })
-                .catch(errors => console.log(errors))
+    computed: {
+        getText() {
+            return this.model.is_liked ? 'Unlike' : 'Like'
         },
-        unlike(status) {
-            axios.delete(`/statuses/${status.id}/like`)
+        getBtnClass() {
+            return [
+                'btn', 'btn-link', 'btn-sm',
+                this.model.is_liked ? '' : 'font-weight-bold'
+            ]
+        },
+        getIconClass() {
+            return [
+                this.model.is_liked ? 'fas' : 'far',
+                'fa-thumbs-up', 'text-primary', 'mr-1',
+            ]
+        },
+    },
+    methods: {
+        toggle() {
+            let method = this.model.is_liked ? 'delete' : 'post'
+
+            axios[method](this.url)
                 .then(response => {
-                    status.is_liked = false
-                    status.likes_count--
+                    this.model.is_liked = !this.model.is_liked
+                    this.model.likes_count += method === 'post' ? 1 : -1
                 })
                 .catch(errors => console.log(errors))
         },

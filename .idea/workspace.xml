@@ -24,10 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CommentResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/CommentResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/LikeBtn.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/LikeBtn.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/StatusListItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/StatusListItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Http/Resources/CommentResourceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Http/Resources/CommentResourceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanLikeCommentsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanLikeCommentsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanLikeStatusesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanLikeStatusesTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +236,7 @@
       <workItem from="1598064554338" duration="4355000" />
       <workItem from="1598231887983" duration="9767000" />
       <workItem from="1598407662612" duration="6620000" />
-      <workItem from="1598580928550" duration="25258000" />
+      <workItem from="1598580928550" duration="29367000" />
     </task>
     <servers />
   </component>
@@ -350,11 +352,11 @@
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="2027" y="26" key="refactoring.ChangeSignatureDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598584438139" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1598812313817">
+    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1598932405799">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598413751823" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598812313817" />
+    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598932405799" />
     <state x="1712" y="-183" width="672" height="678" key="search.everywhere.popup/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597380076229" />
     <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208481687" />
   </component>

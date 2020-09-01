@@ -1914,35 +1914,36 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    status: {
+    model: {
       type: Object,
+      required: true
+    },
+    url: {
+      type: String,
       required: true
     }
   },
-  methods: {
-    like: function like(status) {
-      axios.post("/statuses/".concat(status.id, "/like")).then(function (response) {
-        status.is_liked = true;
-        status.likes_count++;
-      })["catch"](function (errors) {
-        return console.log(errors);
-      });
+  computed: {
+    getText: function getText() {
+      return this.model.is_liked ? 'Unlike' : 'Like';
     },
-    unlike: function unlike(status) {
-      axios["delete"]("/statuses/".concat(status.id, "/like")).then(function (response) {
-        status.is_liked = false;
-        status.likes_count--;
+    getBtnClass: function getBtnClass() {
+      return ['btn', 'btn-link', 'btn-sm', this.model.is_liked ? '' : 'font-weight-bold'];
+    },
+    getIconClass: function getIconClass() {
+      return [this.model.is_liked ? 'fas' : 'far', 'fa-thumbs-up', 'text-primary', 'mr-1'];
+    }
+  },
+  methods: {
+    toggle: function toggle() {
+      var _this = this;
+
+      var method = this.model.is_liked ? 'delete' : 'post';
+      axios[method](this.url).then(function (response) {
+        _this.model.is_liked = !_this.model.is_liked;
+        _this.model.likes_count += method === 'post' ? 1 : -1;
       })["catch"](function (errors) {
         return console.log(errors);
       });
@@ -2141,6 +2142,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -2168,22 +2179,6 @@ __webpack_require__.r(__webpack_exports__);
         _this.comments.push(response.data.data);
 
         _this.comment = '';
-      })["catch"](function (errors) {
-        return console.log(errors);
-      });
-    },
-    storeLikeComment: function storeLikeComment(comment) {
-      axios.post("/comments/".concat(comment.id, "/like")).then(function (response) {
-        comment.is_liked = true;
-        comment.likes_count++;
-      })["catch"](function (errors) {
-        return console.log(errors);
-      });
-    },
-    deleteLikeComment: function deleteLikeComment(comment) {
-      axios["delete"]("/comments/".concat(comment.id, "/like")).then(function (response) {
-        comment.is_liked = false;
-        comment.likes_count--;
       })["catch"](function (errors) {
         return console.log(errors);
       });
@@ -37775,36 +37770,21 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.status.is_liked
-    ? _c(
-        "button",
-        {
-          staticClass: "btn btn-link btn-sm",
-          attrs: { dusk: "unlike-btn" },
-          on: {
-            click: function($event) {
-              return _vm.unlike(_vm.status)
-            }
-          }
-        },
-        [
-          _c("i", { staticClass: "fas fa-thumbs-up text-primary mr-1" }),
-          _vm._v(" Unlike\n")
-        ]
-      )
-    : _c(
-        "button",
-        {
-          staticClass: "btn btn-link btn-sm",
-          attrs: { dusk: "like-btn" },
-          on: {
-            click: function($event) {
-              return _vm.like(_vm.status)
-            }
-          }
-        },
-        [_c("i", { staticClass: "far fa-thumbs-up mr-1" }), _vm._v(" Like\n")]
-      )
+  return _c(
+    "button",
+    {
+      class: _vm.getBtnClass,
+      on: {
+        click: function($event) {
+          return _vm.toggle()
+        }
+      }
+    },
+    [
+      _c("i", { class: _vm.getIconClass }),
+      _vm._v(" " + _vm._s(_vm.getText) + "\n")
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -37993,7 +37973,13 @@ var render = function() {
           "card-footer d-flex justify-content-between align-items-center"
       },
       [
-        _c("like-btn", { attrs: { status: _vm.status } }),
+        _c("like-btn", {
+          attrs: {
+            dusk: "status-like-btn",
+            model: _vm.status,
+            url: "/statuses/" + _vm.status.id + "/likes"
+          }
+        }),
         _vm._v(" "),
         _c("div", { staticClass: "text-secondary mr-2" }, [
           _c("i", { staticClass: "far fa-thumbs-up" }),
@@ -38011,60 +37997,47 @@ var render = function() {
       { staticClass: "card-footer" },
       [
         _vm._l(_vm.comments, function(comment) {
-          return _c("div", { key: comment.id, staticClass: "mb-3" }, [
-            _c("img", {
-              staticClass: "rounded shadow-sm float-left mr-2",
-              attrs: {
-                width: "35",
-                src: comment.user_avatar,
-                alt: comment.user_name
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "card border-0 shadow-sm" }, [
-              _c("div", { staticClass: "card-body p-2 text-secondary" }, [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("strong", [_vm._v(_vm._s(comment.user_name))])
-                ]),
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(comment.body) +
-                    "\n                "
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("span", {
-              attrs: { dusk: "comment-likes-count" },
-              domProps: { textContent: _vm._s(comment.likes_count) }
-            }),
-            _vm._v(" "),
-            !comment.is_liked
-              ? _c(
-                  "button",
-                  {
-                    attrs: { dusk: "comment-like-btn" },
-                    on: {
-                      click: function($event) {
-                        return _vm.storeLikeComment(comment)
-                      }
-                    }
-                  },
-                  [_vm._v("Like")]
-                )
-              : _c(
-                  "button",
-                  {
-                    attrs: { dusk: "comment-unlike-btn" },
-                    on: {
-                      click: function($event) {
-                        return _vm.deleteLikeComment(comment)
-                      }
-                    }
-                  },
-                  [_vm._v("Unlike")]
-                )
-          ])
+          return _c(
+            "div",
+            { key: comment.id, staticClass: "mb-3" },
+            [
+              _c("img", {
+                staticClass: "rounded shadow-sm float-left mr-2",
+                attrs: {
+                  width: "35",
+                  src: comment.user_avatar,
+                  alt: comment.user_name
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card border-0 shadow-sm" }, [
+                _c("div", { staticClass: "card-body p-2 text-secondary" }, [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _c("strong", [_vm._v(_vm._s(comment.user_name))])
+                  ]),
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(comment.body) +
+                      "\n                "
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("span", {
+                attrs: { dusk: "comment-likes-count" },
+                domProps: { textContent: _vm._s(comment.likes_count) }
+              }),
+              _vm._v(" "),
+              _c("like-btn", {
+                attrs: {
+                  dusk: "comment-like-btn",
+                  model: comment,
+                  url: "/comments/" + comment.id + "/likes"
+                }
+              })
+            ],
+            1
+          )
         }),
         _vm._v(" "),
         _vm.isAuthenticated

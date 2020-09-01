@@ -17,25 +17,6 @@ class UsersCanLikeStatusesTest extends DuskTestCase
     /** @test
      * @throws Throwable
      */
-    public function user_can_like_statuses()
-    {
-        $user   = factory(User::class)->create();
-        $status = factory(Status::class)->create();
-
-        $this->browse(function (Browser $browser) use ($user, $status) {
-            $browser->loginAs($user)
-                    ->visit('/')
-                    ->waitForText($status->body)
-                    ->press('@like-btn')
-                    ->waitForText('Unlike')
-                    ->assertSee('Unlike')
-                    ;
-        });
-    }
-
-    /** @test
-     * @throws Throwable
-     */
     public function user_can_like_and_unlike_statuses()
     {
         $user   = factory(User::class)->create();
@@ -46,12 +27,12 @@ class UsersCanLikeStatusesTest extends DuskTestCase
                 ->visit('/')
                 ->waitForText($status->body)
                 ->assertSeeIn('@likes-count', '0')
-                ->press('@like-btn')
+                ->press('@status-like-btn')
                 ->waitForText('Unlike')
                 ->assertSee('Unlike')
                 ->assertSeeIn('@likes-count', '1')
 
-                ->press('@unlike-btn')
+                ->press('@status-like-btn')
                 ->waitForText('Like')
                 ->assertSee('Like')
                 ->assertSeeIn('@likes-count', '0')
@@ -72,8 +53,7 @@ class UsersCanLikeStatusesTest extends DuskTestCase
 
             $browser->visit('/')
                 ->waitForText($status->body)
-                ->screenshot('redirect-if-not-auth')
-                ->press('@like-btn')
+                ->press('@status-like-btn')
                 ->assertPathIs('/login')
                 ;
         });

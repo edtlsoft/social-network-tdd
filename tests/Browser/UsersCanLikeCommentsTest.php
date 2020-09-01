@@ -26,12 +26,12 @@ class UsersCanLikeCommentsTest extends DuskTestCase
                 ->assertSeeIn('@comment-likes-count', 0)
 
                 ->press('@comment-like-btn')
-                ->waitFor('@comment-unlike-btn')
-                ->assertSeeIn('@comment-unlike-btn', 'Unlike')
+                ->pause(500)
+                ->assertSeeIn('@comment-like-btn', 'Unlike')
                 ->assertSeeIn('@comment-likes-count', 1)
 
-                ->press('@comment-unlike-btn')
-                ->waitFor('@comment-like-btn')
+                ->press('@comment-like-btn')
+                ->pause(500)
                 ->assertSeeIn('@comment-like-btn', 'Like')
                 ->assertSeeIn('@comment-likes-count', 0)
             ;
