@@ -19,7 +19,8 @@ class CommentResource extends JsonResource
             'id' => $this->resource->id,
             'body' => $this->resource->body,
             'user_name' => $this->resource->user->name,
-            'user_avatar' => '/images/default-avatar.jpg',
+            'user_avatar' => $this->resource->user->avatar(),
+            'user_link' => $this->resource->user->link(),
             'likes_count' => $this->resource->likesCount(),
             'is_liked' => $this->resource->isLiked()
         ];

@@ -6,7 +6,9 @@
                     <img class="rounded mr-3 shadow-sm" :src="status.user_avatar" alt="user-profile" width="40px">
                 </div>
                 <div>
-                    <h5 class="mb-1" v-text="status.user_name"></h5>
+                    <h5 class="mb-1">
+                        <a :href="status.user_link" v-text="status.user_name"></a>
+                    </h5>
                     <div class="small text-muted" v-text="status.ago"></div>
                 </div>
             </div>
@@ -35,7 +37,7 @@
                     <div class="flex-grow-1">
                         <div class="card border-0 shadow-sm">
                             <div class="card-body p-2 text-secondary">
-                                <a href="#">
+                                <a :href="comment.user_link">
                                     <strong>{{ comment.user_name }}</strong>
                                 </a>
                                 {{ comment.body }}
@@ -62,7 +64,7 @@
             <form @submit.prevent="storeComment" v-if="isAuthenticated">
                 <div class="d-flex aling-items-center">
                     <img class="rounded shadow-sm mr-2"
-                         width="35" src="/images/default-avatar.jpg"
+                         width="35" :src="status.user_avatar"
                          :alt="currentUser.name"
                     >
                     <div class="input-group">

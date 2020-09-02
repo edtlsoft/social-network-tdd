@@ -38,8 +38,12 @@ class StatusResourceTest extends TestCase
             $statusResource['user_name']
         );
         $this->assertEquals(
-            '/images/default-avatar.jpg',
+            $status->user->avatar(),
             $statusResource['user_avatar']
+        );
+        $this->assertEquals(
+            route('users.show', $status->user),
+            $statusResource['user_link']
         );
         $this->assertEquals(
             $status->created_at->diffForHumans(),
@@ -53,7 +57,6 @@ class StatusResourceTest extends TestCase
             0,
             $statusResource['likes_count']
         );
-        //dd($statusResource['comments']->first()->resource);
         $this->assertEquals(
             CommentResource::class,
             $statusResource['comments']->collects

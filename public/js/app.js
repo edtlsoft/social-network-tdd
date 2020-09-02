@@ -2163,6 +2163,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -38602,10 +38604,12 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", [
-          _c("h5", {
-            staticClass: "mb-1",
-            domProps: { textContent: _vm._s(_vm.status.user_name) }
-          }),
+          _c("h5", { staticClass: "mb-1" }, [
+            _c("a", {
+              attrs: { href: _vm.status.user_link },
+              domProps: { textContent: _vm._s(_vm.status.user_name) }
+            })
+          ]),
           _vm._v(" "),
           _c("div", {
             staticClass: "small text-muted",
@@ -38671,7 +38675,7 @@ var render = function() {
                 [
                   _c("div", { staticClass: "card border-0 shadow-sm" }, [
                     _c("div", { staticClass: "card-body p-2 text-secondary" }, [
-                      _c("a", { attrs: { href: "#" } }, [
+                      _c("a", { attrs: { href: comment.user_link } }, [
                         _c("strong", [_vm._v(_vm._s(comment.user_name))])
                       ]),
                       _vm._v(
@@ -38731,7 +38735,7 @@ var render = function() {
                     staticClass: "rounded shadow-sm mr-2",
                     attrs: {
                       width: "35",
-                      src: "/images/default-avatar.jpg",
+                      src: _vm.status.user_avatar,
                       alt: _vm.currentUser.name
                     }
                   }),

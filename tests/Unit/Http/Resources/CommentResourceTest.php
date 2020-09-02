@@ -38,7 +38,7 @@ class CommentResourceTest extends TestCase
         );
 
         $this->assertEquals(
-            '/images/default-avatar.jpg',
+            $comment->user->avatar(),
             $commentResource['user_avatar']
         );
 
@@ -50,6 +50,11 @@ class CommentResourceTest extends TestCase
         $this->assertEquals(
             false,
             $commentResource['is_liked']
+        );
+
+        $this->assertEquals(
+            route('users.show', $comment->user),
+            $commentResource['user_link']
         );
     }
 }

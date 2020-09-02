@@ -23,10 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/Feature/CanSeeProfileTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CommentResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/CommentResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/StatusResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/StatusResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/LikeBtn.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/LikeBtn.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/StatusListItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/StatusListItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Http/Resources/CommentResourceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Http/Resources/CommentResourceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Http/Resources/StatusResourceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Http/Resources/StatusResourceTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,20 +190,20 @@
       <TestRunner class="Tests\Unit\Http\Resources\CommentResourceTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Http/Resources/CommentResourceTest.php" method="a_comment_resource_must_have_the_necessary_fields" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="StatusTest.a_comment_model_must_use_the_triat_has_likes_trait" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\Models\StatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" method="a_comment_model_must_use_the_triat_has_likes_trait" scope="Method" />
+    <configuration name="StatusResourceTest.a_status_resource_must_have_the_necessary_fields" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\Http\Resources\StatusResourceTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Http/Resources/StatusResourceTest.php" method="a_status_resource_must_have_the_necessary_fields" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="StatusTest.a_model_model_must_use_the_triat_has_likes_trait" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\Models\StatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" method="a_model_model_must_use_the_triat_has_likes_trait" scope="Method" />
+    <configuration name="UserTest.an_user_has_a_avatar" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\UserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/UserTest.php" method="an_user_has_a_avatar" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="StatusTest.a_status_model_must_use_the_triat_has_likes_trait" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\Models\StatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/StatusTest.php" method="a_status_model_must_use_the_triat_has_likes_trait" scope="Method" />
+    <configuration name="UserTest.an_user_has_a_link" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\UserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/UserTest.php" method="an_user_has_a_link" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UsersCanLikeStatusesTest.guest_can_not_like_statuses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Browser\UsersCanLikeStatusesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Browser/UsersCanLikeStatusesTest.php" method="guest_can_not_like_statuses" scope="Method" />
+    <configuration name="User.an_user_has_a_link" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\User" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/UserTest.php" method="an_user_has_a_link" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -207,10 +213,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.CommentResourceTest.a_comment_resource_must_have_the_necessary_fields" />
-        <item itemvalue="PHPUnit.UsersCanLikeStatusesTest.guest_can_not_like_statuses" />
-        <item itemvalue="PHPUnit.StatusTest.a_status_model_must_use_the_triat_has_likes_trait" />
-        <item itemvalue="PHPUnit.StatusTest.a_model_model_must_use_the_triat_has_likes_trait" />
-        <item itemvalue="PHPUnit.StatusTest.a_comment_model_must_use_the_triat_has_likes_trait" />
+        <item itemvalue="PHPUnit.UserTest.an_user_has_a_avatar" />
+        <item itemvalue="PHPUnit.StatusResourceTest.a_status_resource_must_have_the_necessary_fields" />
+        <item itemvalue="PHPUnit.UserTest.an_user_has_a_link" />
+        <item itemvalue="PHPUnit.User.an_user_has_a_link" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +239,8 @@
       <workItem from="1598064554338" duration="4355000" />
       <workItem from="1598231887983" duration="9767000" />
       <workItem from="1598407662612" duration="6620000" />
-      <workItem from="1598580928550" duration="31842000" />
+      <workItem from="1598580928550" duration="34522000" />
+      <workItem from="1599015880826" duration="2707000" />
     </task>
     <servers />
   </component>
@@ -257,14 +264,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="324" y="19" key="#CLI_Interpreters/0.0.1366.728@0.0.1366.728" timestamp="1596726791412" />
+    <state x="1758" y="57" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599015211449">
+      <screen x="1366" y="-105" width="1366" height="728" />
+    </state>
+    <state x="1758" y="57" key="#com.intellij.fileTypes.FileTypeChooser/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599015211449" />
     <state x="488" y="44" key="#com.intellij.ide.util.MemberChooser" timestamp="1597009129006">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="44" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1597009129006" />
-    <state x="1866" y="-55" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598752172003">
+    <state x="1866" y="-89" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599017703871">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
-    <state x="1866" y="-55" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598752172003" />
+    <state x="1866" y="-89" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599017703871" />
     <state x="1779" y="14" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598755155385">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
@@ -275,36 +286,40 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="695" y="115" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1366.728@0.0.1366.728" timestamp="1598321497925" />
+    <state x="1845" y="124" key="#com.jetbrains.php.refactoring.move.namespace.PhpMoveNamespaceDialog#" timestamp="1599017503423">
+      <screen x="1366" y="-105" width="1366" height="728" />
+    </state>
+    <state x="1845" y="124" key="#com.jetbrains.php.refactoring.move.namespace.PhpMoveNamespaceDialog#/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599017503423" />
     <state x="524" y="119" key="FileChooserDialogImpl" timestamp="1597009297666">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597009297666" />
-    <state width="800" height="227" key="GridCell.Tab.0.bottom" timestamp="1598934338785">
+    <state width="1367" height="224" key="GridCell.Tab.0.bottom" timestamp="1599018388056">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
-    <state width="800" height="227" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598934338785" />
+    <state width="1367" height="224" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599018388056" />
     <state width="1367" height="179" key="GridCell.Tab.0.bottom/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.bottom/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
-    <state width="800" height="227" key="GridCell.Tab.0.center" timestamp="1598934338784">
+    <state width="1367" height="224" key="GridCell.Tab.0.center" timestamp="1599018388055">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
-    <state width="800" height="227" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598934338784" />
+    <state width="1367" height="224" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599018388055" />
     <state width="1367" height="179" key="GridCell.Tab.0.center/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628126" />
     <state width="1367" height="287" key="GridCell.Tab.0.center/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929868" />
-    <state width="800" height="227" key="GridCell.Tab.0.left" timestamp="1598934338784">
+    <state width="1367" height="224" key="GridCell.Tab.0.left" timestamp="1599018388055">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
-    <state width="800" height="227" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598934338784" />
+    <state width="1367" height="224" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599018388055" />
     <state width="1367" height="179" key="GridCell.Tab.0.left/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628125" />
     <state width="1367" height="287" key="GridCell.Tab.0.left/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929867" />
-    <state width="800" height="227" key="GridCell.Tab.0.right" timestamp="1598934338784">
+    <state width="1367" height="224" key="GridCell.Tab.0.right" timestamp="1599018388056">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
-    <state width="800" height="227" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598934338784" />
+    <state width="1367" height="224" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599018388056" />
     <state width="1367" height="179" key="GridCell.Tab.0.right/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.right/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
     <state width="1367" height="259" key="GridCell.Tab.1.bottom" timestamp="1597376421875">
@@ -340,20 +355,20 @@
     </state>
     <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596727465570" />
     <state x="1641" y="-12" key="Vcs.Push.Dialog.v2/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598672123870" />
-    <state x="1816" y="-105" width="583" height="728" key="find.popup" timestamp="1597707431957">
+    <state x="1816" y="-105" width="583" height="728" key="find.popup" timestamp="1599018538242">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="295" y="0" width="583" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1596727160385" />
-    <state x="1816" y="-105" width="583" height="728" key="find.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1597707431957" />
+    <state x="1816" y="-105" width="583" height="728" key="find.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599018538242" />
     <state x="2027" y="26" key="refactoring.ChangeSignatureDialog" timestamp="1598584438139">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="2027" y="26" key="refactoring.ChangeSignatureDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598584438139" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1598932405799">
+    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1599018260487">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598413751823" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598932405799" />
+    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599018260487" />
     <state x="1712" y="-183" width="672" height="678" key="search.everywhere.popup/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597380076229" />
     <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208481687" />
   </component>
