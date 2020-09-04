@@ -2,8 +2,10 @@
 
 namespace Tests\Unit\Http\Resources;
 
+use App\Http\Resources\UserResource;
 use App\Models\Comment;
 use App\Http\Resources\CommentResource;
+use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -55,6 +57,15 @@ class CommentResourceTest extends TestCase
         $this->assertEquals(
             route('users.show', $comment->user),
             $commentResource['user_link']
+        );
+
+        $this->assertInstanceOf(
+            UserResource::class,
+            $commentResource['user']
+        );
+        $this->assertInstanceOf(
+            User::class,
+            $commentResource['user']->resource
         );
     }
 }

@@ -15,9 +15,9 @@ class UserResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'user_name' => $this->resource->name,
-            'user_avatar' => $this->resource->avatar(),
-            'user_link' => $this->resource->link(),
+            'name' => $this->resource->name,
+            'avatar' => $this->resource->avatar(),
+            'link' => $this->resource->link(),
         ];
     }
 }
