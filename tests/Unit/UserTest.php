@@ -11,9 +11,17 @@ class UserTest extends TestCase
     use DatabaseMigrations;
 
     /** @test */
+    public function route_key_name_is_set_to_name()
+    {
+        $user = factory(User::class)->make();
+
+        $this->assertEquals('name', $user->getRouteKeyName());
+    }
+
+    /** @test */
     public function an_user_has_a_avatar()
     {
-        $user = factory(User::class)->create(['name' => 'Edward']);
+        $user = factory(User::class)->make();
 
         $this->assertEquals(
             '/images/default-avatar.jpg',
@@ -24,7 +32,7 @@ class UserTest extends TestCase
     /** @test */
     public function an_user_has_a_link()
     {
-        $user = factory(User::class)->create(['name' => 'Edward']);
+        $user = factory(User::class)->make();
 
         $this->assertEquals(
             route('users.show', $user),
