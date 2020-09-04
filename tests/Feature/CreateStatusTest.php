@@ -31,7 +31,9 @@ class CreateStatusTest extends TestCase
         $response->assertJson([
             'data' => [
                 'body' => $body,
-                'user_name' => $user->name
+                'user' => [
+                    'name' => $user->name
+                ]
             ]
         ]);
 

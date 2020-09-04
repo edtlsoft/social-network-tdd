@@ -35,16 +35,6 @@ class CommentResourceTest extends TestCase
         );
 
         $this->assertEquals(
-            $comment->user->name,
-            $commentResource['user_name']
-        );
-
-        $this->assertEquals(
-            $comment->user->avatar(),
-            $commentResource['user_avatar']
-        );
-
-        $this->assertEquals(
             0,
             $commentResource['likes_count']
         );
@@ -52,11 +42,6 @@ class CommentResourceTest extends TestCase
         $this->assertEquals(
             false,
             $commentResource['is_liked']
-        );
-
-        $this->assertEquals(
-            route('users.show', $comment->user),
-            $commentResource['user_link']
         );
 
         $this->assertInstanceOf(
