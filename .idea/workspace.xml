@@ -24,14 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CanSeeProfileTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CanSeeProfileTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Http/Resources/UserResourceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Http/Resources/UserResourceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/UserTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,25 +178,25 @@
       <recent name="C:\xampp\htdocs\developer\social-network-tdd" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.CreateStatusTest.a_authenticated_user_can_create_statuses">
-    <configuration name="CanSeeProfileTest.an_authenticated_user_can_see_your_profile_test" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CanSeeProfileTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CanSeeProfileTest.php" method="an_authenticated_user_can_see_your_profile_test" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.RegistrationTest">
+    <configuration name="RegistrationTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\RegistrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="CreateStatusTest.a_authenticated_user_can_create_statuses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CreateStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" method="a_authenticated_user_can_create_statuses" scope="Method" />
+    <configuration name="RegistrationTest.the_first_name_may_only_contain_letters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\RegistrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" method="the_first_name_may_only_contain_letters" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTest.users_can_register" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegistrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" method="users_can_register" scope="Method" />
+    <configuration name="RegistrationTest.the_first_name_must_be_at_least_5_characters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\RegistrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" method="the_first_name_must_be_at_least_5_characters" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UserResourceTest.an_user_resource_must_have_the_necessary_fields" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\Http\Resources\UserResourceTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Http/Resources/UserResourceTest.php" method="an_user_resource_must_have_the_necessary_fields" scope="Method" />
+    <configuration name="RegistrationTest.the_last_name_may_only_contain_letters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\RegistrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" method="the_last_name_may_only_contain_letters" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UserTest.route_key_name_is_set_to_name" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\UserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/UserTest.php" method="route_key_name_is_set_to_name" scope="Method" />
+    <configuration name="RegistrationTest.the_last_name_must_be_at_least_5_characters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\RegistrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" method="the_last_name_must_be_at_least_5_characters" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -211,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.CreateStatusTest.a_authenticated_user_can_create_statuses" />
-        <item itemvalue="PHPUnit.CanSeeProfileTest.an_authenticated_user_can_see_your_profile_test" />
-        <item itemvalue="PHPUnit.UserResourceTest.an_user_resource_must_have_the_necessary_fields" />
-        <item itemvalue="PHPUnit.UserTest.route_key_name_is_set_to_name" />
-        <item itemvalue="PHPUnit.RegistrationTest.users_can_register" />
+        <item itemvalue="PHPUnit.RegistrationTest" />
+        <item itemvalue="PHPUnit.RegistrationTest.the_last_name_must_be_at_least_5_characters" />
+        <item itemvalue="PHPUnit.RegistrationTest.the_last_name_may_only_contain_letters" />
+        <item itemvalue="PHPUnit.RegistrationTest.the_first_name_must_be_at_least_5_characters" />
+        <item itemvalue="PHPUnit.RegistrationTest.the_first_name_may_only_contain_letters" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +233,9 @@
       <workItem from="1598231887983" duration="9767000" />
       <workItem from="1598407662612" duration="6620000" />
       <workItem from="1598580928550" duration="34522000" />
-      <workItem from="1599015880826" duration="14309000" />
+      <workItem from="1599015880826" duration="16106000" />
+      <workItem from="1599278761270" duration="1760000" />
+      <workItem from="1599280577476" duration="1775000" />
     </task>
     <servers />
   </component>
@@ -284,10 +280,11 @@
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598233258585" />
     <state x="1779" y="14" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599187527767" />
     <state x="1779" y="-207" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208260977" />
-    <state x="695" y="115" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1598321497925">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="2061" y="10" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1599277790698">
+      <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="695" y="115" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1366.728@0.0.1366.728" timestamp="1598321497925" />
+    <state x="2061" y="10" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599277790698" />
     <state x="1845" y="124" key="#com.jetbrains.php.refactoring.move.namespace.PhpMoveNamespaceDialog#" timestamp="1599017503423">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
@@ -297,32 +294,32 @@
     </state>
     <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597009297666" />
     <state x="1890" y="14" key="FileChooserDialogImpl/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599185125535" />
-    <state width="1367" height="253" key="GridCell.Tab.0.bottom" timestamp="1599276153146">
+    <state width="1367" height="221" key="GridCell.Tab.0.bottom" timestamp="1599282345840">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
-    <state width="1367" height="253" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599276153146" />
+    <state width="1367" height="221" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345840" />
     <state width="1367" height="179" key="GridCell.Tab.0.bottom/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.bottom/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
-    <state width="1367" height="253" key="GridCell.Tab.0.center" timestamp="1599276153145">
+    <state width="1367" height="221" key="GridCell.Tab.0.center" timestamp="1599282345839">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
-    <state width="1367" height="253" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599276153145" />
+    <state width="1367" height="221" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.center/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628126" />
     <state width="1367" height="287" key="GridCell.Tab.0.center/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929868" />
-    <state width="1367" height="253" key="GridCell.Tab.0.left" timestamp="1599276153145">
+    <state width="1367" height="221" key="GridCell.Tab.0.left" timestamp="1599282345839">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
-    <state width="1367" height="253" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599276153145" />
+    <state width="1367" height="221" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.left/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628125" />
     <state width="1367" height="287" key="GridCell.Tab.0.left/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929867" />
-    <state width="1367" height="253" key="GridCell.Tab.0.right" timestamp="1599276153146">
+    <state width="1367" height="221" key="GridCell.Tab.0.right" timestamp="1599282345839">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
-    <state width="1367" height="253" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599276153146" />
+    <state width="1367" height="221" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.right/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.right/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
     <state width="1367" height="259" key="GridCell.Tab.1.bottom" timestamp="1597376421875">
@@ -368,11 +365,11 @@
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="2027" y="26" key="refactoring.ChangeSignatureDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598584438139" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1599276145370">
+    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1599277810915">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598413751823" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599276145370" />
+    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599277810915" />
     <state x="1712" y="-183" width="672" height="678" key="search.everywhere.popup/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597380076229" />
     <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208481687" />
   </component>
@@ -387,6 +384,15 @@
             <option name="methodName" value="a_status_knows_how_many_likes_it_has" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/tests/Feature/RegistrationTest.php</url>
+          <line>116</line>
+          <properties>
+            <option name="className" value="\Tests\Feature\RegistrationTest" />
+            <option name="methodName" value="the_username_must_be_a_string" />
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
