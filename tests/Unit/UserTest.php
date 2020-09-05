@@ -15,7 +15,7 @@ class UserTest extends TestCase
     {
         $user = factory(User::class)->make();
 
-        $this->assertEquals('name', $user->getRouteKeyName());
+        $this->assertEquals('username', $user->getRouteKeyName());
     }
 
     /** @test */

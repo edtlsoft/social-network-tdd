@@ -20,8 +20,8 @@ class UserResourceTest extends TestCase
 
         // Then
         $this->assertEquals(
-            $user->name,
-            $userResource['name']
+            $user->username,
+            $userResource['username']
         );
         $this->assertEquals(
             $user->avatar(),

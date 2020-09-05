@@ -32,7 +32,7 @@ class CreateStatusTest extends TestCase
             'data' => [
                 'body' => $body,
                 'user' => [
-                    'name' => $user->name
+                    'username' => $user->username
                 ]
             ]
         ]);

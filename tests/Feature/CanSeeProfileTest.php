@@ -15,7 +15,7 @@ class CanSeeProfileTest extends TestCase
     {
         $this->withoutExceptionHandling();
         // Given
-        $user = factory(User::class)->create(['name' => 'Edward']);
+        $user = factory(User::class)->create(['username' => 'Edward']);
 
         // When
         $response = $this->getJson('@Edward');
