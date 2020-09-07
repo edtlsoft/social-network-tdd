@@ -24,7 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/LoginTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanLoginTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +239,7 @@
       <workItem from="1599282423231" duration="160000" />
       <workItem from="1599442221779" duration="1602000" />
       <workItem from="1599444054458" duration="1811000" />
-      <workItem from="1599445962280" duration="670000" />
+      <workItem from="1599445962280" duration="1410000" />
     </task>
     <servers />
   </component>
@@ -273,10 +274,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="44" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1597009129006" />
-    <state x="1866" y="-89" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599017703871">
+    <state x="1866" y="-105" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599446930610">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
-    <state x="1866" y="-89" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599017703871" />
+    <state x="1866" y="-105" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599446930610" />
     <state x="1779" y="14" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599187527767">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
@@ -368,11 +369,11 @@
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="2027" y="26" key="refactoring.ChangeSignatureDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598584438139" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1599446098119">
+    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1599447058607">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598413751823" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599446098119" />
+    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599447058607" />
     <state x="1712" y="-183" width="672" height="678" key="search.everywhere.popup/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597380076229" />
     <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208481687" />
   </component>
