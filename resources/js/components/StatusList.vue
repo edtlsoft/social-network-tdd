@@ -16,14 +16,22 @@ export default {
     components: {
         StatusListItem,
     },
+    props: {
+        url: String
+    },
     data() {
         return ({
             statuses: [],
         })
     },
+    computed: {
+        getUrl() {
+            return this.url ? this.url : '/statuses'
+        }
+    },
     methods: {
         loadListOfStatuses() {
-            axios.get('/statuses')
+            axios.get(this.getUrl)
                 .then(response => this.statuses = response.data.data)
                 .catch(errors => console.log(errors))
         },

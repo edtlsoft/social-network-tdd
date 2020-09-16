@@ -2036,16 +2036,24 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     StatusListItem: _StatusListItem__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
+  props: {
+    url: String
+  },
   data: function data() {
     return {
       statuses: []
     };
   },
+  computed: {
+    getUrl: function getUrl() {
+      return this.url ? this.url : '/statuses';
+    }
+  },
   methods: {
     loadListOfStatuses: function loadListOfStatuses() {
       var _this = this;
 
-      axios.get('/statuses').then(function (response) {
+      axios.get(this.getUrl).then(function (response) {
         return _this.statuses = response.data.data;
       })["catch"](function (errors) {
         return console.log(errors);
