@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use App\Models\Status;
 use App\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -37,6 +38,19 @@ class UserTest extends TestCase
         $this->assertEquals(
             route('users.show', $user),
             $user->link()
+        );
+    }
+
+    /** @test */
+    public function an_user_has_many_statuses()
+    {
+        $user = factory(User::class)->create();
+
+        factory(Status::class)->create(['user_id' => $user->id]);
+
+        $this->assertInstanceOf(
+            Status::class,
+            $user->statuses()->first()
         );
     }
 }

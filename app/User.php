@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Status;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -50,5 +51,9 @@ class User extends Authenticatable
     public function link()
     {
         return route('users.show', $this);
+    }
+    public function statuses()
+    {
+        return $this->hasMany(Status::class);
     }
 }

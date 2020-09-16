@@ -13,9 +13,7 @@ class ListStatusesTest extends TestCase
 {
     use DatabaseMigrations;
 
-    /**
-     * @test
-     */
+    /** @test */
     public function can_get_all_statuses()
     {
         // Given
@@ -46,6 +44,41 @@ class ListStatusesTest extends TestCase
 
         $this->assertEquals(
             $statuses10->body,
+            $response->json('data.0.body')
+        );
+    }
+
+    /** @test */
+    public function can_get_statuses_for_a_specific_user()
+    {
+        $this->withoutExceptionHandling();
+        // Given
+        $user = factory(User::class)->create();
+
+        $status1 = factory(Status::class)->create(['user_id' => $user->id, 'created_at' => now()->subDay()]);
+        $status2 = factory(Status::class)->create(['user_id' => $user->id]);
+
+        $other_statuses = factory(Status::class, 5)->create();
+
+        $this->actingAs($user);
+
+        // When
+        $response = $this->getJson(route('users.statuses.index', $user));
+
+        // Then
+        //dd($response->getContent());
+        $response->assertStatus(200);
+
+        $response->assertJson([
+            'meta' => ['total' => 2]
+        ]);
+
+        $response->assertJsonStructure([
+            'data', 'links' => ['prev', 'next']
+        ]);
+
+        $this->assertEquals(
+            $status2->body,
             $response->json('data.0.body')
         );
     }

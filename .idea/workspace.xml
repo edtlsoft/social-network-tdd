@@ -22,7 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="" />
+    <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ListStatusesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ListStatusesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/UserTest.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,9 +170,10 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files/Git/etc/profile.d" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/phpunit.xml" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -174,25 +181,25 @@
       <recent name="C:\xampp\htdocs\developer\social-network-tdd" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.RegistrationTest">
+  <component name="RunManager" selected="PHPUnit.ListStatusesTest.can_get_statuses_for_a_specific_user">
+    <configuration name="ListStatusesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ListStatusesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ListStatusesTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ListStatusesTest.can_get_all_statuses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ListStatusesTest" file="$PROJECT_DIR$/tests/Feature/ListStatusesTest.php" method="can_get_all_statuses" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ListStatusesTest.can_get_statuses_for_a_specific_user" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ListStatusesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ListStatusesTest.php" method="can_get_statuses_for_a_specific_user" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="RegistrationTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\RegistrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTest.the_first_name_may_only_contain_letters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegistrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" method="the_first_name_may_only_contain_letters" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RegistrationTest.the_first_name_must_be_at_least_5_characters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegistrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" method="the_first_name_must_be_at_least_5_characters" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RegistrationTest.the_last_name_may_only_contain_letters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegistrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" method="the_last_name_may_only_contain_letters" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RegistrationTest.the_last_name_must_be_at_least_5_characters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegistrationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegistrationTest.php" method="the_last_name_must_be_at_least_5_characters" scope="Method" />
+    <configuration name="UserTest.an_user_has_many_statuses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\UserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/UserTest.php" method="an_user_has_many_statuses" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -201,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ListStatusesTest.can_get_statuses_for_a_specific_user" />
+        <item itemvalue="PHPUnit.UserTest.an_user_has_many_statuses" />
+        <item itemvalue="PHPUnit.ListStatusesTest" />
+        <item itemvalue="PHPUnit.ListStatusesTest.can_get_all_statuses" />
         <item itemvalue="PHPUnit.RegistrationTest" />
-        <item itemvalue="PHPUnit.RegistrationTest.the_last_name_must_be_at_least_5_characters" />
-        <item itemvalue="PHPUnit.RegistrationTest.the_last_name_may_only_contain_letters" />
-        <item itemvalue="PHPUnit.RegistrationTest.the_first_name_must_be_at_least_5_characters" />
-        <item itemvalue="PHPUnit.RegistrationTest.the_first_name_may_only_contain_letters" />
       </list>
     </recent_temporary>
   </component>
@@ -237,6 +244,13 @@
       <workItem from="1599444054458" duration="1811000" />
       <workItem from="1599445962280" duration="1736000" />
       <workItem from="1599448036528" duration="1739000" />
+      <workItem from="1599670794831" duration="276000" />
+      <workItem from="1599698628696" duration="699000" />
+      <workItem from="1599700832914" duration="598000" />
+      <workItem from="1599707969779" duration="598000" />
+      <workItem from="1599711608272" duration="594000" />
+      <workItem from="1600221392454" duration="1689000" />
+      <workItem from="1600223154354" duration="2470000" />
     </task>
     <servers />
   </component>
@@ -259,10 +273,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="324" y="19" key="#CLI_Interpreters" timestamp="1596726791412">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1690" y="19" key="#CLI_Interpreters" timestamp="1600223463373">
+      <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="324" y="19" key="#CLI_Interpreters/0.0.1366.728@0.0.1366.728" timestamp="1596726791412" />
+    <state x="1690" y="19" key="#CLI_Interpreters/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600223463373" />
+    <state x="1775" y="0" key="#PHP" timestamp="1600223086341">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1775" y="0" key="#PHP/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600223086341" />
     <state x="1758" y="57" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599015211449">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
@@ -290,39 +309,44 @@
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="1845" y="124" key="#com.jetbrains.php.refactoring.move.namespace.PhpMoveNamespaceDialog#/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599017503423" />
-    <state x="1890" y="14" key="FileChooserDialogImpl" timestamp="1599185125535">
-      <screen x="1366" y="-105" width="1366" height="728" />
+    <state x="1890" y="119" key="FileChooserDialogImpl" timestamp="1600223525730">
+      <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="524" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597009297666" />
-    <state x="1890" y="14" key="FileChooserDialogImpl/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599185125535" />
-    <state width="1367" height="221" key="GridCell.Tab.0.bottom" timestamp="1599282345840">
-      <screen x="1366" y="-105" width="1366" height="728" />
+    <state x="1890" y="14" key="FileChooserDialogImpl/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599670912549" />
+    <state x="1890" y="119" key="FileChooserDialogImpl/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600223525730" />
+    <state width="1367" height="315" key="GridCell.Tab.0.bottom" timestamp="1600225433366">
+      <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
     <state width="1367" height="221" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345840" />
     <state width="1367" height="179" key="GridCell.Tab.0.bottom/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.bottom/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
-    <state width="1367" height="221" key="GridCell.Tab.0.center" timestamp="1599282345839">
-      <screen x="1366" y="-105" width="1366" height="728" />
+    <state width="1367" height="315" key="GridCell.Tab.0.bottom/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600225433366" />
+    <state width="1367" height="315" key="GridCell.Tab.0.center" timestamp="1600225433365">
+      <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
     <state width="1367" height="221" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.center/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628126" />
     <state width="1367" height="287" key="GridCell.Tab.0.center/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929868" />
-    <state width="1367" height="221" key="GridCell.Tab.0.left" timestamp="1599282345839">
-      <screen x="1366" y="-105" width="1366" height="728" />
+    <state width="1367" height="315" key="GridCell.Tab.0.center/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600225433365" />
+    <state width="1367" height="315" key="GridCell.Tab.0.left" timestamp="1600225433365">
+      <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
     <state width="1367" height="221" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.left/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628125" />
     <state width="1367" height="287" key="GridCell.Tab.0.left/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929867" />
-    <state width="1367" height="221" key="GridCell.Tab.0.right" timestamp="1599282345839">
-      <screen x="1366" y="-105" width="1366" height="728" />
+    <state width="1367" height="315" key="GridCell.Tab.0.left/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600225433365" />
+    <state width="1367" height="315" key="GridCell.Tab.0.right" timestamp="1600225433366">
+      <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
     <state width="1367" height="221" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.right/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.right/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
+    <state width="1367" height="315" key="GridCell.Tab.0.right/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600225433366" />
     <state width="1367" height="259" key="GridCell.Tab.1.bottom" timestamp="1597376421875">
       <screen x="1366" y="-232" width="1366" height="728" />
     </state>
@@ -347,11 +371,16 @@
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="1775" y="-34" key="NewPhpClassDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598674110706" />
-    <state x="1550" y="-96" width="1121" height="710" key="SettingsEditor" timestamp="1599274539342">
-      <screen x="1366" y="-105" width="1366" height="728" />
+    <state x="1550" y="9" width="1121" height="710" key="SettingsEditor" timestamp="1600223529463">
+      <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" width="1121" height="710" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596729181947" />
     <state x="1550" y="-96" key="SettingsEditor/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599274539342" />
+    <state x="1550" y="9" key="SettingsEditor/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600223529463" />
+    <state width="498" height="398" key="SwitcherDM" timestamp="1600225370506">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="498" height="398" key="SwitcherDM/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600225370506" />
     <state x="1641" y="-12" key="Vcs.Push.Dialog.v2" timestamp="1598672123870">
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
@@ -366,13 +395,14 @@
       <screen x="1366" y="-105" width="1366" height="728" />
     </state>
     <state x="2027" y="26" key="refactoring.ChangeSignatureDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598584438139" />
-    <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup" timestamp="1599447058607">
-      <screen x="1366" y="-105" width="1366" height="728" />
+    <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1600225121615">
+      <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598413751823" />
     <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599447058607" />
     <state x="1712" y="-183" width="672" height="678" key="search.everywhere.popup/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597380076229" />
     <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208481687" />
+    <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600225121615" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
