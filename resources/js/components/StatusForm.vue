@@ -3,7 +3,7 @@
         <form v-if="isAuthenticated" @submit.prevent="storeStatus">
             <div class="card-body">
                 <textarea v-model="status.body"
-                          :placeholder="`What's on your mind, ${currentUser.name}?`"
+                          :placeholder="`What's on your mind, ${currentUser.username}?`"
                           class="form-control border-0 bg-light"
                           name="body"
                           id="body"
