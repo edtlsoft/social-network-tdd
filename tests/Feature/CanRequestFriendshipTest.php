@@ -22,7 +22,7 @@ class CanRequestFriendshipTest extends TestCase
         $this->assertDatabaseHas('friendships', [
             'sender_id'    => $sender->id,
             'recipient_id' => $recipient->id,
-            'accepted'     => false,
+            'status'       => 'pending',
         ]);
     }
 
@@ -64,7 +64,29 @@ class CanRequestFriendshipTest extends TestCase
         $this->assertDatabaseHas('friendships', [
             'sender_id'    => $sender->id,
             'recipient_id' => $recipient->id,
-            'accepted'     => true,
+            'status'       => 'pending',
+        ]);
+    }
+
+    /** @test */
+    public function can_deny_friendship_request()
+    {
+        $this->markTestIncomplete();
+
+        $sender    = factory(User::class)->create();
+        $recipient = factory(User::class)->create();
+
+        Friendship::create([
+            'sender_id'    => $sender->id,
+            'recipient_id' => $recipient->id,
+        ]);
+
+        $this->actingAs($recipient)->deleteJson(route('accept-friendship.destroy', $sender));
+
+        $this->assertDatabaseHas('friendships', [
+            'sender_id'    => $sender->id,
+            'recipient_id' => $recipient->id,
+            'status'       => 'denied',
         ]);
     }
 }

@@ -17,7 +17,7 @@ class CreateFriendshipsTable extends Migration
             $table->id();
             $table->unsignedInteger('sender_id');
             $table->unsignedInteger('recipient_id');
-            $table->boolean('accepted')->default(false);
+            $table->enum('status', ['pending', 'accepted', 'denied'])->default('pending');
             $table->timestamps();
 
             $table->foreign('sender_id')->references('id')->on('users')->onDelete('cascade');
