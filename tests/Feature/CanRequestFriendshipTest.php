@@ -64,14 +64,14 @@ class CanRequestFriendshipTest extends TestCase
         $this->assertDatabaseHas('friendships', [
             'sender_id'    => $sender->id,
             'recipient_id' => $recipient->id,
-            'status'       => 'pending',
+            'status'       => 'accepted',
         ]);
     }
 
     /** @test */
     public function can_deny_friendship_request()
     {
-        $this->markTestIncomplete();
+        $this->withoutExceptionHandling();
 
         $sender    = factory(User::class)->create();
         $recipient = factory(User::class)->create();
