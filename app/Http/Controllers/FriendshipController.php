@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Friendship;
+use App\Models\Status;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -21,5 +22,20 @@ class FriendshipController extends Controller
             'sender_id' => $request->user()->id,
             'recipient_id' => $recipient->id,
         ]);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param Request $request
+     * @param User $recipient
+     * @return Response
+     */
+    public function destroy(Request $request, User $recipient)
+    {
+        return Friendship::where([
+            'sender_id' => $request->user()->id,
+            'recipient_id' => $recipient->id,
+        ])->delete();
     }
 }
