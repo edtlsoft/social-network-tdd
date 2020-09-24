@@ -59,7 +59,7 @@ class CanRequestFriendshipTest extends TestCase
             'recipient_id' => $recipient->id,
         ]);
 
-        $this->actingAs($recipient)->postJson(route('request-friendship.store', $sender));
+        $this->actingAs($recipient)->postJson(route('accept-friendship.store', $sender));
 
         $this->assertDatabaseHas('friendships', [
             'sender_id'    => $sender->id,

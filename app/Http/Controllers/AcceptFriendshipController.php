@@ -6,7 +6,7 @@ use App\Models\Friendship;
 use App\User;
 use Illuminate\Http\Request;
 
-class RequestFriendshipController extends Controller
+class AcceptFriendshipController extends Controller
 {
     /**
      * Display a listing of the resource.

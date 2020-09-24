@@ -23,9 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FriendshipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FriendshipController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +177,7 @@
       <recent name="C:\xampp\htdocs\developer\social-network-tdd" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.CanRequestFriendshipTest.can_delete_friendship_request">
+  <component name="RunManager" selected="PHPUnit.CanRequestFriendshipTest.can_accept_friendship_request">
     <configuration name="CanRequestFriendshipTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CanRequestFriendshipTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php" scope="Class" />
       <method v="2" />
@@ -207,9 +204,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CanRequestFriendshipTest.can_accept_friendship_request" />
         <item itemvalue="PHPUnit.CanRequestFriendshipTest.can_delete_friendship_request" />
         <item itemvalue="PHPUnit.CanRequestFriendshipTest" />
-        <item itemvalue="PHPUnit.CanRequestFriendshipTest.can_accept_friendship_request" />
         <item itemvalue="PHPUnit.CanRequestFriendshipTest.can_send_friendship_request" />
         <item itemvalue="PHPUnit.ListStatusesTest.can_get_statuses_for_a_specific_user" />
       </list>
@@ -251,7 +248,7 @@
       <workItem from="1600221392454" duration="1689000" />
       <workItem from="1600223154354" duration="13522000" />
       <workItem from="1600657399359" duration="1139000" />
-      <workItem from="1600870113570" duration="2496000" />
+      <workItem from="1600870113570" duration="2722000" />
     </task>
     <servers />
   </component>
@@ -325,41 +322,41 @@
     <state x="1890" y="14" key="FileChooserDialogImpl/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599670912549" />
     <state x="1890" y="119" key="FileChooserDialogImpl/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600223525730" />
     <state x="1890" y="126" key="FileChooserDialogImpl/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600647110722" />
-    <state width="1367" height="265" key="GridCell.Tab.0.bottom" timestamp="1600915451358">
+    <state width="1367" height="188" key="GridCell.Tab.0.bottom" timestamp="1600915834164">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
     <state width="1367" height="221" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345840" />
     <state width="1367" height="179" key="GridCell.Tab.0.bottom/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.bottom/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
-    <state width="1367" height="265" key="GridCell.Tab.0.bottom/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600915451358" />
+    <state width="1367" height="188" key="GridCell.Tab.0.bottom/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600915834164" />
     <state width="1367" height="283" key="GridCell.Tab.0.bottom/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401489517" />
-    <state width="1367" height="265" key="GridCell.Tab.0.center" timestamp="1600915451357">
+    <state width="1367" height="188" key="GridCell.Tab.0.center" timestamp="1600915834162">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
     <state width="1367" height="221" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.center/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628126" />
     <state width="1367" height="287" key="GridCell.Tab.0.center/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929868" />
-    <state width="1367" height="265" key="GridCell.Tab.0.center/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600915451357" />
+    <state width="1367" height="188" key="GridCell.Tab.0.center/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600915834162" />
     <state width="1367" height="283" key="GridCell.Tab.0.center/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401489516" />
-    <state width="1367" height="265" key="GridCell.Tab.0.left" timestamp="1600915451357">
+    <state width="1367" height="188" key="GridCell.Tab.0.left" timestamp="1600915834162">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
     <state width="1367" height="221" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.left/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628125" />
     <state width="1367" height="287" key="GridCell.Tab.0.left/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929867" />
-    <state width="1367" height="265" key="GridCell.Tab.0.left/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600915451357" />
+    <state width="1367" height="188" key="GridCell.Tab.0.left/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600915834162" />
     <state width="1367" height="283" key="GridCell.Tab.0.left/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401489515" />
-    <state width="1367" height="265" key="GridCell.Tab.0.right" timestamp="1600915451357">
+    <state width="1367" height="188" key="GridCell.Tab.0.right" timestamp="1600915834163">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
     <state width="1367" height="221" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.right/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.right/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
-    <state width="1367" height="265" key="GridCell.Tab.0.right/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600915451357" />
+    <state width="1367" height="188" key="GridCell.Tab.0.right/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600915834163" />
     <state width="1367" height="283" key="GridCell.Tab.0.right/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401489516" />
     <state width="1367" height="259" key="GridCell.Tab.1.bottom" timestamp="1597376421875">
       <screen x="1366" y="-232" width="1366" height="728" />
