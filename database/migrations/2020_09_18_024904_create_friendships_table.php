@@ -15,13 +15,13 @@ class CreateFriendshipsTable extends Migration
     {
         Schema::create('friendships', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('sender_id');
-            $table->unsignedInteger('recipient_id');
+            $table->unsignedBigInteger('sender_id');
+            $table->unsignedBigInteger('recipient_id');
             $table->enum('status', ['pending', 'accepted', 'denied'])->default('pending');
             $table->timestamps();
 
-            $table->foreign('sender_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('recipient_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('sender_id')->references('id')->on('users');
+            $table->foreign('recipient_id')->references('id')->on('users');
         });
     }
 
