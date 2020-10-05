@@ -27,9 +27,9 @@ class CanRequestFriendshipTest extends TestCase
         $sender    = factory(User::class)->create();
         $recipient = factory(User::class)->create();
 
-        $this->actingAs($sender)->postJson(route('friendship.store', $recipient));
+        $response = $this->actingAs($sender)->postJson(route('friendship.store', $recipient));
 
-        $this->assertJson([
+        $response->assertJson([
             'friendship_status' => 'pending'
         ]);
 
