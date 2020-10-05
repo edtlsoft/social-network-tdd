@@ -9,6 +9,11 @@
                     <img src="{{ $user->avatar() }}" alt="" class="card-img-top">
                     <div class="card-body">
                         {{ $user->username }}
+                        <friendship-btn
+                            dusk="request-friendship"
+                            :recipient="{{ $user }}"
+                            class="btn btn-primary"
+                        ></friendship-btn>
                     </div>
                 </div>
             </div>

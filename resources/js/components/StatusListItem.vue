@@ -7,7 +7,7 @@
                 </div>
                 <div>
                     <h5 class="mb-1">
-                        <a :href="status.user.link" v-text="status.user.name"></a>
+                        <a :href="status.user.link" v-text="status.user.username"></a>
                     </h5>
                     <div class="small text-muted" v-text="status.ago"></div>
                 </div>

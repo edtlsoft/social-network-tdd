@@ -19,5 +19,13 @@ class UsersTableSeeder extends Seeder
             'email'      => 'edward@edtlsoft.com',
             'password'   => \bcrypt('123')
         ]);
+
+        factory(User::class)->create([
+            'username'   => 'NewUser',
+            'first_name' => 'New',
+            'last_name'  => 'User',
+            'email'      => 'newuser@edtlsoft.com',
+            'password'   => \bcrypt('123')
+        ]);
     }
 }
