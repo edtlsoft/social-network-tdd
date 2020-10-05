@@ -15,7 +15,7 @@ class UsersCanRequestFriendshipTest extends DuskTestCase
     /** @test
      * @throws Throwable
      */
-    public function users_can_request_friendship()
+    public function senders_can_create_and_delete_friendship_requests()
     {
         $sender    = factory(User::class)->create();
         $recipient = factory(User::class)->create();
@@ -25,7 +25,14 @@ class UsersCanRequestFriendshipTest extends DuskTestCase
                 ->visit(route('users.show', $recipient))
                 ->press('@request-friendship')
                 ->waitForText('Cancel')
-                ->assertSee('Cancel');
+                ->assertSee('Cancel')
+
+                ->visit(route('users.show', $recipient))
+                ->assertSee('Cancel')
+
+                ->press('@request-friendship')
+                ->waitForText('Add friend')
+                ->assertSee('Add friend');
         });
     }
 }

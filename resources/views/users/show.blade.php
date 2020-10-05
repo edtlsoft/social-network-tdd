@@ -12,6 +12,7 @@
                         <friendship-btn
                             dusk="request-friendship"
                             :recipient="{{ $user }}"
+                            friendship-status="{{ $friendshipStatus }}"
                             class="btn btn-primary"
                         ></friendship-btn>
                     </div>

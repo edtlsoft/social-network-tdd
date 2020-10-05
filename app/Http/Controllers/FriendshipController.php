@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Friendship;
 use App\Models\Status;
 use App\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -23,9 +24,13 @@ class FriendshipController extends Controller
      */
     public function store(Request $request, User $recipient)
     {
-        return Friendship::firstOrCreate([
+        Friendship::firstOrCreate([
             'sender_id' => $request->user()->id,
             'recipient_id' => $recipient->id,
+        ]);
+
+        return response()->json([
+            'friendship_status' => 'pending'
         ]);
     }
 
@@ -34,13 +39,17 @@ class FriendshipController extends Controller
      *
      * @param Request $request
      * @param User $recipient
-     * @return Response
+     * @return JsonResponse
      */
     public function destroy(Request $request, User $recipient)
     {
-        return Friendship::where([
+        Friendship::where([
             'sender_id' => $request->user()->id,
             'recipient_id' => $recipient->id,
         ])->delete();
+
+        return response()->json([
+            'friendship_status' => 'deleted'
+        ]);
     }
 }

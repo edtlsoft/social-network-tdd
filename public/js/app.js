@@ -1915,25 +1915,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     recipient: {
       type: Object,
       required: true
+    },
+    friendshipStatus: {
+      type: String,
+      required: true
     }
   },
   data: function data() {
     return {
-      textBtn: 'Add Friend'
+      localFriendshipStatus: this.friendshipStatus
     };
   },
+  computed: {
+    getText: function getText() {
+      return this.localFriendshipStatus === 'pending' ? 'Cancel' : 'Add friend';
+    }
+  },
   methods: {
-    sendFriendshipRequest: function sendFriendshipRequest() {
+    toggleFriendshipStatus: function toggleFriendshipStatus() {
       var _this = this;
 
-      axios.post("/friendship/".concat(this.recipient.username)).then(function (response) {
-        _this.textBtn = 'Cancel';
+      var method = this.localFriendshipStatus === 'pending' ? 'delete' : 'post';
+      axios[method]("/friendship/".concat(this.recipient.username)).then(function (response) {
+        _this.localFriendshipStatus = response.data.friendship_status;
       })["catch"](function (errors) {
         return console.log(errors);
       });
@@ -38482,11 +38491,8 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "button",
-    {
-      attrs: { dusk: "request-friendship", text: "" },
-      on: { click: _vm.sendFriendshipRequest }
-    },
-    [_vm._v("\n    " + _vm._s(_vm.textBtn) + "\n")]
+    { attrs: { text: "" }, on: { click: _vm.toggleFriendshipStatus } },
+    [_vm._v("\n    " + _vm._s(_vm.getText) + "\n")]
   )
 }
 var staticRenderFns = []
