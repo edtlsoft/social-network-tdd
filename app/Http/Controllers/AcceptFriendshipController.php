@@ -13,6 +13,13 @@ class AcceptFriendshipController extends Controller
         $this->middleware('auth');
     }
 
+    public function index()
+    {
+        $friendshipRequests = Friendship::where('recipient_id', auth()->id())->with('sender')->get();
+
+        return view('friendships.index', compact('friendshipRequests'));
+    }
+
     /**
      * Store a newly created resource in storage.
      *
