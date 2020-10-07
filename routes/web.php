@@ -33,7 +33,7 @@ Route::delete('/friendship/{recipient}', 'FriendshipController@destroy')->name('
 // Request Friendship
 Route::get('/friends/request', 'AcceptFriendshipController@index')->name('accept-friendship.index');
 Route::post('/accept-friendships/{sender}', 'AcceptFriendshipController@store')->name('accept-friendship.store');
-Route::delete('/accept-friendship/{sender}', 'AcceptFriendshipController@destroy')->name('accept-friendship.destroy');
+Route::delete('/accept-friendships/{sender}', 'AcceptFriendshipController@destroy')->name('accept-friendship.destroy');
 
 
 Auth::routes();

@@ -1,9 +1,16 @@
 <template>
-    <div v-if="localFriendshipStatus === 'pending'">
-        <button dusk="accept-friendship" @click="acceptFriendshipRequest">Confirm</button>
-    </div>
-    <div v-else>
-        <button>Friends</button>
+    <div class="d-flex justify-content-between">
+        <span v-text="sender.username"></span>
+        <div v-if="localFriendshipStatus === 'pending'">
+            <button dusk="accept-friendship" @click="acceptFriendshipRequest">Confirm</button>
+            <button dusk="deny-friendship" @click="denyFriendshipRequest">Delete</button>
+        </div>
+        <div v-else-if="localFriendshipStatus === 'accepted'">
+            <span>Friends</span>
+        </div>
+        <div v-else>
+            <span>Request removed</span>
+        </div>
     </div>
 </template>
 
@@ -28,7 +35,14 @@ export default {
         acceptFriendshipRequest() {
             axios.post(`/accept-friendships/${this.sender.username}`)
                 .then(response => {
-                    this.localFriendshipStatus = 'accepted'
+                    this.localFriendshipStatus = response.data.status
+                })
+                .catch(error => console.log(error))
+        },
+        denyFriendshipRequest() {
+            axios.delete(`/accept-friendships/${this.sender.username}`)
+                .then(response => {
+                    this.localFriendshipStatus = response.data.status
                 })
                 .catch(error => console.log(error))
         },

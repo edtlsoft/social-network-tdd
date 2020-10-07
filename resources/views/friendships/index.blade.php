@@ -1,11 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-    @foreach($friendshipRequests as $friendshipRequest)
-        {{ $friendshipRequest->sender->username }}
-        <accept-friendship-btn
-            :sender="{{ $friendshipRequest->sender }}"
-            friendship-status="{{ $friendshipRequest->status }}"
-        ></accept-friendship-btn>
-    @endforeach
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                @foreach($friendshipRequests as $friendshipRequest)
+                    <accept-friendship-btn
+                        :sender="{{ $friendshipRequest->sender }}"
+                        friendship-status="{{ $friendshipRequest->status }}"
+                    ></accept-friendship-btn>
+                @endforeach
+            </div>
+        </div>
+    </div>
 @endsection

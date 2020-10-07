@@ -1917,6 +1917,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     sender: {
@@ -1938,7 +1945,16 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.post("/accept-friendships/".concat(this.sender.username)).then(function (response) {
-        _this.localFriendshipStatus = 'accepted';
+        _this.localFriendshipStatus = response.data.status;
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    },
+    denyFriendshipRequest: function denyFriendshipRequest() {
+      var _this2 = this;
+
+      axios["delete"]("/accept-friendships/".concat(this.sender.username)).then(function (response) {
+        _this2.localFriendshipStatus = response.data.status;
       })["catch"](function (error) {
         return console.log(error);
       });
@@ -38538,18 +38554,33 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.localFriendshipStatus === "pending"
-    ? _c("div", [
-        _c(
-          "button",
-          {
-            attrs: { dusk: "accept-friendship" },
-            on: { click: _vm.acceptFriendshipRequest }
-          },
-          [_vm._v("Confirm")]
-        )
-      ])
-    : _c("div", [_c("button", [_vm._v("Friends")])])
+  return _c("div", { staticClass: "d-flex justify-content-between" }, [
+    _c("span", { domProps: { textContent: _vm._s(_vm.sender.username) } }),
+    _vm._v(" "),
+    _vm.localFriendshipStatus === "pending"
+      ? _c("div", [
+          _c(
+            "button",
+            {
+              attrs: { dusk: "accept-friendship" },
+              on: { click: _vm.acceptFriendshipRequest }
+            },
+            [_vm._v("Confirm")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              attrs: { dusk: "deny-friendship" },
+              on: { click: _vm.denyFriendshipRequest }
+            },
+            [_vm._v("Delete")]
+          )
+        ])
+      : _vm.localFriendshipStatus === "accepted"
+      ? _c("div", [_c("span", [_vm._v("Friends")])])
+      : _c("div", [_c("span", [_vm._v("Request removed")])])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
