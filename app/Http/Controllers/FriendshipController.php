@@ -20,36 +20,36 @@ class FriendshipController extends Controller
      * Store a newly created resource in storage.
      *
      * @param Request $request
-     * @return Response
+     * @param User $recipient
+     * @return JsonResponse
      */
     public function store(Request $request, User $recipient)
     {
-        Friendship::firstOrCreate([
+        $friendship = Friendship::firstOrCreate([
             'sender_id' => $request->user()->id,
             'recipient_id' => $recipient->id,
         ]);
 
-        return response()->json([
-            'friendship_status' => 'pending'
-        ]);
+        return response()->json(['friendship_status' => $friendship->fresh()->status]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param Request $request
-     * @param User $recipient
+     * @param User $user
      * @return JsonResponse
      */
-    public function destroy(Request $request, User $recipient)
+    public function destroy(Request $request, User $user)
     {
-        Friendship::where([
+        $deleted = Friendship::where([
             'sender_id' => $request->user()->id,
-            'recipient_id' => $recipient->id,
+            'recipient_id' => $user->id,
+        ])->orWhere([
+            'sender_id' => $user->id,
+            'recipient_id' => $request->user()->id,
         ])->delete();
 
-        return response()->json([
-            'friendship_status' => 'deleted'
-        ]);
+        return response()->json(['friendship_status' => $deleted ? 'deleted' : '']);
     }
 }

@@ -28,7 +28,7 @@ Route::get('/users/{user}/statuses', 'UserStatusController@index')->name('users.
 
 // Friendship
 Route::post('/friendship/{recipient}', 'FriendshipController@store')->name('friendship.store');
-Route::delete('/friendship/{recipient}', 'FriendshipController@destroy')->name('friendship.destroy');
+Route::delete('/friendships/{user}', 'FriendshipController@destroy')->name('friendship.destroy');
 
 // Request Friendship
 Route::get('/friends/request', 'AcceptFriendshipController@index')->name('accept-friendship.index');

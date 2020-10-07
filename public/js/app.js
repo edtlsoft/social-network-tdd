@@ -1924,6 +1924,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     sender: {
@@ -1945,7 +1951,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.post("/accept-friendships/".concat(this.sender.username)).then(function (response) {
-        _this.localFriendshipStatus = response.data.status;
+        _this.localFriendshipStatus = response.data.friendship_status;
       })["catch"](function (error) {
         return console.log(error);
       });
@@ -1954,7 +1960,16 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       axios["delete"]("/accept-friendships/".concat(this.sender.username)).then(function (response) {
-        _this2.localFriendshipStatus = response.data.status;
+        _this2.localFriendshipStatus = response.data.friendship_status;
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    },
+    deleteFriendshipRequest: function deleteFriendshipRequest() {
+      var _this3 = this;
+
+      axios["delete"]("/friendships/".concat(this.sender.username)).then(function (response) {
+        _this3.localFriendshipStatus = response.data.friendship_status;
       })["catch"](function (error) {
         return console.log(error);
       });
@@ -38574,12 +38589,27 @@ var render = function() {
               attrs: { dusk: "deny-friendship" },
               on: { click: _vm.denyFriendshipRequest }
             },
-            [_vm._v("Delete")]
+            [_vm._v("Deny")]
           )
         ])
       : _vm.localFriendshipStatus === "accepted"
       ? _c("div", [_c("span", [_vm._v("Friends")])])
-      : _c("div", [_c("span", [_vm._v("Request removed")])])
+      : _vm.localFriendshipStatus === "denied"
+      ? _c("div", [_c("span", [_vm._v("Request denied")])])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.localFriendshipStatus === "deleted"
+      ? _c("div", [_c("span", [_vm._v("Request removed")])])
+      : _c("div", [
+          _c(
+            "button",
+            {
+              attrs: { dusk: "delete-friendship" },
+              on: { click: _vm.deleteFriendshipRequest }
+            },
+            [_vm._v("Delete")]
+          )
+        ])
   ])
 }
 var staticRenderFns = []

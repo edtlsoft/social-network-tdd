@@ -38,7 +38,7 @@ class AcceptFriendshipController extends Controller
             'status' => 'accepted',
         ]);
 
-        return response()->json(['status' => 'accepted']);
+        return response()->json(['friendship_status' => 'accepted']);
     }
 
     /**
@@ -58,6 +58,6 @@ class AcceptFriendshipController extends Controller
             'status' => 'denied',
         ]);
 
-        return response()->json(['status' => 'denied']);
+        return response()->json(['friendship_status' => 'denied']);
     }
 }

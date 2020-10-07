@@ -54,7 +54,7 @@ class CanRequestFriendshipTest extends TestCase
     }
 
     /** @test */
-    public function can_delete_friendship_request()
+    public function senders_can_delete_sent_friendship_request()
     {
         $this->withoutExceptionHandling();
 
@@ -71,6 +71,30 @@ class CanRequestFriendshipTest extends TestCase
         $response->assertJson([
             'friendship_status' => 'deleted'
         ]);
+
+        $this->assertDatabaseMissing('friendships', [
+            'sender_id'    => $sender->id,
+            'recipient_id' => $recipient->id,
+            'accepted'     => false,
+        ]);
+    }
+
+    /** @test */
+    public function recipients_can_delete_received_friendship_request()
+    {
+        $this->withoutExceptionHandling();
+
+        $sender    = factory(User::class)->create();
+        $recipient = factory(User::class)->create();
+
+        Friendship::create([
+            'sender_id'    => $sender->id,
+            'recipient_id' => $recipient->id,
+        ]);
+
+        $response = $this->actingAs($recipient)->deleteJson(route('friendship.destroy', $recipient));
+
+        $response->assertJson(['friendship_status' => 'deleted']);
 
         $this->assertDatabaseMissing('friendships', [
             'sender_id'    => $sender->id,
@@ -102,7 +126,7 @@ class CanRequestFriendshipTest extends TestCase
 
         $response = $this->actingAs($recipient)->postJson(route('accept-friendship.store', $sender));
 
-        $response->assertJson(['status' => 'accepted']);
+        $response->assertJson(['friendship_status' => 'accepted']);
 
         $this->assertDatabaseHas('friendships', [
             'sender_id'    => $sender->id,
@@ -136,7 +160,7 @@ class CanRequestFriendshipTest extends TestCase
 
         $response = $this->actingAs($recipient)->deleteJson(route('accept-friendship.destroy', $sender));
 
-        $response->assertJson(['status' => 'denied']);
+        $response->assertJson(['friendship_status' => 'denied']);
 
         $this->assertDatabaseHas('friendships', [
             'sender_id'    => $sender->id,
