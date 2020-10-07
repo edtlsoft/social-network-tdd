@@ -33,7 +33,7 @@ class UsersCanRequestFriendshipTest extends DuskTestCase
                 ->assertSee('Cancel')
 
                 ->press('@request-friendship')
-                ->waitForText('Add friend')
+                ->waitForText('Add friend', 10)
                 ->assertSee('Add friend');
         });
     }

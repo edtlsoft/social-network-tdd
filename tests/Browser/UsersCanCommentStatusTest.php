@@ -40,7 +40,7 @@ class UsersCanCommentStatusTest extends DuskTestCase
             $browser->visit('/')->waitForText($status->body);
 
                 foreach($comments as $comment) {
-                    $browser->assertSee($comment->user->name)
+                    $browser->assertSee($comment->user->username)
                             ->assertSee($comment->body);
                 }
             ;

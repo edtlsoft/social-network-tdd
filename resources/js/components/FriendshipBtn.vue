@@ -31,7 +31,7 @@ export default {
         toggleFriendshipStatus() {
             let method = this.localFriendshipStatus === 'pending' ? 'delete' : 'post'
 
-            axios[method](`/friendship/${this.recipient.username}`)
+            axios[method](`/friendships/${this.recipient.username}`)
             .then(response => {
                 this.localFriendshipStatus = response.data.friendship_status
             })

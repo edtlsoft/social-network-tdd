@@ -24,12 +24,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AcceptFriendshipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AcceptFriendshipController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FriendshipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FriendshipController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/AcceptFriendshipBtn.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AcceptFriendshipBtn.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/FriendshipBtn.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/FriendshipBtn.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/StatusListItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/StatusListItem.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanCommentStatusTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanCommentStatusTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanCreateStatusTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanCreateStatusTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanLikeCommentsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanLikeCommentsTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanRequestFriendshipTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanRequestFriendshipTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanSeeAllStatusesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanSeeAllStatusesTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -257,7 +260,7 @@
       <workItem from="1600657399359" duration="1139000" />
       <workItem from="1600870113570" duration="7135000" />
       <workItem from="1601066408912" duration="4914000" />
-      <workItem from="1601862768540" duration="24771000" />
+      <workItem from="1601862768540" duration="27574000" />
     </task>
     <servers />
   </component>
@@ -402,10 +405,10 @@
     </state>
     <state x="1770" y="105" width="540" height="540" key="StructurePopup/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600227032371" />
     <state x="1770" y="111" width="585" height="570" key="StructurePopup/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600397248306" />
-    <state width="498" height="398" key="SwitcherDM" timestamp="1602040737581">
+    <state width="498" height="398" key="SwitcherDM" timestamp="1602043123970">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state width="498" height="398" key="SwitcherDM/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602040737581" />
+    <state width="498" height="398" key="SwitcherDM/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602043123970" />
     <state width="498" height="420" key="SwitcherDM/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401200634" />
     <state x="1641" y="-12" key="Vcs.Push.Dialog.v2" timestamp="1598672123870">
       <screen x="1366" y="-105" width="1366" height="728" />
@@ -425,14 +428,14 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1705" y="162" key="run.anything.popup/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1601866341660" />
-    <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602039919632">
+    <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602043541477">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598413751823" />
     <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599447058607" />
     <state x="1712" y="-183" width="672" height="678" key="search.everywhere.popup/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597380076229" />
     <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208481687" />
-    <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602039919632" />
+    <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602043541477" />
     <state x="1712" y="52" width="672" height="716" key="search.everywhere.popup/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600400965809" />
   </component>
   <component name="XDebuggerManager">
@@ -458,7 +461,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php</url>
-          <line>116</line>
+          <line>118</line>
           <properties>
             <option name="className" value="\Tests\Feature\CanRequestFriendshipTest" />
             <option name="methodName" value="can_accept_friendship_request" />

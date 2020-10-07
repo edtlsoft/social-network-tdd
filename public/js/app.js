@@ -2021,7 +2021,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var method = this.localFriendshipStatus === 'pending' ? 'delete' : 'post';
-      axios[method]("/friendship/".concat(this.recipient.username)).then(function (response) {
+      axios[method]("/friendships/".concat(this.recipient.username)).then(function (response) {
         _this.localFriendshipStatus = response.data.friendship_status;
       })["catch"](function (errors) {
         return console.log(errors);
@@ -38910,7 +38910,7 @@ var render = function() {
                   _c("div", { staticClass: "card border-0 shadow-sm" }, [
                     _c("div", { staticClass: "card-body p-2 text-secondary" }, [
                       _c("a", { attrs: { href: comment.user.link } }, [
-                        _c("strong", [_vm._v(_vm._s(comment.user.name))])
+                        _c("strong", [_vm._v(_vm._s(comment.user.username))])
                       ]),
                       _vm._v(
                         "\n                            " +
@@ -38970,7 +38970,7 @@ var render = function() {
                     attrs: {
                       width: "35",
                       src: _vm.status.user.avatar,
-                      alt: _vm.currentUser.name
+                      alt: _vm.currentUser.username
                     }
                   }),
                   _vm._v(" "),

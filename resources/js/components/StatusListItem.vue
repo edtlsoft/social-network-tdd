@@ -38,7 +38,7 @@
                         <div class="card border-0 shadow-sm">
                             <div class="card-body p-2 text-secondary">
                                 <a :href="comment.user.link">
-                                    <strong>{{ comment.user.name }}</strong>
+                                    <strong>{{ comment.user.username }}</strong>
                                 </a>
                                 {{ comment.body }}
                             </div>
@@ -65,7 +65,7 @@
                 <div class="d-flex aling-items-center">
                     <img class="rounded shadow-sm mr-2"
                          width="35" :src="status.user.avatar"
-                         :alt="currentUser.name"
+                         :alt="currentUser.username"
                     >
                     <div class="input-group">
                         <textarea v-model="comment"

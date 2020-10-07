@@ -7,12 +7,15 @@ use App\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
+use Throwable;
 
 class UsersCanLikeCommentsTest extends DuskTestCase
 {
     use DatabaseMigrations;
 
-    /** @test */
+    /** @test
+     * @throws Throwable
+     */
     public function authenticated_users_can_like_and_unlike_comments()
     {
         $user = factory(User::class)->create();
