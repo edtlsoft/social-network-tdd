@@ -1994,7 +1994,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     recipient: {
@@ -2013,14 +2012,23 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     getText: function getText() {
-      return this.localFriendshipStatus === 'pending' ? 'Cancel' : 'Add friend';
+      if (this.localFriendshipStatus === 'pending') {
+        return "Cancel";
+      } else if (this.localFriendshipStatus === 'accepted') {
+        return "Delete";
+      } else if (this.localFriendshipStatus === 'denied') {
+        return "Request denied";
+      } else {
+        return "Add friend";
+      }
     }
   },
   methods: {
     toggleFriendshipStatus: function toggleFriendshipStatus() {
       var _this = this;
 
-      var method = this.localFriendshipStatus === 'pending' ? 'delete' : 'post';
+      var method = this.localFriendshipStatus === 'pending' || this.localFriendshipStatus === 'accepted' ? 'delete' : 'post';
+      console.log(method);
       axios[method]("/friendships/".concat(this.recipient.username)).then(function (response) {
         _this.localFriendshipStatus = response.data.friendship_status;
       })["catch"](function (errors) {
@@ -38634,11 +38642,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "button",
-    { attrs: { text: "" }, on: { click: _vm.toggleFriendshipStatus } },
-    [_vm._v("\n    " + _vm._s(_vm.getText) + "\n")]
-  )
+  return _c("button", { on: { click: _vm.toggleFriendshipStatus } }, [
+    _vm._v("\n    " + _vm._s(_vm.getText) + "\n")
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -51419,15 +51425,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************************!*\
   !*** ./resources/js/components/FriendshipBtn.vue ***!
   \***************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _FriendshipBtn_vue_vue_type_template_id_61ae5672_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FriendshipBtn.vue?vue&type=template&id=61ae5672&scoped=true& */ "./resources/js/components/FriendshipBtn.vue?vue&type=template&id=61ae5672&scoped=true&");
 /* harmony import */ var _FriendshipBtn_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FriendshipBtn.vue?vue&type=script&lang=js& */ "./resources/js/components/FriendshipBtn.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _FriendshipBtn_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _FriendshipBtn_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -51457,7 +51462,7 @@ component.options.__file = "resources/js/components/FriendshipBtn.vue"
 /*!****************************************************************************!*\
   !*** ./resources/js/components/FriendshipBtn.vue?vue&type=script&lang=js& ***!
   \****************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

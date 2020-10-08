@@ -42,14 +42,18 @@ class FriendshipController extends Controller
      */
     public function destroy(Request $request, User $user)
     {
-        $deleted = Friendship::where([
+        $friendship = Friendship::where([
             'sender_id' => $request->user()->id,
             'recipient_id' => $user->id,
         ])->orWhere([
             'sender_id' => $user->id,
             'recipient_id' => $request->user()->id,
-        ])->delete();
+        ])->first();
 
-        return response()->json(['friendship_status' => $deleted ? 'deleted' : '']);
+        if( $friendship->status === 'denied' ) {
+            return response()->json(['friendship_status' => 'denied']);
+        }
+
+        return response()->json(['friendship_status' => $friendship->delete() ? 'deleted' : '']);
     }
 }

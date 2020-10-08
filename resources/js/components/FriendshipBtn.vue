@@ -1,6 +1,5 @@
 <template>
-    <button @click="toggleFriendshipStatus"
-            text="">
+    <button @click="toggleFriendshipStatus">
         {{ getText }}
     </button>
 </template>
@@ -24,12 +23,27 @@ export default {
     },
     computed: {
         getText() {
-            return this.localFriendshipStatus === 'pending' ? 'Cancel' : 'Add friend'
+            if( this.localFriendshipStatus === 'pending' ) {
+                return "Cancel";
+            }
+            else if( this.localFriendshipStatus === 'accepted' ) {
+                return "Delete";
+            }
+            else if( this.localFriendshipStatus === 'denied' ) {
+                return "Request denied";
+            }
+            else {
+                return "Add friend";
+            }
         },
     },
     methods: {
         toggleFriendshipStatus() {
-            let method = this.localFriendshipStatus === 'pending' ? 'delete' : 'post'
+            let method = this.localFriendshipStatus === 'pending' || this.localFriendshipStatus === 'accepted'
+                ? 'delete'
+                : 'post'
+
+            console.log(method)
 
             axios[method](`/friendships/${this.recipient.username}`)
             .then(response => {

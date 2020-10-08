@@ -28,13 +28,63 @@ class UsersCanRequestFriendshipTest extends DuskTestCase
                 ->press('@request-friendship')
                 ->waitForText('Cancel')
                 ->assertSee('Cancel')
-
                 ->visit(route('users.show', $recipient))
                 ->assertSee('Cancel')
-
                 ->press('@request-friendship')
                 ->waitForText('Add friend', 10)
                 ->assertSee('Add friend');
+        });
+    }
+
+    /** @test
+     * @throws Throwable
+     */
+    public function senders_can_delete_accepted_friendship_requests()
+    {
+        $sender    = factory(User::class)->create();
+        $recipient = factory(User::class)->create();
+
+        Friendship::create([
+            'sender_id'    => $sender->id,
+            'recipient_id' => $recipient->id,
+            'status'       => 'accepted'
+        ]);
+
+        $this->browse(function (Browser $browser) use ($sender, $recipient) {
+            $browser->loginAs($sender)
+                ->visit(route('users.show', $recipient))
+                ->assertSee($sender->username)
+                ->press('@request-friendship')
+                ->waitForText('Add friend')
+                ->assertSee('Add friend')
+                ->visit(route('users.show', $recipient))
+                ->assertSee('Add friend');
+        });
+    }
+
+    /** @test
+     * @throws Throwable
+     */
+    public function senders_cannot_delete_deny_friendship_requests()
+    {
+        $sender    = factory(User::class)->create();
+        $recipient = factory(User::class)->create();
+
+        Friendship::create([
+            'sender_id'    => $sender->id,
+            'recipient_id' => $recipient->id,
+            'status'       => 'denied'
+        ]);
+
+        $this->browse(function (Browser $browser) use ($sender, $recipient) {
+            $browser->loginAs($sender)
+                ->visit(route('users.show', $recipient))
+                ->assertSee($sender->username)
+                ->assertSee('Request denied')
+                ->press('@request-friendship')
+                ->assertSee('Request denied')
+                ->visit(route('users.show', $recipient))
+                ->assertSee('Request denied');
         });
     }
 
@@ -47,7 +97,7 @@ class UsersCanRequestFriendshipTest extends DuskTestCase
         $recipient = factory(User::class)->create();
 
         Friendship::create([
-            'sender_id' => $sender->id,
+            'sender_id'    => $sender->id,
             'recipient_id' => $recipient->id,
         ]);
 
@@ -57,10 +107,8 @@ class UsersCanRequestFriendshipTest extends DuskTestCase
                 ->press('@accept-friendship')
                 ->waitForText('Friends')
                 ->assertSee('Friends')
-
                 ->visit(route('accept-friendship.index'))
-                ->assertSee('Friends')
-                ;
+                ->assertSee('Friends');
         });
     }
 
@@ -84,10 +132,8 @@ class UsersCanRequestFriendshipTest extends DuskTestCase
                 ->press('@deny-friendship')
                 ->waitForText('Request denied')
                 ->assertSee('Request denied')
-
                 ->visit(route('accept-friendship.index'))
-                ->assertSee('Request denied')
-            ;
+                ->assertSee('Request denied');
         });
     }
 
@@ -111,11 +157,9 @@ class UsersCanRequestFriendshipTest extends DuskTestCase
                 ->press('@delete-friendship')
                 ->waitForText('Request removed')
                 ->assertSee('Request removed')
-
                 ->visit(route('accept-friendship.index'))
                 ->assertDontSee($sender->username)
-                ->assertDontSee('Request removed')
-            ;
+                ->assertDontSee('Request removed');
         });
     }
 }
