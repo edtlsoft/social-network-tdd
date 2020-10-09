@@ -8,13 +8,17 @@
                 <div class="card card border-0 bg-light shadow-sm">
                     <img src="{{ $user->avatar() }}" alt="" class="card-img-top">
                     <div class="card-body">
-                        {{ $user->username }}
-                        <friendship-btn
-                            dusk="request-friendship"
-                            :recipient="{{ $user }}"
-                            friendship-status="{{ $friendshipStatus }}"
-                            class="btn btn-primary"
-                        ></friendship-btn>
+                        @if(auth()->id() === $user->id)
+                            <h5 class="card-title">{{ $user->username }} <small class="text-secondary">It's you</small></h5>
+                        @else
+                            <h5 class="card-title">{{ $user->username }}</h5>
+                            <friendship-btn
+                                dusk="request-friendship"
+                                :recipient="{{ $user }}"
+                                friendship-status="{{ $friendshipStatus }}"
+                                class="btn btn-primary"
+                            ></friendship-btn>
+                        @endif
                     </div>
                 </div>
             </div>
