@@ -24,7 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/FriendshipBtn.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/FriendshipBtn.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/mixins/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/mixins/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/UsersCanRequestFriendshipTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/UsersCanRequestFriendshipTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +255,7 @@
       <workItem from="1600870113570" duration="7135000" />
       <workItem from="1601066408912" duration="4914000" />
       <workItem from="1601862768540" duration="28173000" />
-      <workItem from="1602122846966" duration="10489000" />
+      <workItem from="1602122846966" duration="11324000" />
     </task>
     <servers />
   </component>
@@ -326,41 +329,41 @@
     <state x="1890" y="14" key="FileChooserDialogImpl/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599670912549" />
     <state x="1890" y="119" key="FileChooserDialogImpl/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1601138952565" />
     <state x="1890" y="126" key="FileChooserDialogImpl/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600647110722" />
-    <state width="1367" height="237" key="GridCell.Tab.0.bottom" timestamp="1602209244740">
+    <state width="1367" height="237" key="GridCell.Tab.0.bottom" timestamp="1602209337394">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
     <state width="1367" height="221" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345840" />
     <state width="1367" height="179" key="GridCell.Tab.0.bottom/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.bottom/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
-    <state width="1367" height="237" key="GridCell.Tab.0.bottom/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602209244740" />
+    <state width="1367" height="237" key="GridCell.Tab.0.bottom/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602209337394" />
     <state width="1367" height="283" key="GridCell.Tab.0.bottom/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401489517" />
-    <state width="1367" height="237" key="GridCell.Tab.0.center" timestamp="1602209244739">
+    <state width="1367" height="237" key="GridCell.Tab.0.center" timestamp="1602209337393">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
     <state width="1367" height="221" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.center/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628126" />
     <state width="1367" height="287" key="GridCell.Tab.0.center/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929868" />
-    <state width="1367" height="237" key="GridCell.Tab.0.center/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602209244739" />
+    <state width="1367" height="237" key="GridCell.Tab.0.center/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602209337393" />
     <state width="1367" height="283" key="GridCell.Tab.0.center/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401489516" />
-    <state width="1367" height="237" key="GridCell.Tab.0.left" timestamp="1602209244739">
+    <state width="1367" height="237" key="GridCell.Tab.0.left" timestamp="1602209337393">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
     <state width="1367" height="221" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.left/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628125" />
     <state width="1367" height="287" key="GridCell.Tab.0.left/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929867" />
-    <state width="1367" height="237" key="GridCell.Tab.0.left/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602209244739" />
+    <state width="1367" height="237" key="GridCell.Tab.0.left/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602209337393" />
     <state width="1367" height="283" key="GridCell.Tab.0.left/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401489515" />
-    <state width="1367" height="237" key="GridCell.Tab.0.right" timestamp="1602209244739">
+    <state width="1367" height="237" key="GridCell.Tab.0.right" timestamp="1602209337394">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
     <state width="1367" height="221" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.right/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.right/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
-    <state width="1367" height="237" key="GridCell.Tab.0.right/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602209244739" />
+    <state width="1367" height="237" key="GridCell.Tab.0.right/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602209337394" />
     <state width="1367" height="283" key="GridCell.Tab.0.right/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401489516" />
     <state width="1367" height="259" key="GridCell.Tab.1.bottom" timestamp="1597376421875">
       <screen x="1366" y="-232" width="1366" height="728" />
@@ -397,10 +400,10 @@
     </state>
     <state x="1770" y="105" width="540" height="540" key="StructurePopup/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600227032371" />
     <state x="1770" y="111" width="585" height="570" key="StructurePopup/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600397248306" />
-    <state width="498" height="398" key="SwitcherDM" timestamp="1602129324897">
+    <state width="498" height="398" key="SwitcherDM" timestamp="1602210127467">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state width="498" height="398" key="SwitcherDM/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602129324897" />
+    <state width="498" height="398" key="SwitcherDM/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602210127467" />
     <state width="498" height="420" key="SwitcherDM/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401200634" />
     <state x="1641" y="-12" key="Vcs.Push.Dialog.v2" timestamp="1598672123870">
       <screen x="1366" y="-105" width="1366" height="728" />
@@ -453,7 +456,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php</url>
-          <line>153</line>
+          <line>155</line>
           <properties>
             <option name="className" value="\Tests\Feature\CanRequestFriendshipTest" />
             <option name="methodName" value="can_accept_friendship_request" />

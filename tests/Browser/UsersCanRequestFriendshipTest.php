@@ -16,6 +16,21 @@ class UsersCanRequestFriendshipTest extends DuskTestCase
     /** @test
      * @throws Throwable
      */
+    public function guests_cannot_create_friendship_requests()
+    {
+        $recipient = factory(User::class)->create();
+
+        $this->browse(function (Browser $browser) use ( $recipient) {
+            $browser->visit(route('users.show', $recipient))
+                ->assertSee($recipient->username)
+                ->press('@request-friendship')
+                ->assertPathIs('/login');
+        });
+    }
+
+    /** @test
+     * @throws Throwable
+     */
     public function senders_can_create_and_delete_friendship_requests()
     {
         $sender    = factory(User::class)->create();

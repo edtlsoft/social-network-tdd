@@ -11,13 +11,13 @@ export default {
         isAuthenticated() {
             return !! user
         },
-        guest() {
+        isGuest() {
             return ! this.isAuthenticated
         },
     },
     methods: {
         redirectIfGuest() {
-            if( this.guest ){
+            if( this.isGuest ){
                 window.location.href = '/login'
             }
         },

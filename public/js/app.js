@@ -2027,6 +2027,7 @@ __webpack_require__.r(__webpack_exports__);
     toggleFriendshipStatus: function toggleFriendshipStatus() {
       var _this = this;
 
+      this.redirectIfGuest();
       var method = this.localFriendshipStatus === 'pending' || this.localFriendshipStatus === 'accepted' ? 'delete' : 'post';
       console.log(method);
       axios[method]("/friendships/".concat(this.recipient.username)).then(function (response) {
@@ -51804,13 +51805,13 @@ var user = document.head.querySelector('meta[name="user"]').content;
     isAuthenticated: function isAuthenticated() {
       return !!user;
     },
-    guest: function guest() {
+    isGuest: function isGuest() {
       return !this.isAuthenticated;
     }
   },
   methods: {
     redirectIfGuest: function redirectIfGuest() {
-      if (this.guest) {
+      if (this.isGuest) {
         window.location.href = '/login';
       }
     }

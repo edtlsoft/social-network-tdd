@@ -39,6 +39,8 @@ export default {
     },
     methods: {
         toggleFriendshipStatus() {
+            this.redirectIfGuest();
+
             let method = this.localFriendshipStatus === 'pending' || this.localFriendshipStatus === 'accepted'
                 ? 'delete'
                 : 'post'
