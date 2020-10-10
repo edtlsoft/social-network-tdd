@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\StatusCreated;
 use App\Http\Requests\StatusStoreRequest;
 use App\Http\Resources\StatusResource;
 use App\Models\Status;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Event;
 
 class StatusController extends Controller
 {
@@ -34,16 +36,19 @@ class StatusController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  StatusStoreRequest $request
-     * @return Response
+     * @return StatusResource
      */
     public function store(StatusStoreRequest $request)
     {
-        $status = Status::create([
-            'user_id' => $request->user()->id,
-            'body' => $request->body
-        ]);
+        $validate = $request->validate(['body' => 'required|min:5']);
 
-        return StatusResource::make($status);
+        $status = $request->user()->statuses()->create($validate);
+
+        $statusResource = StatusResource::make($status);
+
+        StatusCreated::dispatch($statusResource);
+
+        return $statusResource;
     }
 
     /**

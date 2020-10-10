@@ -24,10 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FriendshipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FriendshipController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Friendship.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Friendship.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Models/FriendshipTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/Models/FriendshipTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StatusController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,11 +179,7 @@
       <recent name="C:\xampp\htdocs\developer\social-network-tdd" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.CanRequestFriendshipTest.recipients_can_delete_denied_friendship_request">
-    <configuration name="CanRequestFriendshipTest.a_user_cannot_send_friendship_request_to_itself" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CanRequestFriendshipTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php" method="a_user_cannot_send_friendship_request_to_itself" scope="Method" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHPUnit.CreateStatusTest.a_authenticated_user_can_create_statuses">
     <configuration name="CanRequestFriendshipTest.guest_cannot_accept_friendship_request" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CanRequestFriendshipTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php" method="guest_cannot_accept_friendship_request" scope="Method" />
       <method v="2" />
@@ -198,6 +192,10 @@
       <TestRunner class="Tests\Feature\CanRequestFriendshipTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CanRequestFriendshipTest.php" method="recipients_can_delete_received_friendship_request" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="CreateStatusTest.a_authenticated_user_can_create_statuses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CreateStatusTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CreateStatusTest.php" method="a_authenticated_user_can_create_statuses" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="FriendshipTest.can_find_friendship_by_sender_and_recipient" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\Models\FriendshipTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/Models/FriendshipTest.php" method="can_find_friendship_by_sender_and_recipient" scope="Method" />
       <method v="2" />
@@ -208,11 +206,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CreateStatusTest.a_authenticated_user_can_create_statuses" />
         <item itemvalue="PHPUnit.CanRequestFriendshipTest.recipients_can_delete_denied_friendship_request" />
         <item itemvalue="PHPUnit.CanRequestFriendshipTest.recipients_can_delete_received_friendship_request" />
         <item itemvalue="PHPUnit.FriendshipTest.can_find_friendship_by_sender_and_recipient" />
         <item itemvalue="PHPUnit.CanRequestFriendshipTest.guest_cannot_accept_friendship_request" />
-        <item itemvalue="PHPUnit.CanRequestFriendshipTest.a_user_cannot_send_friendship_request_to_itself" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +253,7 @@
       <workItem from="1600870113570" duration="7135000" />
       <workItem from="1601066408912" duration="4914000" />
       <workItem from="1601862768540" duration="28173000" />
-      <workItem from="1602122846966" duration="15084000" />
+      <workItem from="1602122846966" duration="16652000" />
     </task>
     <servers />
   </component>
@@ -329,41 +327,41 @@
     <state x="1890" y="14" key="FileChooserDialogImpl/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599670912549" />
     <state x="1890" y="119" key="FileChooserDialogImpl/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1601138952565" />
     <state x="1890" y="126" key="FileChooserDialogImpl/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600647110722" />
-    <state width="1367" height="231" key="GridCell.Tab.0.bottom" timestamp="1602214119662">
+    <state width="1367" height="206" key="GridCell.Tab.0.bottom" timestamp="1602296872848">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
     <state width="1367" height="221" key="GridCell.Tab.0.bottom/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345840" />
     <state width="1367" height="179" key="GridCell.Tab.0.bottom/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.bottom/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
-    <state width="1367" height="231" key="GridCell.Tab.0.bottom/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602214119662" />
+    <state width="1367" height="206" key="GridCell.Tab.0.bottom/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602296872848" />
     <state width="1367" height="283" key="GridCell.Tab.0.bottom/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401489517" />
-    <state width="1367" height="231" key="GridCell.Tab.0.center" timestamp="1602214119661">
+    <state width="1367" height="206" key="GridCell.Tab.0.center" timestamp="1602296872847">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
     <state width="1367" height="221" key="GridCell.Tab.0.center/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.center/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628126" />
     <state width="1367" height="287" key="GridCell.Tab.0.center/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929868" />
-    <state width="1367" height="231" key="GridCell.Tab.0.center/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602214119661" />
+    <state width="1367" height="206" key="GridCell.Tab.0.center/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602296872847" />
     <state width="1367" height="283" key="GridCell.Tab.0.center/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401489516" />
-    <state width="1367" height="231" key="GridCell.Tab.0.left" timestamp="1602214119661">
+    <state width="1367" height="206" key="GridCell.Tab.0.left" timestamp="1602296872846">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598414016739" />
     <state width="1367" height="221" key="GridCell.Tab.0.left/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.left/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628125" />
     <state width="1367" height="287" key="GridCell.Tab.0.left/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929867" />
-    <state width="1367" height="231" key="GridCell.Tab.0.left/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602214119661" />
+    <state width="1367" height="206" key="GridCell.Tab.0.left/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602296872846" />
     <state width="1367" height="283" key="GridCell.Tab.0.left/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401489515" />
-    <state width="1367" height="231" key="GridCell.Tab.0.right" timestamp="1602214119662">
+    <state width="1367" height="206" key="GridCell.Tab.0.right" timestamp="1602296872847">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state width="963" height="300" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598414016740" />
     <state width="1367" height="221" key="GridCell.Tab.0.right/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599282345839" />
     <state width="1367" height="179" key="GridCell.Tab.0.right/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597379628127" />
     <state width="1367" height="287" key="GridCell.Tab.0.right/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208929869" />
-    <state width="1367" height="231" key="GridCell.Tab.0.right/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602214119662" />
+    <state width="1367" height="206" key="GridCell.Tab.0.right/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602296872847" />
     <state width="1367" height="283" key="GridCell.Tab.0.right/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401489516" />
     <state width="1367" height="259" key="GridCell.Tab.1.bottom" timestamp="1597376421875">
       <screen x="1366" y="-232" width="1366" height="728" />
@@ -385,10 +383,11 @@
     </state>
     <state width="893" height="93" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1597285178715" />
     <state width="1367" height="259" key="GridCell.Tab.1.right/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597376421874" />
-    <state x="1775" y="-34" key="NewPhpClassDialog" timestamp="1598674110706">
-      <screen x="1366" y="-105" width="1366" height="728" />
+    <state x="1775" y="71" key="NewPhpClassDialog" timestamp="1602296508599">
+      <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1775" y="-34" key="NewPhpClassDialog/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1598674110706" />
+    <state x="1775" y="71" key="NewPhpClassDialog/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602296508599" />
     <state x="1550" y="9" width="1121" height="710" key="SettingsEditor" timestamp="1600226291199">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
@@ -400,10 +399,10 @@
     </state>
     <state x="1770" y="105" width="540" height="540" key="StructurePopup/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1600227032371" />
     <state x="1770" y="111" width="585" height="570" key="StructurePopup/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600397248306" />
-    <state width="498" height="398" key="SwitcherDM" timestamp="1602214032348">
+    <state width="498" height="398" key="SwitcherDM" timestamp="1602296862381">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state width="498" height="398" key="SwitcherDM/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602214032348" />
+    <state width="498" height="398" key="SwitcherDM/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602296862381" />
     <state width="498" height="420" key="SwitcherDM/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600401200634" />
     <state x="1641" y="-12" key="Vcs.Push.Dialog.v2" timestamp="1598672123870">
       <screen x="1366" y="-105" width="1366" height="728" />
@@ -423,14 +422,14 @@
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="1705" y="162" key="run.anything.popup/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1601866341660" />
-    <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602213867389">
+    <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602296402603">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598413751823" />
     <state x="1712" y="-56" width="672" height="678" key="search.everywhere.popup/1366.-105.1366.728/0.0.1366.728@1366.-105.1366.728" timestamp="1599447058607" />
     <state x="1712" y="-183" width="672" height="678" key="search.everywhere.popup/1366.-232.1366.728/0.0.1366.728@1366.-232.1366.728" timestamp="1597380076229" />
     <state x="1712" y="-277" width="672" height="678" key="search.everywhere.popup/1366.-326.1366.728/0.0.1366.728@1366.-326.1366.728" timestamp="1597208481687" />
-    <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602213867389" />
+    <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup/1366.0.1366.728/0.0.1366.728@1366.0.1366.728" timestamp="1602296402603" />
     <state x="1712" y="52" width="672" height="716" key="search.everywhere.popup/1366.0.1366.768/0.0.1366.768@1366.0.1366.768" timestamp="1600400965809" />
   </component>
   <component name="XDebuggerManager">
