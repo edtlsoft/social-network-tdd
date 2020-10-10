@@ -41,6 +41,15 @@ export default {
         this.loadListOfStatuses();
 
         EventBus.$on('status-created', status => this.statuses.unshift(status))
+
+        Echo.channel('statuses')
+            .listen(
+                'StatusCreated',
+                event => {
+                    console.log(event, event.status);
+                    this.statuses.unshift(event.status);
+                }
+            )
     }
 }
 </script>
