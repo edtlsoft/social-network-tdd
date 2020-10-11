@@ -2142,7 +2142,6 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.post('/statuses', this.status).then(function (response) {
-        EventBus.$emit('status-created', response.data.data);
         _this.status.body = '';
       })["catch"](function (errors) {
         return console.log(errors);
@@ -2206,9 +2205,6 @@ __webpack_require__.r(__webpack_exports__);
     var _this2 = this;
 
     this.loadListOfStatuses();
-    EventBus.$on('status-created', function (status) {
-      return _this2.statuses.unshift(status);
-    });
     Echo.channel('statuses').listen('StatusCreated', function (event) {
       console.log(event, event.status);
 
@@ -57423,8 +57419,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
-  key: "",
-  cluster: "mt1",
+  key: "805817fd3a2be3eeece3",
+  cluster: "us2",
   forceTLS: true
 });
 

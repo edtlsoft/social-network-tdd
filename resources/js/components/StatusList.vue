@@ -40,8 +40,6 @@ export default {
     mounted() {
         this.loadListOfStatuses();
 
-        EventBus.$on('status-created', status => this.statuses.unshift(status))
-
         Echo.channel('statuses')
             .listen(
                 'StatusCreated',
