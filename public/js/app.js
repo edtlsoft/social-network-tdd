@@ -2205,6 +2205,9 @@ __webpack_require__.r(__webpack_exports__);
     var _this2 = this;
 
     this.loadListOfStatuses();
+    EventBus.$on('status-created', function (status) {
+      return _this2.statuses.unshift(status);
+    });
     Echo.channel('statuses').listen('StatusCreated', function (event) {
       console.log(event, event.status);
 
