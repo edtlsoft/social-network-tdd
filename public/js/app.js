@@ -2142,6 +2142,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.post('/statuses', this.status).then(function (response) {
+        EventBus.$emit('status-created', response.data.data);
         _this.status.body = '';
       })["catch"](function (errors) {
         return console.log(errors);
