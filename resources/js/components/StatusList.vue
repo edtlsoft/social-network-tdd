@@ -1,10 +1,12 @@
 <template>
     <div @click="redirectIfGuest">
-        <status-list-item
-            v-for="status in statuses"
-            :key="status.id"
-            :status="status"
-        ></status-list-item>
+        <transition-group name="status-list-transition">
+            <status-list-item
+                v-for="status in statuses"
+                :key="status.id"
+                :status="status"
+            ></status-list-item>
+        </transition-group>
     </div>
 </template>
 
@@ -55,5 +57,7 @@ export default {
 </script>
 
 <style scoped>
-
+    .status-list-transition-move {
+        transition: all 0.5s;
+    }
 </style>
