@@ -2,42 +2,78 @@
 
 namespace Tests\Feature;
 
+use App\Events\CommentCreated;
+use App\Http\Resources\CommentResource;
+use App\Models\Comment;
 use App\Models\Status;
 use App\User;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\Broadcast;
+use Illuminate\Support\Facades\Event;
 use Tests\TestCase;
 
 class CreateCommentsTest extends TestCase
 {
-    use DatabaseMigrations;
+    use RefreshDatabase;
 
     /** @test */
     public function authenticated_users_can_comment_statuses()
     {
         // Given
-        $comment = 'My first comment';
+        $comment = ['body' => 'My first comment'];
         $status  = factory(Status::class)->create();
         $user    = factory(User::class)->create();
 
         $this->actingAs($user);
 
         // When
-        $response = $this->postJson(route('statuses.comments.store', $status), [
-            'body' => $comment,
-        ]);
+        $response = $this->postJson(route('statuses.comments.store', $status), $comment);
 
         $response->assertJson([
-            'data' => ['body' => $comment]
+            'data' => ['body' => $comment['body']]
         ]);
 
         // Then
         $this->assertDatabaseHas('comments', [
-            'user_id' => $user->id,
+            'user_id'   => $user->id,
             'status_id' => $status->id,
-            'body' => $comment,
+            'body'      => $comment['body'],
         ]);
+    }
+
+    /**
+     * @test
+     */
+    public function an_event_is_fired_when_comment_is_created()
+    {
+        Event::fake([CommentCreated::class]);
+        Broadcast::shouldReceive('socket')->andReturn('socket-id');
+
+        // 1. Given => Given a authenticated user
+        $comment = ['body' => 'My first comment'];
+        $status  = factory(Status::class)->create();
+        $user    = factory(User::class)->create();
+
+        // 2. When  => When you make a post request to status
+        $response = $this->actingAs($user)->postJson(route('statuses.comments.store', $status), $comment);
+
+        // 3. Then
+        // Assert Event was dispatched
+        Event::assertDispatched(CommentCreated::class, function($CommentCratedEvent) {
+            $this->assertInstanceOf(ShouldBroadcast::class, $CommentCratedEvent);
+            $this->assertInstanceOf(CommentResource::class, $CommentCratedEvent->comment);
+            $this->assertInstanceOf(Comment::class, $CommentCratedEvent->comment->resource);
+
+            $this->assertEquals(Comment::first()->id, $CommentCratedEvent->comment->id);
+            $this->assertEquals(
+                'socket-id',
+                $CommentCratedEvent->socket,
+                'The event '. get_class($CommentCratedEvent) .' must call the method "dontBroadcastToCurrentUser" in the constructor'
+            );
+
+            return true;
+        });
     }
 
     /** @test */
