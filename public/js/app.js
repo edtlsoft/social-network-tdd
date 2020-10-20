@@ -2353,6 +2353,15 @@ __webpack_require__.r(__webpack_exports__);
         return console.log(errors);
       });
     }
+  },
+  mounted: function mounted() {
+    var _this2 = this;
+
+    Echo.channel("statuses.".concat(this.status.id, ".comments")).listen('CommentCreated', function (event) {
+      console.log(event, event.comment);
+
+      _this2.comments.unshift(event.comment);
+    });
   }
 });
 

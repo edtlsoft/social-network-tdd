@@ -121,6 +121,16 @@ export default {
             .catch(errors => console.log(errors))
         },
     },
+    mounted() {
+        Echo.channel(`statuses.${this.status.id}.comments`)
+            .listen(
+                'CommentCreated',
+                event => {
+                    console.log(event, event.comment);
+                    this.comments.unshift(event.comment);
+                }
+            )
+    },
 }
 </script>
 
