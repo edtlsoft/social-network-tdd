@@ -60,7 +60,7 @@ export default {
                 }
             )
 
-        EventBus.$on(`statuses.${this.statusId}.comments`, comment => this.comment.push(comment))
+        EventBus.$on(`statuses.${this.statusId}.comments`, comment => this.comments.push(comment))
     },
 
 }

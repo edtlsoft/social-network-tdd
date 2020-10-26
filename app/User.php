@@ -29,6 +29,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected $appends = ['avatar'];
+
     /**
      * The attributes that should be cast to native types.
      *
@@ -41,6 +43,11 @@ class User extends Authenticatable
     public function getRouteKeyName()
     {
         return 'username';
+    }
+
+    public function getAvatarAttribute()
+    {
+        return '/images/default-avatar.jpg';
     }
 
     public function avatar()

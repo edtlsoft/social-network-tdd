@@ -36,30 +36,9 @@
             >
             </comment-list>
 
-            <form @submit.prevent="storeComment" v-if="isAuthenticated">
-                <div class="d-flex aling-items-center">
-                    <img class="rounded shadow-sm mr-2"
-                         width="35" :src="status.user.avatar"
-                         :alt="currentUser.username"
-                    >
-                    <div class="input-group">
-                        <textarea v-model="comment"
-                                  dusk="comment"
-                                  class="form-control border-0"
-                                  rows="1"
-                                  placeholder="Write a comment..."
-                                  required
-                        ></textarea>
-                        <div class="input-group-append">
-                            <button dusk="comment-btn"
-                                    type="submit"
-                                    class="btn btn-primary">
-                                Send
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </form>
+            <comment-form
+                :status-id="status.id"
+            ></comment-form>
         </div>
     </div>
 </template>
@@ -68,6 +47,7 @@
 
 import LikeBtn from './LikeBtn'
 import CommentList from './CommentList'
+import CommentForm from './CommentForm'
 
 export default {
     props: {
@@ -80,26 +60,6 @@ export default {
         LikeBtn,
         CommentList,
     },
-    data() {
-        return ({
-            comment: '',
-        })
-    },
-    methods: {
-        storeComment() {
-            axios.post(`/statuses/${this.status.id}/comments`, {
-                body: this.comment
-            })
-            .then(response => {
-                EventBus.$emit(`statuses.${this.status.id}.comments`, response.data.data)
-
-                this.comments.push(response.data.data)
-                this.comment = ''
-            })
-            .catch(errors => console.log(errors))
-        },
-    },
-
 }
 </script>
 
