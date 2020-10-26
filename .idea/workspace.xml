@@ -24,8 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6bb366fd-eef0-4098-ad0c-036b4113c59a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/CommentForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/CommentForm.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/StatusListItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/StatusListItem.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -268,7 +268,7 @@
       <workItem from="1602734360841" duration="236000" />
       <workItem from="1602866928641" duration="1741000" />
       <workItem from="1603159672971" duration="228000" />
-      <workItem from="1603159985793" duration="8127000" />
+      <workItem from="1603159985793" duration="8940000" />
     </task>
     <servers />
   </component>

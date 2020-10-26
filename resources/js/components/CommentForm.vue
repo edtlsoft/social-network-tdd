@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="storeComment" v-if="isAuthenticated">
+    <form @submit.prevent="storeComment" v-if="isAuthenticated" class="mb-3">
         <div class="d-flex aling-items-center">
             <img class="rounded shadow-sm mr-2"
                  width="35" :src="currentUser.avatar"

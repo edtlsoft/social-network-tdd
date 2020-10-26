@@ -44850,6 +44850,7 @@ var render = function() {
     ? _c(
         "form",
         {
+          staticClass: "mb-3",
           on: {
             submit: function($event) {
               $event.preventDefault()
@@ -45286,18 +45287,23 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "card-footer" },
-      [
-        _c("comment-list", {
-          attrs: { comments: _vm.status.comments, "status-id": _vm.status.id }
-        }),
-        _vm._v(" "),
-        _c("comment-form", { attrs: { "status-id": _vm.status.id } })
-      ],
-      1
-    )
+    _vm.isAuthenticated || _vm.status.comments.length
+      ? _c(
+          "div",
+          { staticClass: "card-footer pb-0" },
+          [
+            _c("comment-list", {
+              attrs: {
+                comments: _vm.status.comments,
+                "status-id": _vm.status.id
+              }
+            }),
+            _vm._v(" "),
+            _c("comment-form", { attrs: { "status-id": _vm.status.id } })
+          ],
+          1
+        )
+      : _vm._e()
   ])
 }
 var staticRenderFns = []

@@ -29,7 +29,7 @@
                 <span dusk="likes-count">{{ status.likes_count }}</span>
             </div>
         </div>
-        <div class="card-footer">
+        <div class="card-footer pb-0" v-if="isAuthenticated || status.comments.length">
             <comment-list
                 :comments="status.comments"
                 :status-id="status.id"
