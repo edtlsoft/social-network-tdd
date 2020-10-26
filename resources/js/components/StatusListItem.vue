@@ -30,36 +30,11 @@
             </div>
         </div>
         <div class="card-footer">
-
-            <div v-for="comment in comments" :key="comment.id" class="mb-3">
-                <div class="d-flex">
-                    <img class="rounded shadow-sm mr-2" width="35" height="35" :src="comment.user.avatar" :alt="comment.user.name">
-                    <div class="flex-grow-1">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body p-2 text-secondary">
-                                <a :href="comment.user.link">
-                                    <strong>{{ comment.user.username }}</strong>
-                                </a>
-                                {{ comment.body }}
-                            </div>
-                        </div>
-                        <small
-                            class="float-right badge badge-pill badge-primary py-1 px-2 mt-1"
-                            dusk="comment-likes-count"
-                        >
-                            <i class="fas fa-thumbs-up"></i>
-                            {{ comment.likes_count }}
-                        </small>
-                        <like-btn
-                            dusk="comment-like-btn"
-                            :model="comment"
-                            :url="`/comments/${comment.id}/likes`"
-                            class="comment-like-btn"
-                        >
-                        </like-btn>
-                    </div>
-                </div>
-            </div>
+            <comment-list
+                :comments="status.comments"
+                :status-id="status.id"
+            >
+            </comment-list>
 
             <form @submit.prevent="storeComment" v-if="isAuthenticated">
                 <div class="d-flex aling-items-center">
@@ -92,6 +67,7 @@
 <script>
 
 import LikeBtn from './LikeBtn'
+import CommentList from './CommentList'
 
 export default {
     props: {
@@ -102,11 +78,11 @@ export default {
     },
     components: {
         LikeBtn,
+        CommentList,
     },
     data() {
         return ({
             comment: '',
-            comments: this.status.comments,
         })
     },
     methods: {
@@ -115,22 +91,15 @@ export default {
                 body: this.comment
             })
             .then(response => {
+                EventBus.$emit(`statuses.${this.status.id}.comments`, response.data.data)
+
                 this.comments.push(response.data.data)
                 this.comment = ''
             })
             .catch(errors => console.log(errors))
         },
     },
-    mounted() {
-        Echo.channel(`statuses.${this.status.id}.comments`)
-            .listen(
-                'CommentCreated',
-                event => {
-                    console.log(event, event.comment);
-                    this.comments.unshift(event.comment);
-                }
-            )
-    },
+
 }
 </script>
 
